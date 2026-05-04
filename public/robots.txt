@@ -1,0 +1,31 @@
+User-agent: *
+Allow: /
+Allow: /ar/
+Allow: /ar
+Allow: /fr/
+Allow: /fr
+
+# Block AdSense crawler from internal data we don't want indexed
+Disallow: /radioDescriptions.json
+Disallow: /radios.json
+Disallow: /songs/
+
+# Allow all major search engines to fetch JS/CSS for rendering
+User-agent: Googlebot
+Allow: /*.js$
+Allow: /*.css$
+Allow: /ar/
+Allow: /fr/
+
+User-agent: Googlebot-Image
+Allow: /icons/
+Allow: /og-default.svg
+
+User-agent: Bingbot
+Allow: /*.js$
+Allow: /*.css$
+Allow: /ar/
+Allow: /fr/
+
+# Sitemap location
+Sitemap: https://radiolive.ma/sitemap.xml

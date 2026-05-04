@@ -1,0 +1,44 @@
+{
+  "name": "radio-maroc",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Premium streaming platform for Moroccan radios",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "postbuild": "node scripts/build-sitemap.mjs",
+    "preview": "vite preview",
+    "sitemap": "node scripts/build-sitemap.mjs",
+    "indexnow": "node scripts/indexnow-ping.mjs",
+    "sync:stations": "node scripts/sync-stations.mjs",
+    "sync:logos": "node scripts/sync-logos.mjs",
+    "sync:all": "npm run sync:stations && npm run sync:logos",
+    "apply:stations": "node scripts/apply-stations.mjs",
+    "og:png": "node scripts/build-og-image.mjs",
+    "songs:seed": "node scripts/seed-songs.mjs",
+    "songs:scrape": "node scripts/fetch-icy-metadata.mjs",
+    "songs:top": "node scripts/compute-top-songs.mjs",
+    "songs:all": "npm run songs:scrape && npm run songs:top",
+    "kill": "powershell -NoProfile -Command \"Get-Process node -ErrorAction SilentlyContinue | Stop-Process -Force\"",
+    "fresh": "npm run kill && npm run dev"
+  },
+  "dependencies": {
+    "framer-motion": "^11.3.19",
+    "hls.js": "^1.5.13",
+    "howler": "^2.2.4",
+    "lenis": "^1.3.23",
+    "lucide-react": "^0.428.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet-async": "^3.0.0",
+    "react-router-dom": "^7.14.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.40",
+    "tailwindcss": "^3.4.7",
+    "vite": "^5.3.5"
+  }
+}

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#e23b3a"/>
+      <stop offset="100%" stop-color="#c92424"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Red rounded square -->
+  <rect width="256" height="256" rx="32" fill="url(#bg)"/>
+
+  <!-- Stylized "A" with crossing curves — abstract microphone/chevron motif -->
+  <g transform="translate(128,108)" stroke="#ffffff" stroke-width="6" fill="none" stroke-linecap="round">
+    <!-- Outer circle (left-leaning) -->
+    <ellipse cx="-22" cy="0" rx="40" ry="60" transform="rotate(-15)"/>
+    <!-- Outer circle (right-leaning), creating the crossing pattern -->
+    <ellipse cx="22" cy="0" rx="40" ry="60" transform="rotate(15)"/>
+    <!-- Diagonal stroke (the slash) -->
+    <line x1="-44" y1="42" x2="44" y2="-42" stroke-width="7"/>
+  </g>
+
+  <!-- "ACHKID FM" wordmark -->
+  <g transform="translate(128, 210)"
+     style="font-family: 'Arial Black', 'Arial', sans-serif;"
+     text-anchor="middle">
+    <text x="0" y="0" font-size="32" font-weight="900" fill="#ffffff" letter-spacing="1.5">
+      ACHKID<tspan font-weight="500" letter-spacing="2"> FM</tspan>
+    </text>
+  </g>
+</svg>

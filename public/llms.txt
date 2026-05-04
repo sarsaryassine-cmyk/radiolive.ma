@@ -1,0 +1,112 @@
+# Radio Maroc — radiolive.ma
+
+> Plateforme de streaming audio gratuite des radios marocaines. Plus de 30 stations FM
+> et webradios diffusées en direct 24h/24, sans inscription, accessibles dans le monde
+> entier (Maroc + diaspora). Site bilingue français + arabe avec couverture éditoriale
+> dédiée à la radio, à la musique marocaine et au paysage radiophonique du Royaume.
+
+## À propos
+
+Radio Maroc (radiolive.ma) est un agrégateur de streams audio en temps réel des principales
+radios FM et webradios du Maroc, opéré comme un service gratuit financé par publicité.
+Le site cible deux audiences : (1) les Marocains du Royaume cherchant un accès web simple
+à leurs radios habituelles ; (2) les Marocains résidant à l'étranger (MRE, ~5 millions
+de personnes) qui utilisent le streaming pour rester connectés à l'actualité, la musique
+et la spiritualité du pays.
+
+Toutes les pages sont disponibles en deux langues :
+- Français — URLs racine `/...`
+- Arabe (RTL) — URLs préfixées `/ar/...`
+
+## Mots-clés principaux
+
+### Français
+radio maroc, radio en direct maroc, radio maroc en ligne, écouter radio maroc,
+radio sport maroc, radios marocaines, FM maroc, streaming radio gratuit,
+radio mars, hit radio, medi 1, chada fm, radio 2m, radio coran, radio nationale marocaine
+
+### Arabe
+راديو المغرب مباشر, الإذاعة الوطنية المغربية, راديو المغرب,
+إذاعات مغربية, راديو الرياضة المغربية, راديو هيت, ميدي 1, شدى إف إم
+
+## Structure du site
+
+### Pages piliers
+- `/` — page d'accueil, dashboard streaming live (toutes les stations)
+- `/radio-maroc` — guide encyclopédique du paysage radiophonique marocain (~1100 mots FR)
+- `/radio-maroc-en-direct` — hub live streaming (~1000 mots FR + AR mirror)
+- `/radio-sport-maroc` — radios sportives (Radio Mars, Botola Pro, Lions de l'Atlas)
+- `/radio-nationale-marocaine` — Idha3a Wataniya / SNRT
+- `/ar/radio-maroc-mubashir` — équivalent AR du hub live
+- `/ar/radio-al-idha3a-al-wataniya` — équivalent AR de la radio nationale
+- `/ar/radio-riyada-maghreb` — équivalent AR sport
+
+### Pages stations (35 stations)
+- `/station/<slug>` — page dédiée par radio avec lecteur, description, top chansons,
+  historique des morceaux diffusés, articles liés
+- Stations principales : hit-radio, medi-1-radio, chada-fm, radio-mars, radio-2m,
+  mfm, medradio, atlantic-radio, cap-radio, qoran-radio, skyrock-casablanca,
+  medina-fm, radio-aswat, adwaa-fm, radio-atbir, radio-achkid-fm, etc.
+
+### Pages fréquences FM (16 villes)
+- `/frequences-radio-maroc` — index national
+- `/frequence-radio-<ville>` — Casablanca, Rabat, Marrakech, Fès, Tanger, Agadir,
+  Oujda, Meknès, Kénitra, Tétouan, El Jadida, Safi, Béni Mellal, Khouribga,
+  Nador, Laâyoune
+
+### Pages villes
+- `/radio-casablanca`, `/radio-rabat`, `/radio-marrakech`, `/radio-tanger`,
+  `/radio-fes`, `/radio-agadir`
+
+### Pages genre musical
+- `/radio-maroc-chaabi` — radios chaabi
+- `/radio-maroc-hit` — radios hits / pop
+- `/radio-maroc-amazigh` — radios amazighes / berbères
+
+### Pages diaspora (10 pays)
+- `/radio-maroc-france`, `/radio-maroc-belgique`, `/radio-maroc-pays-bas`,
+  `/radio-maroc-espagne`, `/radio-maroc-italie`, `/radio-maroc-allemagne`,
+  `/radio-maroc-canada`, `/radio-maroc-amerique`, `/radio-maroc-mre`,
+  `/radio-maroc-etranger`
+- Mirror AR : `/ar/min-faransa`, `/ar/min-belgika`, `/ar/min-holanda`, etc.
+
+### Blog (40+ articles)
+- `/blog` — index trié par date desc
+- `/blog/<slug>` — article individuel (~700-1200 mots FR + miroir AR avec slug
+  translittéré, ex. `/ar/blog/al-musiqa-al-chaabia-al-maghribiya`)
+- Catégories : musique chaabi, gnawa, rap marocain, musique amazighe, festival
+  Mawazine, biographies artistes (ElGrandeToto, Saad Lamjarred, Nass El Ghiwane),
+  guides streaming, top 10 chansons
+
+## Catégories de radios
+
+| Catégorie | Format | Stations clés |
+|---|---|---|
+| musicale | Hits, pop, R&B, raï | Hit Radio, MFM, Chada FM, Aswat, Hit Radio Mgharba |
+| sport | 100% sport (Botola, Lions de l'Atlas, CAN) | Radio Mars |
+| nationale | Service public, info | Radio 2M, Radio Nationale (SNRT) |
+| regionale | Radios FM par ville | Marrakech Plus, Radio Plus Agadir |
+| internationale | Bilingue franco-arabe, MRE | Medi 1 Radio, Radio Yabiladi, Monte Carlo Doualiya |
+| religieuse | Récitations Coran, programmes spirituels | Radio Coran, Al Quran Radio, Radio Manarat |
+| culturelle | Andalou, amazigh, jazz oriental | Medi 1 Tarab, Medi 1 Andalouse, Yabiladi Azawan Amazigh |
+| business | Économie, finance | Cap Radio, Atlantic Radio |
+
+## Données structurées schema.org
+
+Chaque page expose du JSON-LD adapté à son type :
+- Home → WebSite (avec SearchAction) + Organization
+- Pages stations → RadioStation (avec broadcastFrequency, areaServed=MA, audio.contentUrl)
+- Pages SEO cluster (pilier, live, sport, national) → WebPage + FAQPage + BreadcrumbList
+- Articles blog → Article (avec inLanguage, datePublished, mainEntityOfPage)
+- Pages diaspora → WebPage avec audience.geographicArea (country code FR/BE/NL/...)
+
+## Sitemap
+
+- `https://radiolive.ma/sitemap.xml` — 454 URLs avec hreflang fr-MA / ar-MA / x-default
+- Stations rafraîchies daily (changefreq), pages éditoriales weekly, articles blog monthly
+
+## Contact / propriété
+
+Site indépendant. Aucune affiliation officielle avec la SNRT, le HACA ou les éditeurs
+de stations. Les flux audio diffusés sont les flux publics officiels de chaque station.
+Catalogue auto-maintenu via l'API publique Radio-Browser.

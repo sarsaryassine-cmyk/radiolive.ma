@@ -1,0 +1,147 @@
+{
+  "radio": "Ness Radio",
+  "slug": "ness-radio",
+  "date": "2026-04-28",
+  "songs": [
+    {
+      "time": "09:56",
+      "artist": "Mohamed Hamaki",
+      "title": "Ahla Haga Feki"
+    },
+    {
+      "time": "09:49",
+      "artist": "Latifa Raafat",
+      "title": "Mawal Hbibi"
+    },
+    {
+      "time": "09:42",
+      "artist": "Wael Kfoury",
+      "title": "Yamma Mwel El Hawa"
+    },
+    {
+      "time": "09:35",
+      "artist": "Ragheb Alama",
+      "title": "Mawjou'a"
+    },
+    {
+      "time": "09:28",
+      "artist": "Asma Lmnawar",
+      "title": "Mawla"
+    },
+    {
+      "time": "09:22",
+      "artist": "Nancy Ajram",
+      "title": "Sah Sah"
+    },
+    {
+      "time": "09:15",
+      "artist": "Latifa Raafat",
+      "title": "Mawal Hbibi"
+    },
+    {
+      "time": "09:09",
+      "artist": "Nancy Ajram",
+      "title": "Sah Sah"
+    },
+    {
+      "time": "09:02",
+      "artist": "Carole Samaha",
+      "title": "Wahdy"
+    },
+    {
+      "time": "08:56",
+      "artist": "Tamer Hosny",
+      "title": "Aatherny"
+    },
+    {
+      "time": "08:50",
+      "artist": "Ragheb Alama",
+      "title": "Mawjou'a"
+    },
+    {
+      "time": "08:44",
+      "artist": "Najwa Karam",
+      "title": "Hayda Haki"
+    },
+    {
+      "time": "08:38",
+      "artist": "Nancy Ajram",
+      "title": "Sah Sah"
+    },
+    {
+      "time": "08:32",
+      "artist": "Tamer Hosny",
+      "title": "Yana Yamoot"
+    },
+    {
+      "time": "08:26",
+      "artist": "Elissa",
+      "title": "Aaks Elli Shayfenha"
+    },
+    {
+      "time": "08:19",
+      "artist": "Tamer Hosny",
+      "title": "Yana Yamoot"
+    },
+    {
+      "time": "08:13",
+      "artist": "Naima Samih",
+      "title": "Yak Aji"
+    },
+    {
+      "time": "08:06",
+      "artist": "Ragheb Alama",
+      "title": "Mawjou'a"
+    },
+    {
+      "time": "07:59",
+      "artist": "Najwa Karam",
+      "title": "Hayda Haki"
+    },
+    {
+      "time": "07:52",
+      "artist": "Asma Lmnawar",
+      "title": "Helmi"
+    },
+    {
+      "time": "07:46",
+      "artist": "Amr Diab",
+      "title": "Alf Leila Wa Leila"
+    },
+    {
+      "time": "07:40",
+      "artist": "Naima Samih",
+      "title": "Yak Aji"
+    },
+    {
+      "time": "07:34",
+      "artist": "Naima Samih",
+      "title": "Yak Aji"
+    },
+    {
+      "time": "07:28",
+      "artist": "Naima Samih",
+      "title": "Yak Aji"
+    },
+    {
+      "time": "07:21",
+      "artist": "Latifa Raafat",
+      "title": "Mawal Hbibi"
+    },
+    {
+      "time": "07:14",
+      "artist": "Amr Diab",
+      "title": "Tamally Maak"
+    },
+    {
+      "time": "07:07",
+      "artist": "Carole Samaha",
+      "title": "Wahdy"
+    },
+    {
+      "time": "07:00",
+      "artist": "Mohamed Hamaki",
+      "title": "Ahla Haga Feki"
+    }
+  ]
+}

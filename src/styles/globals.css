@@ -1,0 +1,263 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Dark fallback only — replaced by SceneBackground / shader as soon as React mounts. */
+    background-color: #07060d;
+    color: #fff;
+    overflow-x: hidden;
+  }
+
+  body.light {
+    background: #f6f5fb;
+    color: #0b0a14;
+  }
+
+  ::selection {
+    background: rgba(124, 77, 255, 0.4);
+    color: #fff;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(124, 77, 255, 0.35);
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(124, 77, 255, 0.6);
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-strong {
+    background: rgba(17, 16, 28, 0.72);
+    backdrop-filter: blur(24px) saturate(160%);
+    -webkit-backdrop-filter: blur(24px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  body.light .glass {
+    background: rgba(255, 255, 255, 0.55);
+    border-color: rgba(0, 0, 0, 0.06);
+  }
+  body.light .glass-strong {
+    background: rgba(255, 255, 255, 0.85);
+    border-color: rgba(0, 0, 0, 0.06);
+  }
+
+  .neo {
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.06),
+      0 1px 0 rgba(255, 255, 255, 0.04),
+      0 20px 50px -20px rgba(0, 0, 0, 0.6);
+  }
+
+  /* Texte gradient — couleurs alignées sur le rouge du logo (#E60E1F / #FF2A3C).
+     Démarre clair (coral pâle) pour rester lisible sur fond sombre. */
+  .gradient-text {
+    background: linear-gradient(120deg, #FF6B7A 0%, #FF2A3C 45%, #E60E1F 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all;
+    background: linear-gradient(120deg, #FF2A3C 0%, #E60E1F 100%);
+    box-shadow: 0 10px 30px -10px rgba(230, 14, 31, 0.55);
+  }
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 16px 40px -12px rgba(230, 14, 31, 0.75);
+  }
+
+  /* Touch target ≥44×44 px sur mobile (Apple HIG / Google M3),
+     ramené à 40 px sur ≥sm pour la densité desktop. */
+  .icon-btn {
+    @apply inline-flex h-11 w-11 sm:h-10 sm:w-10 items-center justify-center rounded-full transition-all;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .icon-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.18);
+  }
+
+  body.light .icon-btn {
+    background: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.08);
+  }
+  body.light .icon-btn:hover {
+    background: rgba(0, 0, 0, 0.08);
+  }
+
+  /* Range sliders */
+  input[type='range'].slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    outline: none;
+    transition: background 0.2s;
+  }
+  input[type='range'].slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 0 4px rgba(124, 77, 255, 0.25);
+    transition: transform 0.15s ease;
+  }
+  input[type='range'].slider::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+  }
+  input[type='range'].slider::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 0 4px rgba(124, 77, 255, 0.25);
+  }
+
+  /* Aurora background blobs */
+  .aurora {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.55;
+    pointer-events: none;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+}
+
+/* ─── BorderBeam (21st Magic) ────────────────────────────────────────────── */
+.border-beam {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  border: var(--bb-border-width, 1.5px) solid transparent;
+  -webkit-mask:
+    linear-gradient(transparent, transparent),
+    linear-gradient(#fff, #fff);
+  mask:
+    linear-gradient(transparent, transparent),
+    linear-gradient(#fff, #fff);
+  -webkit-mask-clip: padding-box, border-box;
+  mask-clip: padding-box, border-box;
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+.border-beam::after {
+  content: '';
+  position: absolute;
+  aspect-ratio: 1 / 1;
+  width: var(--bb-size, 220px);
+  background: linear-gradient(
+    to left,
+    var(--bb-color-from, #a78bfa),
+    var(--bb-color-to, #22d3ee),
+    transparent
+  );
+  offset-anchor: var(--bb-anchor, 90%) 50%;
+  offset-path: rect(0 auto auto 0 round var(--bb-size, 220px));
+  animation: border-beam var(--bb-duration, 12s) infinite linear;
+  animation-delay: var(--bb-delay, 0s);
+}
+
+@keyframes border-beam {
+  to {
+    offset-distance: 100%;
+  }
+}
+
+@supports not (offset-path: rect(0 auto auto 0)) {
+  .border-beam::after { display: none; }
+  .border-beam {
+    box-shadow:
+      inset 0 0 0 var(--bb-border-width, 1.5px) var(--bb-color-from, #a78bfa);
+  }
+}
+
+/* Equalizer bars animation */
+.eq-bar {
+  display: inline-block;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to top, #E60E1F, #FF2A3C, #FF6B7A);
+  border-radius: 2px;
+  transform-origin: bottom;
+  animation: eq 1s ease-in-out infinite;
+}
+.eq-bar:nth-child(1) { animation-delay: -0.6s; }
+.eq-bar:nth-child(2) { animation-delay: -0.2s; }
+.eq-bar:nth-child(3) { animation-delay: -0.4s; }
+.eq-bar:nth-child(4) { animation-delay: -0.1s; }
+
+@keyframes eq {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+
+/* Radio Maroc — animation logo officielle (création utilisateur, fidèle au source).
+   Mêmes classes que le fichier HTML d'origine : .rm-mark, .pulse, .compassR, .starGlow.
+   Utilisé par RadioMarocLogo.jsx (rendu inline SVG, sans iframe pour la perf). */
+.rm-mark .pulse{ transform-origin:0 0; animation: rmPulse 4s cubic-bezier(0.2,0,0,1) infinite; }
+.rm-mark .pulse-1{ animation-delay: 0s; }
+.rm-mark .pulse-2{ animation-delay: 1.2s; }
+.rm-mark .pulse-3{ animation-delay: 2.4s; }
+.rm-mark .compassR{ animation: rmSpin 60s linear infinite; transform-origin: 0 0; }
+.rm-mark .starGlow{ animation: rmStarGlow 3s ease-in-out infinite; transform-origin: 0 0; }
+@keyframes rmPulse{
+  0%   { transform: scale(0.92); opacity: 0; }
+  40%  { opacity: 1; }
+  100% { transform: scale(1.4);  opacity: 0; }
+}
+@keyframes rmSpin{ to { transform: rotate(360deg); } }
+@keyframes rmStarGlow{
+  0%, 100% { filter: drop-shadow(0 0 6px rgba(255,42,60,0.55)); }
+  50%      { filter: drop-shadow(0 0 16px rgba(255,42,60,0.95)); }
+}
+

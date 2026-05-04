@@ -1,0 +1,35 @@
+# Cloudflare Pages / Netlify SPA fallback + 301 SEO redirects.
+
+# 301 — mots-clés cousins consolidés sur la page principale (anti-cannibalisation).
+/radio-maroc-en-ligne   /radio-maroc-en-direct   301
+/ecouter-radio-maroc    /radio-maroc-en-direct   301
+/radio-mars-maroc       /station/radio-mars      301
+
+# 301 — stations renommées suite au cleanup (casse normalisée).
+/station/medradio              /station/med-radio    301
+/station/medinafm              /station/medina-fm    301
+/ar/station/medradio           /ar/station/med-radio    301
+/ar/station/medinafm           /ar/station/medina-fm    301
+
+# 301 — doublons fusionnés vers la station principale.
+/station/ma-hit-radio-maroc                   /station/hit-radio          301
+/station/ma-radio-sawt-alamal                 /station/sawt-al-amal       301
+/station/mrc-radio-plus                       /station/radio-plus-agadir  301
+/ar/station/ma-hit-radio-maroc                /ar/station/hit-radio          301
+/ar/station/ma-radio-sawt-alamal              /ar/station/sawt-al-amal       301
+/ar/station/mrc-radio-plus                    /ar/station/radio-plus-agadir  301
+
+# 301 — préfixes MA:-/MRC:- supprimés (Q5).
+/station/mrc-sawt-al-amal                     /station/sawt-al-amal                301
+/station/mrc-hip-hop-soul-radio-radio-music   /station/hip-hop-soul-radio-radio-music   301
+/station/mrc-radio-adwaa-atfal-4              /station/radio-adwaa-atfal-4         301
+/station/mrc-radio-adwaa-mazika-5             /station/radio-adwaa-mazika-5        301
+/station/mrc-radio-adwaa-music-3              /station/radio-adwaa-music-3         301
+/ar/station/mrc-sawt-al-amal                     /ar/station/sawt-al-amal                301
+/ar/station/mrc-hip-hop-soul-radio-radio-music   /ar/station/hip-hop-soul-radio-radio-music   301
+/ar/station/mrc-radio-adwaa-atfal-4              /ar/station/radio-adwaa-atfal-4         301
+/ar/station/mrc-radio-adwaa-mazika-5             /ar/station/radio-adwaa-mazika-5        301
+/ar/station/mrc-radio-adwaa-music-3              /ar/station/radio-adwaa-music-3         301
+
+# SPA fallback : tous les autres chemins client-side servent index.html.
+/*    /index.html   200

@@ -1,0 +1,296 @@
+[
+  {
+    "name": "Radio Mars",
+    "stream": "https://radiomars.ice.infomaniak.ch/radiomars-128.mp3",
+    "icon": "/logos/radio-mars.png",
+    "popularity_rank": 1
+  },
+  {
+    "name": "Hit Radio",
+    "stream": "https://hitradio-maroc.ice.infomaniak.ch/hitradio-maroc-128.mp3",
+    "icon": "/icons/HIT%20RADIO.png",
+    "popularity_rank": 2
+  },
+  {
+    "name": "Medi 1 Radio",
+    "stream": "https://cdn.live.easybroadcast.io/live/83_medi1radio-maghreb_8s9i4bn/playlist.m3u8",
+    "icon": "/icons/MEDI%201%20RADIO.jpg",
+    "popularity_rank": 3
+  },
+  {
+    "name": "MFM",
+    "stream": "https://a5.asurahosting.com:7980/radio.mp3",
+    "icon": "/icons/MFM.png",
+    "popularity_rank": 4
+  },
+  {
+    "name": "Aswat FM",
+    "stream": "https://broadcast.ice.infomaniak.ch/aswat-high.mp3",
+    "icon": "/logos/aswat-fm.png",
+    "popularity_rank": 5
+  },
+  {
+    "name": "Med Radio",
+    "stream": "https://medradio.ice.infomaniak.ch/medradio-128.mp3",
+    "icon": "/icons/MEDRADIO.jpg",
+    "popularity_rank": 6
+  },
+  {
+    "name": "Chada FM",
+    "stream": "https://edge16.vedge.infomaniak.com/livecast/ik:chadatv/manifest.m3u8",
+    "icon": "/icons/CHADA%20FM.jpg",
+    "popularity_rank": 7
+  },
+  {
+    "name": "Atlantic Radio",
+    "stream": "https://atlantic-sonic.nindohost.net:9300/stream",
+    "icon": "/logos/atlantic-radio.webp",
+    "popularity_rank": 8
+  },
+  {
+    "name": "Radio 2M",
+    "stream": "https://cdnamd-hls-globecast.akamaized.net/live/ramdisk/radio_2m/radio_hls_ts/index.m3u8",
+    "icon": "/icons/Radio%202M.png",
+    "popularity_rank": 9
+  },
+  {
+    "name": "Cap Radio",
+    "stream": "https://listen.radioking.com/radio/710810/stream/776366",
+    "icon": "/icons/CAP%20RADIO.png",
+    "popularity_rank": 10
+  },
+  {
+    "name": "Radio Plus Agadir",
+    "stream": "https://stream-158.zeno.fm/bqdbb6hd0neuv",
+    "icon": "/icons/Radio%20Plus%20Agadir.svg",
+    "popularity_rank": 14
+  },
+  {
+    "name": "Radio plus",
+    "stream": "https://stream.radio.co/s8cc7a5da4/listen",
+    "icon": "/logos/radio-plus.webp",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Marrakech Plus",
+    "stream": "https://cast5.my-control-panel.com/proxy/marrakec/stream",
+    "icon": "/icons/Marrakech%20Plus.jpg",
+    "popularity_rank": 15
+  },
+  {
+    "name": "Qoran Radio",
+    "stream": "https://virmach2.hajjam.net/index.html",
+    "icon": "/icons/QORAN%20RADIO.png",
+    "popularity_rank": 16
+  },
+  {
+    "name": "Adwaa FM",
+    "stream": "http://stream.zeno.fm/5bxh2nh0x1zuv?1681882617017",
+    "icon": "/icons/Adwaa%20FM.png",
+    "popularity_rank": 19
+  },
+  {
+    "name": "Medina FM",
+    "stream": "https://medinafm.ice.infomaniak.ch/medinafm-64.mp3",
+    "icon": "/icons/MEDINAFM.png",
+    "popularity_rank": 21
+  },
+  {
+    "name": "Radio Yabiladi",
+    "stream": "https://radio.yabiladi.com:8002/;stream.mp3",
+    "icon": "/icons/Radio%20Yabiladi.webp",
+    "popularity_rank": 25
+  },
+  {
+    "name": "Abdul Basit",
+    "stream": "https://radio.mp3islam.com/listen/abdulbasit/radio.mp3",
+    "icon": "/logos/abdul-basit.webp",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Achkid FM",
+    "stream": "https://stream.zeno.fm/7nqu31p6xg0uv",
+    "icon": "/logos/achkid-fm.png",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Al Quran Radio",
+    "stream": "https://n0a.radiojar.com/0tpy1h0kxtzuv?rj-ttl=5&rj-tok=AAABhdgGORQA-2acfyF3_4WY2g",
+    "icon": "/icons/QORAN%20RADIO.png",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Aziz Al Mustaphi",
+    "stream": "https://d3ctxlq1ktw2nl.cloudfront.net/production/2022-0-3/240607172-44100-2-afb2485b0c30e.mp3",
+    "icon": "/icons/QORAN%20RADIO.png",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Fayroz",
+    "stream": "https://stream.zeno.fm/zv3e5wykprhvv.mp3",
+    "icon": "/logos/fayroz.jpg",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Hip Hop Soul Radio Radio Music",
+    "stream": "https://stream.zeno.fm/k7cdrm450s8uv",
+    "icon": "/logos/hip-hop-soul-radio.webp",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Maher Al Muaiqly",
+    "stream": "https://backup.qurango.net/radio/maher",
+    "icon": "/logos/maher-al-muaiqly.webp",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Medi 1 Classique",
+    "stream": "http://live.medi1.com/Classique",
+    "icon": "/logos/medi-1-classique.ico",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Medi 1 DJ",
+    "stream": "http://live.medi1.com/Dj",
+    "icon": null,
+    "popularity_rank": 999
+  },
+  {
+    "name": "Medi 1 Radio Andalouse",
+    "stream": "http://live.medi1.com/Andalouse",
+    "icon": null,
+    "popularity_rank": 999
+  },
+  {
+    "name": "Medi 1 Tarab",
+    "stream": "http://live.medi1.com/Tarab",
+    "icon": null,
+    "popularity_rank": 999
+  },
+  {
+    "name": "Mohammed Ayyub",
+    "stream": "https://qurango.net/radio/mohammed_ayyub",
+    "icon": "/logos/mohammed-ayyub.jpg",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Mukhtasar Tafseer",
+    "stream": "https://qurango.net/radio/mukhtasartafsir",
+    "icon": "/icons/QORAN%20RADIO.png",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Ness Radio",
+    "stream": "https://radio.nessradio.net:8212/nessradio-hd",
+    "icon": "/logos/ness-radio.jpg",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Only Rai",
+    "stream": "http://onlyrai.ice.infomaniak.ch/onlyrai-high.mp3",
+    "icon": "/logos/only-rai.webp",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Quran Karim Radio",
+    "stream": "http://stream.radiojar.com/0tpy1h0kxtzuv",
+    "icon": "/icons/QORAN%20RADIO.png",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Radio Adwaa Atfal 4",
+    "stream": "https://stream.zeno.fm/8wrs2bh0x1zuv",
+    "icon": "/logos/radio-adwaa-atfal-4.avif",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Radio Adwaa Mazika 5",
+    "stream": "https://stream.zeno.fm/ezxx195gq2zuv",
+    "icon": "/logos/radio-adwaa-mazika-5.webp",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Radio Adwaa Music 3",
+    "stream": "https://stream.zeno.fm/x4451xh0x1zuv",
+    "icon": "/logos/radio-adwaa-music-3.avif",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Radio Atbir",
+    "stream": "https://stream-156.zeno.fm/bqdbb6hd0neuv?zs=VGAZo-zKSX-08bLa8RiUVg",
+    "icon": "/logos/radio-atbir.png",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Radio Azawan",
+    "stream": "https://az-maroc.ice.infomaniak.ch/az-maroc-128.mp3",
+    "icon": "/logos/radio-azawan.png",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Radio Manarat",
+    "stream": "https://listen.radioking.com/radio/252934/stream/297385",
+    "icon": "/icons/Radio%20Manarat.png",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Radio Monte Carlo Doualiya",
+    "stream": "https://montecarlodoualiya128k.ice.infomaniak.ch/mc-doualiya.mp3",
+    "icon": "/icons/Radio%20Monte%20Carlo%20Doualiya.png",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Rap Lbeldi Maroc",
+    "stream": "https://stream.zeno.fm/ivdufrl7q0quv",
+    "icon": "/icons/Rap%20Lbeldi%20Maroc.webp",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Skyrock Casablanca",
+    "stream": "https://icecast.skyrock.net/s/casa_aac_64k",
+    "icon": "/logos/skyrock-casablanca.ico",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Tafseer Ibn Othaymeen",
+    "stream": "https://qurango.net/radio/tafseer",
+    "icon": "/icons/QORAN%20RADIO.png",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Yabiladi Azawan Amazigh",
+    "stream": "https://radio.yabiladi.com:9002/;stream.mp3",
+    "icon": "/logos/yabiladi-azawan-amazigh.png",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Yabiladi Chaabi Maroc",
+    "stream": "https://radio.yabiladi.com:8102/;stream.mp3",
+    "icon": "/logos/yabiladi-chaabi-maroc.png",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Zine Bladi",
+    "stream": "https://asmaki.ma:8000/radio.mp3",
+    "icon": "/icons/ZINE%20BLADI.png",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Radio Tanger Med",
+    "stream": "https://radiotangermed-22.ice.infomaniak.ch/radiotangermed-22-128.mp3",
+    "icon": "/logos/radio-tanger-med.png",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Radio Star Maroc FM",
+    "stream": "https://a2.asurahosting.com:6100/radio.mp3",
+    "icon": "/logos/radio-star-maroc-fm.png",
+    "popularity_rank": 999
+  },
+  {
+    "name": "Radio Sawt Alamal",
+    "stream": "https://stream.zeno.fm/qgw73bqh5qruv",
+    "icon": "/logos/radio-sawt-alamal.png",
+    "popularity_rank": 999
+  }
+]

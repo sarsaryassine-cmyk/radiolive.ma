@@ -1,0 +1,33 @@
+{
+  "radio": "Chada FM",
+  "slug": "chada-fm",
+  "date": "2026-04-28",
+  "songs": [
+    { "time": "09:54", "artist": "Nancy Ajram", "title": "Sah Sah" },
+    { "time": "09:48", "artist": "Tamer Hosny", "title": "Aatherny" },
+    { "time": "09:41", "artist": "Saad Lamjarred", "title": "Casablanca" },
+    { "time": "09:35", "artist": "Wael Kfoury", "title": "Tabki El Toyour" },
+    { "time": "09:28", "artist": "Amr Diab", "title": "Alf Leila Wa Leila" },
+    { "time": "09:21", "artist": "Hatim Ammor", "title": "Ghalban" },
+    { "time": "09:14", "artist": "Elissa", "title": "Aaks Elli Shayfenha" },
+    { "time": "09:07", "artist": "Mohamed Hamaki", "title": "Ahla Haga Feki" },
+    { "time": "09:00", "artist": "Asma Lmnawar", "title": "Helmi" },
+    { "time": "08:53", "artist": "Sherine", "title": "Mashy Haddi" },
+    { "time": "08:46", "artist": "Najwa Karam", "title": "Hayda Haki" },
+    { "time": "08:40", "artist": "Tamer Hosny", "title": "Yana Yamoot" },
+    { "time": "08:33", "artist": "Ragheb Alama", "title": "Mawjou'a" },
+    { "time": "08:26", "artist": "Abdelhalim Hafez", "title": "Ahwak" },
+    { "time": "08:19", "artist": "Amr Diab", "title": "Tamally Maak" },
+    { "time": "08:12", "artist": "Saad Lamjarred", "title": "Lm3allem" },
+    { "time": "08:05", "artist": "Carole Samaha", "title": "Wahdy" },
+    { "time": "07:58", "artist": "Hatim Ammor", "title": "Ana Maghrebi" },
+    { "time": "07:51", "artist": "Nancy Ajram", "title": "Salamat" },
+    { "time": "07:44", "artist": "Wael Kfoury", "title": "Yamma Mwel El Hawa" },
+    { "time": "07:37", "artist": "Asma Lmnawar", "title": "Mawla" },
+    { "time": "07:30", "artist": "Tamer Hosny", "title": "Aatherny" },
+    { "time": "07:23", "artist": "Amr Diab", "title": "Habibi Ya Nour El Ein" },
+    { "time": "07:16", "artist": "Saad Lamjarred", "title": "Casablanca" },
+    { "time": "07:09", "artist": "Sherine", "title": "Lessa Faker" },
+    { "time": "07:00", "artist": "Hatim Ammor", "title": "Ghalban" }
+  ]
+}

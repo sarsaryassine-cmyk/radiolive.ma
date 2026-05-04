@@ -1,0 +1,15 @@
+{
+  "name": "radiolive-now-playing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cloudflare Worker — fetches ICY metadata for radiolive.ma stations + iTunes artwork",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  }
+}

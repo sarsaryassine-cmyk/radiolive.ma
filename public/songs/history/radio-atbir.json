@@ -1,0 +1,147 @@
+{
+  "radio": "Radio Atbir",
+  "slug": "radio-atbir",
+  "date": "2026-04-28",
+  "songs": [
+    {
+      "time": "09:54",
+      "artist": "Raïs Hassan Arsmouk",
+      "title": "Tisniwin"
+    },
+    {
+      "time": "09:48",
+      "artist": "Raïs Demsiri",
+      "title": "Anflus"
+    },
+    {
+      "time": "09:41",
+      "artist": "Najat Aâtabou",
+      "title": "Lala Yamna"
+    },
+    {
+      "time": "09:34",
+      "artist": "Imanaren",
+      "title": "Tamurt"
+    },
+    {
+      "time": "09:27",
+      "artist": "Fatima Tabaamrant",
+      "title": "Tamatart Inu"
+    },
+    {
+      "time": "09:20",
+      "artist": "Najat Aâtabou",
+      "title": "Lala Yamna"
+    },
+    {
+      "time": "09:13",
+      "artist": "Fatima Tabaamrant",
+      "title": "Tamatart Inu"
+    },
+    {
+      "time": "09:07",
+      "artist": "Cherifa Kersit",
+      "title": "Ayuy Aman"
+    },
+    {
+      "time": "09:00",
+      "artist": "Imanaren",
+      "title": "Tamurt"
+    },
+    {
+      "time": "08:54",
+      "artist": "Raïs Hassan Arsmouk",
+      "title": "Tisniwin"
+    },
+    {
+      "time": "08:48",
+      "artist": "Fatima Tabaamrant",
+      "title": "Tamatart Inu"
+    },
+    {
+      "time": "08:42",
+      "artist": "Raïs Demsiri",
+      "title": "Anflus"
+    },
+    {
+      "time": "08:36",
+      "artist": "Raïs Hassan Arsmouk",
+      "title": "Tisniwin"
+    },
+    {
+      "time": "08:29",
+      "artist": "Raïs Demsiri",
+      "title": "Anflus"
+    },
+    {
+      "time": "08:23",
+      "artist": "Fatima Tabaamrant",
+      "title": "Tamatart Inu"
+    },
+    {
+      "time": "08:17",
+      "artist": "Raïs Hassan Arsmouk",
+      "title": "Tisniwin"
+    },
+    {
+      "time": "08:11",
+      "artist": "Imanaren",
+      "title": "Tamurt"
+    },
+    {
+      "time": "08:05",
+      "artist": "Najat Aâtabou",
+      "title": "Lala Yamna"
+    },
+    {
+      "time": "07:59",
+      "artist": "Najat Aâtabou",
+      "title": "Lala Yamna"
+    },
+    {
+      "time": "07:53",
+      "artist": "Raïs Hassan Arsmouk",
+      "title": "Tisniwin"
+    },
+    {
+      "time": "07:46",
+      "artist": "Najat Aâtabou",
+      "title": "Lala Yamna"
+    },
+    {
+      "time": "07:39",
+      "artist": "Raïs Hassan Arsmouk",
+      "title": "Tisniwin"
+    },
+    {
+      "time": "07:33",
+      "artist": "Imanaren",
+      "title": "Tamurt"
+    },
+    {
+      "time": "07:27",
+      "artist": "Fatima Tabaamrant",
+      "title": "Tamatart Inu"
+    },
+    {
+      "time": "07:20",
+      "artist": "Cherifa Kersit",
+      "title": "Ayuy Aman"
+    },
+    {
+      "time": "07:14",
+      "artist": "Imanaren",
+      "title": "Tamurt"
+    },
+    {
+      "time": "07:07",
+      "artist": "Fatima Tabaamrant",
+      "title": "Tamatart Inu"
+    },
+    {
+      "time": "07:00",
+      "artist": "Raïs Demsiri",
+      "title": "Anflus"
+    }
+  ]
+}

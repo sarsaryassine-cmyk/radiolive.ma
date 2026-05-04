@@ -1,0 +1,21 @@
+name = "radiolive-now-playing"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# KV cache (TTL 30s) — à créer via :
+#   wrangler kv namespace create METADATA_CACHE
+# Puis remplacer "TO_BE_CREATED" par l'ID retourné.
+[[kv_namespaces]]
+binding = "METADATA_CACHE"
+id = "TO_BE_CREATED"
+
+[vars]
+ALLOWED_ORIGINS = "https://radiolive.ma,https://www.radiolive.ma,http://localhost:5173,http://localhost:3000"
+RATE_LIMIT_PER_MINUTE = "60"
+
+# Routes — à activer dans le dashboard Cloudflare une fois le worker déployé :
+#   radiolive.ma/api/now-playing/*
+[[routes]]
+pattern = "radiolive.ma/api/now-playing/*"
+zone_name = "radiolive.ma"

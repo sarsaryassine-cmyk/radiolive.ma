@@ -1,0 +1,1762 @@
+{
+  "_updatedAt": "2026-04-28T20:34:04.482Z",
+  "global": [
+    {
+      "artist": "Najat Aâtabou",
+      "title": "Lala Yamna",
+      "plays": 29,
+      "radios": 7,
+      "score": 46.400000000000006
+    },
+    {
+      "artist": "Sami Yusuf",
+      "title": "Allahuma Salli Ala Muhammad",
+      "plays": 32,
+      "radios": 5,
+      "score": 44.8
+    },
+    {
+      "artist": "Fatima Tabaamrant",
+      "title": "Tamatart Inu",
+      "plays": 23,
+      "radios": 4,
+      "score": 29.900000000000002
+    },
+    {
+      "artist": "Cheikh Abdul Rahman Al-Sudais",
+      "title": "Sourate Al-Mulk",
+      "plays": 19,
+      "radios": 5,
+      "score": 26.599999999999998
+    },
+    {
+      "artist": "Maher Zain",
+      "title": "Insha Allah",
+      "plays": 19,
+      "radios": 5,
+      "score": 26.599999999999998
+    },
+    {
+      "artist": "Cheikh Mishary Al-Afasy",
+      "title": "Sourate Yâ-Sîn",
+      "plays": 19,
+      "radios": 5,
+      "score": 26.599999999999998
+    },
+    {
+      "artist": "Raïs Hassan Arsmouk",
+      "title": "Tisniwin",
+      "plays": 19,
+      "radios": 4,
+      "score": 24.7
+    },
+    {
+      "artist": "Cheikh Saud Al-Shuraim",
+      "title": "Sourate Ar-Rahman",
+      "plays": 17,
+      "radios": 5,
+      "score": 23.799999999999997
+    },
+    {
+      "artist": "Cheikh Abdul Basit Abdul Samad",
+      "title": "Sourate Maryam (mujawwad)",
+      "plays": 17,
+      "radios": 5,
+      "score": 23.799999999999997
+    },
+    {
+      "artist": "Raïs Demsiri",
+      "title": "Anflus",
+      "plays": 18,
+      "radios": 4,
+      "score": 23.400000000000002
+    },
+    {
+      "artist": "Manal BK",
+      "title": "Slay",
+      "plays": 15,
+      "radios": 6,
+      "score": 22.5
+    },
+    {
+      "artist": "Saad Lamjarred",
+      "title": "Casablanca",
+      "plays": 14,
+      "radios": 7,
+      "score": 22.400000000000002
+    },
+    {
+      "artist": "Cheikh Maher Al-Mu'aiqly",
+      "title": "Sourate Al-Kahf",
+      "plays": 16,
+      "radios": 5,
+      "score": 22.4
+    },
+    {
+      "artist": "Imanaren",
+      "title": "Tamurt",
+      "plays": 17,
+      "radios": 4,
+      "score": 22.1
+    },
+    {
+      "artist": "Cherifa Kersit",
+      "title": "Ayuy Aman",
+      "plays": 15,
+      "radios": 4,
+      "score": 19.5
+    },
+    {
+      "artist": "Atlantic Magazine",
+      "title": "Interview dirigeant",
+      "plays": 17,
+      "radios": 2,
+      "score": 18.700000000000003
+    },
+    {
+      "artist": "Atlantic Info",
+      "title": "Édition économique",
+      "plays": 17,
+      "radios": 2,
+      "score": 18.700000000000003
+    },
+    {
+      "artist": "Inkonnu",
+      "title": "Magic",
+      "plays": 12,
+      "radios": 6,
+      "score": 18
+    },
+    {
+      "artist": "Saad Lamjarred",
+      "title": "Lm3allem",
+      "plays": 12,
+      "radios": 6,
+      "score": 18
+    },
+    {
+      "artist": "ElGrande Toto",
+      "title": "Mghayra",
+      "plays": 12,
+      "radios": 6,
+      "score": 18
+    },
+    {
+      "artist": "Stormy",
+      "title": "Casablanca",
+      "plays": 11,
+      "radios": 7,
+      "score": 17.6
+    },
+    {
+      "artist": "Bruno Mars",
+      "title": "Die With A Smile",
+      "plays": 11,
+      "radios": 7,
+      "score": 17.6
+    },
+    {
+      "artist": "Atlantic Économie",
+      "title": "Décryptage du jour",
+      "plays": 16,
+      "radios": 2,
+      "score": 17.6
+    },
+    {
+      "artist": "Hatim Ammor",
+      "title": "Ana Maghrebi",
+      "plays": 11,
+      "radios": 6,
+      "score": 16.5
+    },
+    {
+      "artist": "Manal BK",
+      "title": "Niya",
+      "plays": 11,
+      "radios": 6,
+      "score": 16.5
+    },
+    {
+      "artist": "MCD Soir",
+      "title": "Le journal",
+      "plays": 15,
+      "radios": 2,
+      "score": 16.5
+    },
+    {
+      "artist": "Médi 1 Soir",
+      "title": "Édition de l'information",
+      "plays": 15,
+      "radios": 2,
+      "score": 16.5
+    },
+    {
+      "artist": "Taylor Swift",
+      "title": "Cruel Summer",
+      "plays": 10,
+      "radios": 6,
+      "score": 15
+    },
+    {
+      "artist": "Cap Business",
+      "title": "Magazine économique",
+      "plays": 13,
+      "radios": 2,
+      "score": 14.3
+    },
+    {
+      "artist": "Hatim Ammor",
+      "title": "Ghalban",
+      "plays": 9,
+      "radios": 6,
+      "score": 13.5
+    },
+    {
+      "artist": "7liwa",
+      "title": "Hayda",
+      "plays": 9,
+      "radios": 6,
+      "score": 13.5
+    },
+    {
+      "artist": "Fairouz",
+      "title": "Habaytak Bissayf",
+      "plays": 12,
+      "radios": 2,
+      "score": 13.200000000000001
+    },
+    {
+      "artist": "Ahmed Chawki",
+      "title": "Habibi I Love You",
+      "plays": 9,
+      "radios": 5,
+      "score": 12.6
+    },
+    {
+      "artist": "Dua Lipa",
+      "title": "Houdini",
+      "plays": 9,
+      "radios": 5,
+      "score": 12.6
+    },
+    {
+      "artist": "The Weeknd",
+      "title": "Blinding Lights",
+      "plays": 8,
+      "radios": 6,
+      "score": 12
+    },
+    {
+      "artist": "ElGrande Toto",
+      "title": "Caviar",
+      "plays": 8,
+      "radios": 6,
+      "score": 12
+    },
+    {
+      "artist": "Said Senhaji",
+      "title": "Mahdouma",
+      "plays": 10,
+      "radios": 3,
+      "score": 12
+    },
+    {
+      "artist": "Daoudi",
+      "title": "Khalouni Nbki",
+      "plays": 10,
+      "radios": 3,
+      "score": 12
+    },
+    {
+      "artist": "Daoudi",
+      "title": "Wash Smahti Lia",
+      "plays": 10,
+      "radios": 3,
+      "score": 12
+    },
+    {
+      "artist": "Salah El Ouadie",
+      "title": "Cha3bi",
+      "plays": 10,
+      "radios": 3,
+      "score": 12
+    },
+    {
+      "artist": "Amr Diab",
+      "title": "Tamally Maak",
+      "plays": 9,
+      "radios": 4,
+      "score": 11.700000000000001
+    },
+    {
+      "artist": "Issam",
+      "title": "Trap Beldi",
+      "plays": 8,
+      "radios": 5,
+      "score": 11.2
+    },
+    {
+      "artist": "Don Bigg",
+      "title": "Bladi",
+      "plays": 8,
+      "radios": 5,
+      "score": 11.2
+    },
+    {
+      "artist": "Cap Marchés",
+      "title": "Bourse de Casablanca",
+      "plays": 10,
+      "radios": 2,
+      "score": 11
+    },
+    {
+      "artist": "Cheikh Salim Fergani",
+      "title": "Malouf Constantinois",
+      "plays": 11,
+      "radios": 1,
+      "score": 11
+    },
+    {
+      "artist": "Cheb Khaled",
+      "title": "Didi",
+      "plays": 10,
+      "radios": 2,
+      "score": 11
+    },
+    {
+      "artist": "Khalid Bennani",
+      "title": "Maghraba Tal Mout",
+      "plays": 9,
+      "radios": 3,
+      "score": 10.799999999999999
+    },
+    {
+      "artist": "Mohamed Hamaki",
+      "title": "Ahla Haga Feki",
+      "plays": 8,
+      "radios": 4,
+      "score": 10.4
+    },
+    {
+      "artist": "Mars Foot",
+      "title": "Magazine — analyse Botola Pro",
+      "plays": 10,
+      "radios": 1,
+      "score": 10
+    },
+    {
+      "artist": "Oum Kalthoum",
+      "title": "Enta Omri",
+      "plays": 9,
+      "radios": 2,
+      "score": 9.9
+    }
+  ],
+  "byRadio": {
+    "abdul-basit": [
+      {
+        "artist": "Cheikh Abdul Rahman Al-Sudais",
+        "title": "Sourate Al-Mulk",
+        "plays": 8
+      },
+      {
+        "artist": "Sami Yusuf",
+        "title": "Allahuma Salli Ala Muhammad",
+        "plays": 4
+      },
+      {
+        "artist": "Cheikh Saud Al-Shuraim",
+        "title": "Sourate Ar-Rahman",
+        "plays": 4
+      },
+      {
+        "artist": "Maher Zain",
+        "title": "Insha Allah",
+        "plays": 3
+      },
+      {
+        "artist": "Cheikh Maher Al-Mu'aiqly",
+        "title": "Sourate Al-Kahf",
+        "plays": 3
+      },
+      {
+        "artist": "Cheikh Abdul Basit Abdul Samad",
+        "title": "Sourate Maryam (mujawwad)",
+        "plays": 3
+      },
+      {
+        "artist": "Cheikh Mishary Al-Afasy",
+        "title": "Sourate Yâ-Sîn",
+        "plays": 3
+      }
+    ],
+    "adwaa-fm": [
+      {
+        "artist": "Saad Lamjarred",
+        "title": "Casablanca",
+        "plays": 4
+      },
+      {
+        "artist": "Stormy",
+        "title": "Casablanca",
+        "plays": 4
+      },
+      {
+        "artist": "Hatim Ammor",
+        "title": "Ana Maghrebi",
+        "plays": 3
+      },
+      {
+        "artist": "Hatim Ammor",
+        "title": "Ghalban",
+        "plays": 2
+      },
+      {
+        "artist": "The Weeknd",
+        "title": "Blinding Lights",
+        "plays": 2
+      },
+      {
+        "artist": "Manal BK",
+        "title": "Niya",
+        "plays": 2
+      },
+      {
+        "artist": "Ahmed Chawki",
+        "title": "Habibi I Love You",
+        "plays": 2
+      },
+      {
+        "artist": "Dua Lipa",
+        "title": "Houdini",
+        "plays": 2
+      },
+      {
+        "artist": "ElGrande Toto",
+        "title": "Caviar",
+        "plays": 2
+      },
+      {
+        "artist": "Bruno Mars",
+        "title": "Die With A Smile",
+        "plays": 2
+      }
+    ],
+    "al-quran-radio": [
+      {
+        "artist": "Maher Zain",
+        "title": "Insha Allah",
+        "plays": 6
+      },
+      {
+        "artist": "Cheikh Mishary Al-Afasy",
+        "title": "Sourate Yâ-Sîn",
+        "plays": 5
+      },
+      {
+        "artist": "Sami Yusuf",
+        "title": "Allahuma Salli Ala Muhammad",
+        "plays": 5
+      },
+      {
+        "artist": "Cheikh Maher Al-Mu'aiqly",
+        "title": "Sourate Al-Kahf",
+        "plays": 4
+      },
+      {
+        "artist": "Cheikh Saud Al-Shuraim",
+        "title": "Sourate Ar-Rahman",
+        "plays": 4
+      },
+      {
+        "artist": "Cheikh Abdul Basit Abdul Samad",
+        "title": "Sourate Maryam (mujawwad)",
+        "plays": 3
+      },
+      {
+        "artist": "Cheikh Abdul Rahman Al-Sudais",
+        "title": "Sourate Al-Mulk",
+        "plays": 1
+      }
+    ],
+    "atlantic-radio": [
+      {
+        "artist": "Atlantic Économie",
+        "title": "Décryptage du jour",
+        "plays": 10
+      },
+      {
+        "artist": "Cap Marchés",
+        "title": "Bourse de Casablanca",
+        "plays": 7
+      },
+      {
+        "artist": "Cap Business",
+        "title": "Magazine économique",
+        "plays": 6
+      },
+      {
+        "artist": "Atlantic Magazine",
+        "title": "Interview dirigeant",
+        "plays": 5
+      }
+    ],
+    "aziz-al-mustaphi": [
+      {
+        "artist": "Sami Yusuf",
+        "title": "Allahuma Salli Ala Muhammad",
+        "plays": 7
+      },
+      {
+        "artist": "Cheikh Abdul Basit Abdul Samad",
+        "title": "Sourate Maryam (mujawwad)",
+        "plays": 5
+      },
+      {
+        "artist": "Cheikh Mishary Al-Afasy",
+        "title": "Sourate Yâ-Sîn",
+        "plays": 4
+      },
+      {
+        "artist": "Cheikh Maher Al-Mu'aiqly",
+        "title": "Sourate Al-Kahf",
+        "plays": 4
+      },
+      {
+        "artist": "Cheikh Abdul Rahman Al-Sudais",
+        "title": "Sourate Al-Mulk",
+        "plays": 4
+      },
+      {
+        "artist": "Cheikh Saud Al-Shuraim",
+        "title": "Sourate Ar-Rahman",
+        "plays": 3
+      },
+      {
+        "artist": "Maher Zain",
+        "title": "Insha Allah",
+        "plays": 1
+      }
+    ],
+    "cap-radio": [
+      {
+        "artist": "Atlantic Magazine",
+        "title": "Interview dirigeant",
+        "plays": 12
+      },
+      {
+        "artist": "Cap Business",
+        "title": "Magazine économique",
+        "plays": 7
+      },
+      {
+        "artist": "Atlantic Économie",
+        "title": "Décryptage du jour",
+        "plays": 6
+      },
+      {
+        "artist": "Cap Marchés",
+        "title": "Bourse de Casablanca",
+        "plays": 3
+      }
+    ],
+    "chada-fm": [
+      {
+        "artist": "Tamer Hosny",
+        "title": "Aatherny",
+        "plays": 2
+      },
+      {
+        "artist": "Saad Lamjarred",
+        "title": "Casablanca",
+        "plays": 2
+      },
+      {
+        "artist": "Hatim Ammor",
+        "title": "Ghalban",
+        "plays": 2
+      },
+      {
+        "artist": "Nancy Ajram",
+        "title": "Sah Sah",
+        "plays": 1
+      },
+      {
+        "artist": "Wael Kfoury",
+        "title": "Tabki El Toyour",
+        "plays": 1
+      },
+      {
+        "artist": "Amr Diab",
+        "title": "Alf Leila Wa Leila",
+        "plays": 1
+      },
+      {
+        "artist": "Elissa",
+        "title": "Aaks Elli Shayfenha",
+        "plays": 1
+      },
+      {
+        "artist": "Mohamed Hamaki",
+        "title": "Ahla Haga Feki",
+        "plays": 1
+      },
+      {
+        "artist": "Asma Lmnawar",
+        "title": "Helmi",
+        "plays": 1
+      },
+      {
+        "artist": "Sherine",
+        "title": "Mashy Haddi",
+        "plays": 1
+      }
+    ],
+    "fayroz": [
+      {
+        "artist": "Fairouz",
+        "title": "Habaytak Bissayf",
+        "plays": 5
+      },
+      {
+        "artist": "Farid El Atrache",
+        "title": "Hekayat Gharami",
+        "plays": 4
+      },
+      {
+        "artist": "Oum Kalthoum",
+        "title": "Enta Omri",
+        "plays": 4
+      },
+      {
+        "artist": "Mohamed Abdel Wahab",
+        "title": "Cleopatra",
+        "plays": 4
+      },
+      {
+        "artist": "Sabah Fakhri",
+        "title": "Ya Mal El Cham",
+        "plays": 4
+      },
+      {
+        "artist": "Wadih El Safi",
+        "title": "Albi Sa'al",
+        "plays": 3
+      },
+      {
+        "artist": "Fairouz",
+        "title": "Bektob Ismak Ya Bladi",
+        "plays": 3
+      },
+      {
+        "artist": "Oum Kalthoum",
+        "title": "Al Atlal",
+        "plays": 1
+      }
+    ],
+    "hit-radio": [
+      {
+        "artist": "ElGrande Toto",
+        "title": "Mghayra",
+        "plays": 3
+      },
+      {
+        "artist": "Saad Lamjarred",
+        "title": "Casablanca",
+        "plays": 2
+      },
+      {
+        "artist": "Hatim Ammor",
+        "title": "Ana Maghrebi",
+        "plays": 2
+      },
+      {
+        "artist": "Ahmed Chawki",
+        "title": "Habibi I Love You",
+        "plays": 2
+      },
+      {
+        "artist": "Dua Lipa",
+        "title": "Houdini",
+        "plays": 1
+      },
+      {
+        "artist": "The Weeknd",
+        "title": "Blinding Lights",
+        "plays": 1
+      },
+      {
+        "artist": "Manal BK",
+        "title": "Niya",
+        "plays": 1
+      },
+      {
+        "artist": "Stormy",
+        "title": "Casablanca",
+        "plays": 1
+      },
+      {
+        "artist": "Billie Eilish",
+        "title": "Birds of a Feather",
+        "plays": 1
+      },
+      {
+        "artist": "ElGrande Toto",
+        "title": "Caviar",
+        "plays": 1
+      }
+    ],
+    "marrakech-plus": [
+      {
+        "artist": "Manal BK",
+        "title": "Slay",
+        "plays": 5
+      },
+      {
+        "artist": "Manal BK",
+        "title": "Niya",
+        "plays": 3
+      },
+      {
+        "artist": "Inkonnu",
+        "title": "Magic",
+        "plays": 3
+      },
+      {
+        "artist": "Dua Lipa",
+        "title": "Houdini",
+        "plays": 2
+      },
+      {
+        "artist": "Saad Lamjarred",
+        "title": "Casablanca",
+        "plays": 2
+      },
+      {
+        "artist": "Saad Lamjarred",
+        "title": "Lm3allem",
+        "plays": 2
+      },
+      {
+        "artist": "ElGrande Toto",
+        "title": "Mghayra",
+        "plays": 2
+      },
+      {
+        "artist": "Khtek",
+        "title": "Kick Off",
+        "plays": 2
+      },
+      {
+        "artist": "Issam",
+        "title": "Trap Beldi",
+        "plays": 1
+      },
+      {
+        "artist": "ElGrande Toto",
+        "title": "Caviar",
+        "plays": 1
+      }
+    ],
+    "medi-1-classique": [
+      {
+        "artist": "J.S. Bach",
+        "title": "Air on the G String",
+        "plays": 9
+      },
+      {
+        "artist": "L.v. Beethoven",
+        "title": "Symphony No. 9 — Ode to Joy",
+        "plays": 6
+      },
+      {
+        "artist": "W.A. Mozart",
+        "title": "Symphony No. 40 — Allegro",
+        "plays": 5
+      },
+      {
+        "artist": "F. Chopin",
+        "title": "Nocturne Op. 9 No. 2",
+        "plays": 4
+      },
+      {
+        "artist": "M. Ravel",
+        "title": "Boléro",
+        "plays": 2
+      },
+      {
+        "artist": "A. Vivaldi",
+        "title": "Four Seasons — Spring",
+        "plays": 2
+      }
+    ],
+    "medi-1-dj": [
+      {
+        "artist": "Solomun",
+        "title": "Tale Of Us — Astral",
+        "plays": 6
+      },
+      {
+        "artist": "Avicii",
+        "title": "Wake Me Up",
+        "plays": 5
+      },
+      {
+        "artist": "David Guetta",
+        "title": "Titanium",
+        "plays": 5
+      },
+      {
+        "artist": "Tiesto",
+        "title": "10:35",
+        "plays": 5
+      },
+      {
+        "artist": "Calvin Harris",
+        "title": "Summer",
+        "plays": 4
+      },
+      {
+        "artist": "Black Coffee",
+        "title": "Drive (feat. David Guetta)",
+        "plays": 3
+      }
+    ],
+    "medi-1-radio-andalouse": [
+      {
+        "artist": "Cheikh Salim Fergani",
+        "title": "Malouf Constantinois",
+        "plays": 11
+      },
+      {
+        "artist": "Orchestre Andalou de Fès",
+        "title": "Nouba Al-Maya",
+        "plays": 5
+      },
+      {
+        "artist": "Mohamed Larbi Temsamani",
+        "title": "Nouba Iraq al-Ajam",
+        "plays": 5
+      },
+      {
+        "artist": "Orchestre de Tétouan",
+        "title": "Nouba Hijaz Kabir",
+        "plays": 4
+      },
+      {
+        "artist": "Hadj Mohamed Bajeddoub",
+        "title": "Nouba Rasd Ad-Dhil",
+        "plays": 3
+      }
+    ],
+    "medi-1-radio": [
+      {
+        "artist": "MCD Soir",
+        "title": "Le journal",
+        "plays": 9
+      },
+      {
+        "artist": "Médi 1 Soir",
+        "title": "Édition de l'information",
+        "plays": 8
+      },
+      {
+        "artist": "Atlantic Info",
+        "title": "Édition économique",
+        "plays": 7
+      },
+      {
+        "artist": "Radio 2M",
+        "title": "Magazine du jour",
+        "plays": 4
+      }
+    ],
+    "medi-1-tarab": [
+      {
+        "artist": "Fairouz",
+        "title": "Habaytak Bissayf",
+        "plays": 7
+      },
+      {
+        "artist": "Oum Kalthoum",
+        "title": "Enta Omri",
+        "plays": 5
+      },
+      {
+        "artist": "Wadih El Safi",
+        "title": "Albi Sa'al",
+        "plays": 4
+      },
+      {
+        "artist": "Farid El Atrache",
+        "title": "Hekayat Gharami",
+        "plays": 4
+      },
+      {
+        "artist": "Oum Kalthoum",
+        "title": "Al Atlal",
+        "plays": 4
+      },
+      {
+        "artist": "Fairouz",
+        "title": "Bektob Ismak Ya Bladi",
+        "plays": 2
+      },
+      {
+        "artist": "Sabah Fakhri",
+        "title": "Ya Mal El Cham",
+        "plays": 2
+      }
+    ],
+    "medinafm": [
+      {
+        "artist": "Amr Diab",
+        "title": "Tamally Maak",
+        "plays": 4
+      },
+      {
+        "artist": "Carole Samaha",
+        "title": "Wahdy",
+        "plays": 3
+      },
+      {
+        "artist": "Asma Lmnawar",
+        "title": "Helmi",
+        "plays": 3
+      },
+      {
+        "artist": "Mohamed Hamaki",
+        "title": "Ahla Haga Feki",
+        "plays": 2
+      },
+      {
+        "artist": "Asma Lmnawar",
+        "title": "Mawla",
+        "plays": 2
+      },
+      {
+        "artist": "Najwa Karam",
+        "title": "Hayda Haki",
+        "plays": 2
+      },
+      {
+        "artist": "Tamer Hosny",
+        "title": "Aatherny",
+        "plays": 2
+      },
+      {
+        "artist": "Nancy Ajram",
+        "title": "Salamat",
+        "plays": 2
+      },
+      {
+        "artist": "Latifa Raafat",
+        "title": "Mawal Hbibi",
+        "plays": 2
+      },
+      {
+        "artist": "Nancy Ajram",
+        "title": "Sah Sah",
+        "plays": 1
+      }
+    ],
+    "medradio": [
+      {
+        "artist": "Taylor Swift",
+        "title": "Cruel Summer",
+        "plays": 3
+      },
+      {
+        "artist": "ElGrande Toto",
+        "title": "Mghayra",
+        "plays": 3
+      },
+      {
+        "artist": "Ahmed Chawki",
+        "title": "Habibi I Love You",
+        "plays": 3
+      },
+      {
+        "artist": "Manal BK",
+        "title": "Slay",
+        "plays": 2
+      },
+      {
+        "artist": "Bruno Mars",
+        "title": "Die With A Smile",
+        "plays": 2
+      },
+      {
+        "artist": "Issam",
+        "title": "Trap Beldi",
+        "plays": 2
+      },
+      {
+        "artist": "Hatim Ammor",
+        "title": "Ana Maghrebi",
+        "plays": 2
+      },
+      {
+        "artist": "Saad Lamjarred",
+        "title": "Casablanca",
+        "plays": 2
+      },
+      {
+        "artist": "ElGrande Toto",
+        "title": "Caviar",
+        "plays": 2
+      },
+      {
+        "artist": "Inkonnu",
+        "title": "Magic",
+        "plays": 1
+      }
+    ],
+    "mfm": [
+      {
+        "artist": "Cheb Khaled",
+        "title": "Aïcha",
+        "plays": 6
+      },
+      {
+        "artist": "Cheb Mami",
+        "title": "Parisien du Nord",
+        "plays": 4
+      },
+      {
+        "artist": "Cheb Bilal",
+        "title": "Bilal Story",
+        "plays": 4
+      },
+      {
+        "artist": "Faudel",
+        "title": "Tellement N'Brick",
+        "plays": 4
+      },
+      {
+        "artist": "Cheba Zahouania",
+        "title": "Galbi",
+        "plays": 4
+      },
+      {
+        "artist": "Cheb Khaled",
+        "title": "Didi",
+        "plays": 3
+      },
+      {
+        "artist": "Cheba Maria",
+        "title": "Maktoub Aalik",
+        "plays": 2
+      },
+      {
+        "artist": "Cheb Hasni",
+        "title": "El Bareh",
+        "plays": 1
+      }
+    ],
+    "ness-radio": [
+      {
+        "artist": "Naima Samih",
+        "title": "Yak Aji",
+        "plays": 4
+      },
+      {
+        "artist": "Latifa Raafat",
+        "title": "Mawal Hbibi",
+        "plays": 3
+      },
+      {
+        "artist": "Ragheb Alama",
+        "title": "Mawjou'a",
+        "plays": 3
+      },
+      {
+        "artist": "Nancy Ajram",
+        "title": "Sah Sah",
+        "plays": 3
+      },
+      {
+        "artist": "Mohamed Hamaki",
+        "title": "Ahla Haga Feki",
+        "plays": 2
+      },
+      {
+        "artist": "Carole Samaha",
+        "title": "Wahdy",
+        "plays": 2
+      },
+      {
+        "artist": "Najwa Karam",
+        "title": "Hayda Haki",
+        "plays": 2
+      },
+      {
+        "artist": "Tamer Hosny",
+        "title": "Yana Yamoot",
+        "plays": 2
+      },
+      {
+        "artist": "Wael Kfoury",
+        "title": "Yamma Mwel El Hawa",
+        "plays": 1
+      },
+      {
+        "artist": "Asma Lmnawar",
+        "title": "Mawla",
+        "plays": 1
+      }
+    ],
+    "only-rai": [
+      {
+        "artist": "Cheb Khaled",
+        "title": "Didi",
+        "plays": 7
+      },
+      {
+        "artist": "Cheba Zahouania",
+        "title": "Galbi",
+        "plays": 5
+      },
+      {
+        "artist": "Cheb Hasni",
+        "title": "El Bareh",
+        "plays": 4
+      },
+      {
+        "artist": "Cheb Khaled",
+        "title": "Aïcha",
+        "plays": 3
+      },
+      {
+        "artist": "Cheb Bilal",
+        "title": "Bilal Story",
+        "plays": 3
+      },
+      {
+        "artist": "Cheba Maria",
+        "title": "Maktoub Aalik",
+        "plays": 2
+      },
+      {
+        "artist": "Faudel",
+        "title": "Tellement N'Brick",
+        "plays": 2
+      },
+      {
+        "artist": "Cheb Mami",
+        "title": "Parisien du Nord",
+        "plays": 2
+      }
+    ],
+    "qoran-radio": [
+      {
+        "artist": "Sami Yusuf",
+        "title": "Allahuma Salli Ala Muhammad",
+        "plays": 10
+      },
+      {
+        "artist": "Maher Zain",
+        "title": "Insha Allah",
+        "plays": 5
+      },
+      {
+        "artist": "Cheikh Saud Al-Shuraim",
+        "title": "Sourate Ar-Rahman",
+        "plays": 4
+      },
+      {
+        "artist": "Cheikh Mishary Al-Afasy",
+        "title": "Sourate Yâ-Sîn",
+        "plays": 3
+      },
+      {
+        "artist": "Cheikh Maher Al-Mu'aiqly",
+        "title": "Sourate Al-Kahf",
+        "plays": 2
+      },
+      {
+        "artist": "Cheikh Abdul Rahman Al-Sudais",
+        "title": "Sourate Al-Mulk",
+        "plays": 2
+      },
+      {
+        "artist": "Cheikh Abdul Basit Abdul Samad",
+        "title": "Sourate Maryam (mujawwad)",
+        "plays": 1
+      }
+    ],
+    "radio-2m": [
+      {
+        "artist": "Manal BK",
+        "title": "Slay",
+        "plays": 4
+      },
+      {
+        "artist": "Saad Lamjarred",
+        "title": "Lm3allem",
+        "plays": 4
+      },
+      {
+        "artist": "Billie Eilish",
+        "title": "Birds of a Feather",
+        "plays": 3
+      },
+      {
+        "artist": "Stormy",
+        "title": "Casablanca",
+        "plays": 2
+      },
+      {
+        "artist": "Issam",
+        "title": "Trap Beldi",
+        "plays": 2
+      },
+      {
+        "artist": "Hatim Ammor",
+        "title": "Ana Maghrebi",
+        "plays": 2
+      },
+      {
+        "artist": "Bruno Mars",
+        "title": "Die With A Smile",
+        "plays": 2
+      },
+      {
+        "artist": "7liwa",
+        "title": "Hayda",
+        "plays": 2
+      },
+      {
+        "artist": "Hatim Ammor",
+        "title": "Ghalban",
+        "plays": 1
+      },
+      {
+        "artist": "ElGrande Toto",
+        "title": "Mghayra",
+        "plays": 1
+      }
+    ],
+    "radio-achkid-fm": [
+      {
+        "artist": "Najat Aâtabou",
+        "title": "Lala Yamna",
+        "plays": 6
+      },
+      {
+        "artist": "Raïs Demsiri",
+        "title": "Anflus",
+        "plays": 6
+      },
+      {
+        "artist": "Cherifa Kersit",
+        "title": "Ayuy Aman",
+        "plays": 5
+      },
+      {
+        "artist": "Imanaren",
+        "title": "Tamurt",
+        "plays": 5
+      },
+      {
+        "artist": "Raïs Hassan Arsmouk",
+        "title": "Tisniwin",
+        "plays": 4
+      },
+      {
+        "artist": "Fatima Tabaamrant",
+        "title": "Tamatart Inu",
+        "plays": 2
+      }
+    ],
+    "radio-aswat": [
+      {
+        "artist": "Amr Diab",
+        "title": "Tamally Maak",
+        "plays": 3
+      },
+      {
+        "artist": "Mohamed Hamaki",
+        "title": "Ahla Haga Feki",
+        "plays": 3
+      },
+      {
+        "artist": "Ragheb Alama",
+        "title": "Mawjou'a",
+        "plays": 3
+      },
+      {
+        "artist": "Latifa Raafat",
+        "title": "Mawal Hbibi",
+        "plays": 3
+      },
+      {
+        "artist": "Tamer Hosny",
+        "title": "Yana Yamoot",
+        "plays": 2
+      },
+      {
+        "artist": "Wael Kfoury",
+        "title": "Tabki El Toyour",
+        "plays": 2
+      },
+      {
+        "artist": "Nancy Ajram",
+        "title": "Sah Sah",
+        "plays": 2
+      },
+      {
+        "artist": "Elissa",
+        "title": "Aaks Elli Shayfenha",
+        "plays": 2
+      },
+      {
+        "artist": "Amr Diab",
+        "title": "Alf Leila Wa Leila",
+        "plays": 2
+      },
+      {
+        "artist": "Naima Samih",
+        "title": "Yak Aji",
+        "plays": 1
+      }
+    ],
+    "radio-atbir": [
+      {
+        "artist": "Raïs Hassan Arsmouk",
+        "title": "Tisniwin",
+        "plays": 6
+      },
+      {
+        "artist": "Fatima Tabaamrant",
+        "title": "Tamatart Inu",
+        "plays": 6
+      },
+      {
+        "artist": "Najat Aâtabou",
+        "title": "Lala Yamna",
+        "plays": 5
+      },
+      {
+        "artist": "Imanaren",
+        "title": "Tamurt",
+        "plays": 5
+      },
+      {
+        "artist": "Raïs Demsiri",
+        "title": "Anflus",
+        "plays": 4
+      },
+      {
+        "artist": "Cherifa Kersit",
+        "title": "Ayuy Aman",
+        "plays": 2
+      }
+    ],
+    "radio-manarat": [
+      {
+        "artist": "Sami Yusuf",
+        "title": "Allahuma Salli Ala Muhammad",
+        "plays": 6
+      },
+      {
+        "artist": "Cheikh Abdul Basit Abdul Samad",
+        "title": "Sourate Maryam (mujawwad)",
+        "plays": 5
+      },
+      {
+        "artist": "Maher Zain",
+        "title": "Insha Allah",
+        "plays": 4
+      },
+      {
+        "artist": "Cheikh Abdul Rahman Al-Sudais",
+        "title": "Sourate Al-Mulk",
+        "plays": 4
+      },
+      {
+        "artist": "Cheikh Mishary Al-Afasy",
+        "title": "Sourate Yâ-Sîn",
+        "plays": 4
+      },
+      {
+        "artist": "Cheikh Maher Al-Mu'aiqly",
+        "title": "Sourate Al-Kahf",
+        "plays": 3
+      },
+      {
+        "artist": "Cheikh Saud Al-Shuraim",
+        "title": "Sourate Ar-Rahman",
+        "plays": 2
+      }
+    ],
+    "radio-mars": [
+      {
+        "artist": "Mars Foot",
+        "title": "Magazine — analyse Botola Pro",
+        "plays": 10
+      },
+      {
+        "artist": "Mars Khabar",
+        "title": "Édition spéciale CAN",
+        "plays": 7
+      },
+      {
+        "artist": "Allo Mars",
+        "title": "Interview joueur",
+        "plays": 6
+      },
+      {
+        "artist": "Mars Sport",
+        "title": "Débat post-match",
+        "plays": 5
+      }
+    ],
+    "radio-monte-carlo-doualiya": [
+      {
+        "artist": "Atlantic Info",
+        "title": "Édition économique",
+        "plays": 10
+      },
+      {
+        "artist": "Médi 1 Soir",
+        "title": "Édition de l'information",
+        "plays": 7
+      },
+      {
+        "artist": "MCD Soir",
+        "title": "Le journal",
+        "plays": 6
+      },
+      {
+        "artist": "Radio 2M",
+        "title": "Magazine du jour",
+        "plays": 5
+      }
+    ],
+    "radio-plus-agadir": [
+      {
+        "artist": "Fatima Tabaamrant",
+        "title": "Tamatart Inu",
+        "plays": 11
+      },
+      {
+        "artist": "Raïs Hassan Arsmouk",
+        "title": "Tisniwin",
+        "plays": 5
+      },
+      {
+        "artist": "Imanaren",
+        "title": "Tamurt",
+        "plays": 4
+      },
+      {
+        "artist": "Najat Aâtabou",
+        "title": "Lala Yamna",
+        "plays": 3
+      },
+      {
+        "artist": "Raïs Demsiri",
+        "title": "Anflus",
+        "plays": 3
+      },
+      {
+        "artist": "Cherifa Kersit",
+        "title": "Ayuy Aman",
+        "plays": 2
+      }
+    ],
+    "radio-yabiladi": [
+      {
+        "artist": "Senhaji",
+        "title": "Galbi Wlfek",
+        "plays": 5
+      },
+      {
+        "artist": "Said Senhaji",
+        "title": "Mahdouma",
+        "plays": 4
+      },
+      {
+        "artist": "Daoudi",
+        "title": "Khalouni Nbki",
+        "plays": 3
+      },
+      {
+        "artist": "Khalid Bennani",
+        "title": "Maghraba Tal Mout",
+        "plays": 3
+      },
+      {
+        "artist": "Daoudi",
+        "title": "Wash Smahti Lia",
+        "plays": 3
+      },
+      {
+        "artist": "Salah El Ouadie",
+        "title": "Cha3bi",
+        "plays": 3
+      },
+      {
+        "artist": "Stati",
+        "title": "Doukha Mzyana",
+        "plays": 2
+      },
+      {
+        "artist": "Najat Aâtabou",
+        "title": "Lala Yamna",
+        "plays": 2
+      },
+      {
+        "artist": "Stati",
+        "title": "Ya Lalla",
+        "plays": 2
+      },
+      {
+        "artist": "Najat Aâtabou",
+        "title": "Hadi El Kelma",
+        "plays": 1
+      }
+    ],
+    "rap-lbeldi-maroc": [
+      {
+        "artist": "Don Bigg",
+        "title": "Bladi",
+        "plays": 4
+      },
+      {
+        "artist": "7liwa",
+        "title": "Hayda",
+        "plays": 3
+      },
+      {
+        "artist": "Manal BK",
+        "title": "Niya",
+        "plays": 3
+      },
+      {
+        "artist": "Bruno Mars",
+        "title": "Die With A Smile",
+        "plays": 2
+      },
+      {
+        "artist": "ElGrande Toto",
+        "title": "Mghayra",
+        "plays": 2
+      },
+      {
+        "artist": "Saad Lamjarred",
+        "title": "Lm3allem",
+        "plays": 2
+      },
+      {
+        "artist": "Manal BK",
+        "title": "Slay",
+        "plays": 2
+      },
+      {
+        "artist": "Inkonnu",
+        "title": "Magic",
+        "plays": 2
+      },
+      {
+        "artist": "Billie Eilish",
+        "title": "Birds of a Feather",
+        "plays": 1
+      },
+      {
+        "artist": "Khtek",
+        "title": "Kick Off",
+        "plays": 1
+      }
+    ],
+    "skyrock-casablanca": [
+      {
+        "artist": "Inkonnu",
+        "title": "Magic",
+        "plays": 4
+      },
+      {
+        "artist": "Dua Lipa",
+        "title": "Houdini",
+        "plays": 3
+      },
+      {
+        "artist": "Taylor Swift",
+        "title": "Cruel Summer",
+        "plays": 3
+      },
+      {
+        "artist": "Saad Lamjarred",
+        "title": "Lm3allem",
+        "plays": 2
+      },
+      {
+        "artist": "Hatim Ammor",
+        "title": "Ghalban",
+        "plays": 2
+      },
+      {
+        "artist": "The Weeknd",
+        "title": "Blinding Lights",
+        "plays": 2
+      },
+      {
+        "artist": "Issam",
+        "title": "Trap Beldi",
+        "plays": 2
+      },
+      {
+        "artist": "Manal BK",
+        "title": "Niya",
+        "plays": 1
+      },
+      {
+        "artist": "Bruno Mars",
+        "title": "Die With A Smile",
+        "plays": 1
+      },
+      {
+        "artist": "Ahmed Chawki",
+        "title": "Habibi I Love You",
+        "plays": 1
+      }
+    ],
+    "yabiladi-azawan-amazigh": [
+      {
+        "artist": "Najat Aâtabou",
+        "title": "Lala Yamna",
+        "plays": 6
+      },
+      {
+        "artist": "Cherifa Kersit",
+        "title": "Ayuy Aman",
+        "plays": 6
+      },
+      {
+        "artist": "Raïs Demsiri",
+        "title": "Anflus",
+        "plays": 5
+      },
+      {
+        "artist": "Fatima Tabaamrant",
+        "title": "Tamatart Inu",
+        "plays": 4
+      },
+      {
+        "artist": "Raïs Hassan Arsmouk",
+        "title": "Tisniwin",
+        "plays": 4
+      },
+      {
+        "artist": "Imanaren",
+        "title": "Tamurt",
+        "plays": 3
+      }
+    ],
+    "yabiladi-chaabi-maroc": [
+      {
+        "artist": "Daoudi",
+        "title": "Wash Smahti Lia",
+        "plays": 4
+      },
+      {
+        "artist": "Said Senhaji",
+        "title": "Mahdouma",
+        "plays": 4
+      },
+      {
+        "artist": "Daoudi",
+        "title": "Khalouni Nbki",
+        "plays": 4
+      },
+      {
+        "artist": "Najat Aâtabou",
+        "title": "Lala Yamna",
+        "plays": 3
+      },
+      {
+        "artist": "Stati",
+        "title": "Ya Lalla",
+        "plays": 3
+      },
+      {
+        "artist": "Salah El Ouadie",
+        "title": "Cha3bi",
+        "plays": 3
+      },
+      {
+        "artist": "Khalid Bennani",
+        "title": "Maghraba Tal Mout",
+        "plays": 3
+      },
+      {
+        "artist": "Najat Aâtabou",
+        "title": "Hadi El Kelma",
+        "plays": 2
+      },
+      {
+        "artist": "Stati",
+        "title": "Doukha Mzyana",
+        "plays": 1
+      },
+      {
+        "artist": "Senhaji",
+        "title": "Galbi Wlfek",
+        "plays": 1
+      }
+    ],
+    "zine-bladi": [
+      {
+        "artist": "Salah El Ouadie",
+        "title": "Cha3bi",
+        "plays": 4
+      },
+      {
+        "artist": "Najat Aâtabou",
+        "title": "Hadi El Kelma",
+        "plays": 4
+      },
+      {
+        "artist": "Najat Aâtabou",
+        "title": "Lala Yamna",
+        "plays": 4
+      },
+      {
+        "artist": "Daoudi",
+        "title": "Khalouni Nbki",
+        "plays": 3
+      },
+      {
+        "artist": "Khalid Bennani",
+        "title": "Maghraba Tal Mout",
+        "plays": 3
+      },
+      {
+        "artist": "Daoudi",
+        "title": "Wash Smahti Lia",
+        "plays": 3
+      },
+      {
+        "artist": "Stati",
+        "title": "Doukha Mzyana",
+        "plays": 2
+      },
+      {
+        "artist": "Senhaji",
+        "title": "Galbi Wlfek",
+        "plays": 2
+      },
+      {
+        "artist": "Said Senhaji",
+        "title": "Mahdouma",
+        "plays": 2
+      },
+      {
+        "artist": "Stati",
+        "title": "Ya Lalla",
+        "plays": 1
+      }
+    ]
+  }
+}
