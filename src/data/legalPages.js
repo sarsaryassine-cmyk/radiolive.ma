@@ -16,12 +16,12 @@ export const LEGAL_PAGES = {
     lastUpdated: '2026-05-06',
 
     fr: {
-      title: 'Politique de confidentialité — Radio Live MA',
+      title: 'Politique de confidentialité — Radio Live Maroc',
       description:
         "Politique de confidentialité de radiolive.ma : utilisation des cookies, AdSense, traitement des données conformément au RGPD et à la loi marocaine 09-08.",
       h1: 'Politique de confidentialité',
       intro:
-        "Radio Live MA (radiolive.ma) respecte votre vie privée et s'engage à protéger vos données personnelles. Cette politique explique quelles données nous collectons, comment elles sont utilisées et vos droits, conformément au Règlement général sur la protection des données (RGPD) et à la loi marocaine 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel.",
+        "Radio Live Maroc (radiolive.ma) respecte votre vie privée et s'engage à protéger vos données personnelles. Cette politique explique quelles données nous collectons, comment elles sont utilisées et vos droits, conformément au Règlement général sur la protection des données (RGPD) et à la loi marocaine 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel.",
       sections: [
         {
           h2: 'Données collectées',
@@ -140,16 +140,16 @@ export const LEGAL_PAGES = {
     lastUpdated: '2026-05-06',
 
     fr: {
-      title: "Conditions d'utilisation — Radio Live MA",
+      title: "Conditions d'utilisation — Radio Live Maroc",
       description:
         "Conditions générales d'utilisation de radiolive.ma : règles d'écoute, propriété intellectuelle, responsabilité, agrégation de flux radio marocains.",
       h1: "Conditions d'utilisation",
       intro:
-        "Bienvenue sur Radio Live MA. En accédant et en utilisant le site radiolive.ma, vous acceptez les présentes conditions d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser le site.",
+        "Bienvenue sur Radio Live Maroc. En accédant et en utilisant le site radiolive.ma, vous acceptez les présentes conditions d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser le site.",
       sections: [
         {
           h2: 'Présentation du service',
-          p: "Radio Live MA est un agrégateur gratuit de flux audio publics des radios marocaines. Le site permet d'écouter en streaming les principales stations radio du Maroc (Hit Radio, Radio Mars, Chada FM, Medi 1, Radio 2M, etc.) ainsi que des webradios spécialisées (musicales, religieuses, régionales). L'écoute est gratuite, sans inscription, sans téléchargement.",
+          p: "Radio Live Maroc est un agrégateur gratuit de flux audio publics des radios marocaines. Le site permet d'écouter en streaming les principales stations radio du Maroc (Hit Radio, Radio Mars, Chada FM, Medi 1, Radio 2M, etc.) ainsi que des webradios spécialisées (musicales, religieuses, régionales). L'écoute est gratuite, sans inscription, sans téléchargement.",
         },
         {
           h2: "Propriété intellectuelle des contenus diffusés",
@@ -158,7 +158,7 @@ export const LEGAL_PAGES = {
         },
         {
           h2: 'Propriété du site et marques',
-          p: "Le design, les textes éditoriaux (descriptions de stations, articles de blog, pages SEO), les graphismes, le code source, et la marque « Radio Live MA » / « radiolive.ma » sont la propriété exclusive de Radio Live MA. Toute reproduction, distribution, modification ou utilisation commerciale sans autorisation écrite préalable est interdite.",
+          p: "Le design, les textes éditoriaux (descriptions de stations, articles de blog, pages SEO), les graphismes, le code source, et la marque « Radio Live Maroc » / « radiolive.ma » sont la propriété exclusive de Radio Live Maroc. Toute reproduction, distribution, modification ou utilisation commerciale sans autorisation écrite préalable est interdite.",
           p2: "Les noms et logos des radios marocaines (Hit Radio, Medi 1, Radio Mars, etc.) sont des marques déposées appartenant à leurs propriétaires respectifs et utilisés à titre informatif uniquement.",
         },
         {
@@ -173,11 +173,11 @@ export const LEGAL_PAGES = {
         },
         {
           h2: 'Disponibilité du service',
-          p: "Radio Live MA est fourni « en l'état », sans garantie de disponibilité ininterrompue. Les flux audio dépendent des serveurs des radios elles-mêmes et peuvent être indisponibles temporairement (maintenance, panne réseau, changement d'URL par la station). Nous mettons à jour le catalogue régulièrement pour maintenir les flux fonctionnels mais ne pouvons garantir une disponibilité 100%.",
+          p: "Radio Live Maroc est fourni « en l'état », sans garantie de disponibilité ininterrompue. Les flux audio dépendent des serveurs des radios elles-mêmes et peuvent être indisponibles temporairement (maintenance, panne réseau, changement d'URL par la station). Nous mettons à jour le catalogue régulièrement pour maintenir les flux fonctionnels mais ne pouvons garantir une disponibilité 100%.",
         },
         {
           h2: 'Limitation de responsabilité',
-          p: "Radio Live MA ne saurait être tenu responsable de :",
+          p: "Radio Live Maroc ne saurait être tenu responsable de :",
           ul: [
             "L'indisponibilité temporaire ou permanente d'un flux audio fournie par une station tierce.",
             "La qualité des contenus diffusés par les radios (paroles, opinions, programmes éditoriaux).",
@@ -187,7 +187,7 @@ export const LEGAL_PAGES = {
         },
         {
           h2: 'Publicité',
-          p: "Radio Live MA finance son fonctionnement par l'affichage de publicités via Google AdSense. Les annonces sont automatiquement sélectionnées par Google et nous n'avons aucun contrôle direct sur les annonces individuelles affichées. Si une publicité vous semble inappropriée, vous pouvez la signaler via les options de Google AdSense ou nous le mentionner par email.",
+          p: "Radio Live Maroc finance son fonctionnement par l'affichage de publicités via Google AdSense. Les annonces sont automatiquement sélectionnées par Google et nous n'avons aucun contrôle direct sur les annonces individuelles affichées. Si une publicité vous semble inappropriée, vous pouvez la signaler via les options de Google AdSense ou nous le mentionner par email.",
         },
         {
           h2: 'Modification des conditions',
@@ -219,7 +219,7 @@ export const LEGAL_PAGES = {
         },
         {
           h2: 'ملكية الموقع والعلامات التجارية',
-          p: 'التصميم، النصوص التحريرية (أوصاف المحطات، مقالات المدونة، صفحات SEO)، الرسوم، الكود المصدري، وعلامة «راديو لايف المغرب» / «radiolive.ma» هي ملكية حصرية لـ Radio Live MA. أي إعادة إنتاج أو توزيع أو تعديل أو استخدام تجاري بدون إذن كتابي مسبق ممنوع.',
+          p: 'التصميم، النصوص التحريرية (أوصاف المحطات، مقالات المدونة، صفحات SEO)، الرسوم، الكود المصدري، وعلامة «راديو لايف المغرب» / «radiolive.ma» هي ملكية حصرية لـ Radio Live Maroc. أي إعادة إنتاج أو توزيع أو تعديل أو استخدام تجاري بدون إذن كتابي مسبق ممنوع.',
           p2: 'أسماء وشعارات الإذاعات المغربية (Hit Radio، Medi 1، Radio Mars، إلخ) هي علامات تجارية مسجلة تخص أصحابها وتُستخدم لأغراض إعلامية فقط.',
         },
         {
@@ -268,17 +268,17 @@ export const LEGAL_PAGES = {
     lastUpdated: '2026-05-06',
 
     fr: {
-      title: 'À propos — Radio Live MA, le portail des radios marocaines',
+      title: 'À propos — Radio Live Maroc, le portail des radios marocaines',
       description:
-        "Radio Live MA, le portail de référence pour écouter toutes les radios marocaines en direct. Mission, équipe, valeurs du projet radiolive.ma.",
-      h1: 'À propos de Radio Live MA',
+        "Radio Live Maroc, le portail de référence pour écouter toutes les radios marocaines en direct. Mission, équipe, valeurs du projet radiolive.ma.",
+      h1: 'À propos de Radio Live Maroc',
       intro:
-        "Radio Live MA (radiolive.ma) est le portail de référence pour écouter en direct toutes les radios marocaines, gratuitement, sans inscription, depuis n'importe quel endroit dans le monde.",
+        "Radio Live Maroc (radiolive.ma) est le portail de référence pour écouter en direct toutes les radios marocaines, gratuitement, sans inscription, depuis n'importe quel endroit dans le monde.",
       sections: [
         {
           h2: 'Notre mission',
-          p: "Centraliser sur une seule plateforme moderne et accessible toutes les stations radio marocaines en streaming. Que vous soyez à Casablanca dans votre voiture, à Bruxelles le dimanche matin, ou à Montréal en pleine journée de travail, Radio Live MA vous reconnecte instantanément à la pulsation sonore du Maroc — Hit Radio, Radio Mars, Medi 1, Chada FM, Aswat, et plus de 45 autres stations.",
-          p2: "Le projet est né d'un constat simple : aucune plateforme ne réunissait l'ensemble des radios marocaines avec une interface moderne, rapide et fiable. Les listes existantes étaient dispersées, les flux souvent cassés, l'expérience utilisateur datée. Radio Live MA comble ce vide.",
+          p: "Centraliser sur une seule plateforme moderne et accessible toutes les stations radio marocaines en streaming. Que vous soyez à Casablanca dans votre voiture, à Bruxelles le dimanche matin, ou à Montréal en pleine journée de travail, Radio Live Maroc vous reconnecte instantanément à la pulsation sonore du Maroc — Hit Radio, Radio Mars, Medi 1, Chada FM, Aswat, et plus de 45 autres stations.",
+          p2: "Le projet est né d'un constat simple : aucune plateforme ne réunissait l'ensemble des radios marocaines avec une interface moderne, rapide et fiable. Les listes existantes étaient dispersées, les flux souvent cassés, l'expérience utilisateur datée. Radio Live Maroc comble ce vide.",
         },
         {
           h2: 'Pour qui ?',
@@ -291,12 +291,12 @@ export const LEGAL_PAGES = {
         },
         {
           h2: "Comment ça fonctionne",
-          p: "Radio Live MA est un agrégateur de flux audio publics. Nous référençons les URLs de streaming officielles fournies par chaque station radio, et notre lecteur audio se connecte directement aux serveurs des radios — nous ne stockons aucun contenu audio. Le catalogue est mis à jour régulièrement (synchronisation quotidienne avec l'API publique Radio-Browser, plus interventions manuelles pour la qualité).",
+          p: "Radio Live Maroc est un agrégateur de flux audio publics. Nous référençons les URLs de streaming officielles fournies par chaque station radio, et notre lecteur audio se connecte directement aux serveurs des radios — nous ne stockons aucun contenu audio. Le catalogue est mis à jour régulièrement (synchronisation quotidienne avec l'API publique Radio-Browser, plus interventions manuelles pour la qualité).",
           p2: "Le site est conçu pour être rapide même sur des connexions modestes : streaming HLS HD pour les radios qui le supportent, MP3 fallback pour les autres, mise en cache locale du catalogue pour un démarrage instantané dès la deuxième visite.",
         },
         {
           h2: 'Engagements éditoriaux',
-          p: "Radio Live MA s'engage à :",
+          p: "Radio Live Maroc s'engage à :",
           ul: [
             "Référencer toutes les stations radio marocaines actives, sans favoritisme éditorial.",
             "Maintenir des descriptions factuelles et respectueuses de chaque station, même celles aux ligues éditoriales différentes.",
@@ -307,12 +307,12 @@ export const LEGAL_PAGES = {
         },
         {
           h2: 'Le projet et son créateur',
-          p: "Radio Live MA est un projet éditorial indépendant qui se consacre exclusivement au paysage radiophonique marocain. Le site est construit avec des technologies modernes (React, Vite, Cloudflare) pour offrir une expérience fluide et accessible sur tous les appareils. Notre vocation est de servir l'écosystème radiophonique marocain en centralisant l'ensemble des stations sur une plateforme moderne, gratuite et respectueuse de la vie privée.",
+          p: "Radio Live Maroc est un projet éditorial indépendant qui se consacre exclusivement au paysage radiophonique marocain. Le site est construit avec des technologies modernes (React, Vite, Cloudflare) pour offrir une expérience fluide et accessible sur tous les appareils. Notre vocation est de servir l'écosystème radiophonique marocain en centralisant l'ensemble des stations sur une plateforme moderne, gratuite et respectueuse de la vie privée.",
           p2: "Si vous êtes une radio marocaine non encore référencée, ou si vous avez des suggestions d'amélioration, contactez-nous via la page Contact.",
         },
         {
           h2: "Le paysage radiophonique marocain en quelques chiffres",
-          p: "Le Maroc possède l'un des paysages radiophoniques les plus riches du monde arabe. Depuis la libéralisation des ondes en 2006 par la HACA (Haute Autorité de la Communication Audiovisuelle), des dizaines de radios privées ont rejoint les chaînes publiques historiques (SNRT, 2M). Aujourd'hui, on compte plus de 30 radios FM nationales et régionales actives, plus une multitude de webradios spécialisées (musique amazighe, raï, religieux, sport). Radio Live MA s'efforce de toutes les couvrir.",
+          p: "Le Maroc possède l'un des paysages radiophoniques les plus riches du monde arabe. Depuis la libéralisation des ondes en 2006 par la HACA (Haute Autorité de la Communication Audiovisuelle), des dizaines de radios privées ont rejoint les chaînes publiques historiques (SNRT, 2M). Aujourd'hui, on compte plus de 30 radios FM nationales et régionales actives, plus une multitude de webradios spécialisées (musique amazighe, raï, religieux, sport). Radio Live Maroc s'efforce de toutes les couvrir.",
         },
       ],
     },
@@ -373,8 +373,8 @@ export const LEGAL_PAGES = {
     lastUpdated: '2026-05-06',
 
     fr: {
-      title: 'Contact — Radio Live MA',
-      description: 'Contactez Radio Live MA : signalement de flux cassé, ajout de station, demande légale, partenariat. Réponse sous 72h.',
+      title: 'Contact — Radio Live Maroc',
+      description: 'Contactez Radio Live Maroc : signalement de flux cassé, ajout de station, demande légale, partenariat. Réponse sous 72h.',
       h1: 'Contactez-nous',
       intro:
         "Une question, un signalement de flux cassé, une suggestion d'ajout de station, une demande de partenariat, ou une réclamation légale ? Voici comment nous joindre.",
@@ -399,7 +399,7 @@ export const LEGAL_PAGES = {
         {
           h2: 'Identité du responsable',
           p: 'Le site radiolive.ma est édité et maintenu par :',
-          p2: 'Radio Live MA — Maroc — contact@radiolive.ma',
+          p2: 'Radio Live Maroc — Maroc — contact@radiolive.ma',
         },
         {
           h2: 'Vous êtes une radio marocaine ?',
@@ -446,7 +446,7 @@ export const LEGAL_PAGES = {
         {
           h2: 'هوية المسؤول',
           p: 'موقع radiolive.ma يحرره ويصونه:',
-          p2: 'Radio Live MA — المغرب — contact@radiolive.ma',
+          p2: 'Radio Live Maroc — المغرب — contact@radiolive.ma',
         },
         {
           h2: 'هل أنت إذاعة مغربية؟',
