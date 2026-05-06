@@ -69,7 +69,7 @@ export const LEGAL_PAGES = {
         },
         {
           h2: 'Contact',
-          p: "Pour toute question relative à cette politique de confidentialité ou au traitement de vos données personnelles, écrivez-nous à : sarsaryassine@gmail.com",
+          p: "Pour toute question relative à cette politique de confidentialité ou au traitement de vos données personnelles, écrivez-nous à : contact@radiolive.ma",
         },
       ],
     },
@@ -128,7 +128,7 @@ export const LEGAL_PAGES = {
         },
         {
           h2: 'اتصل بنا',
-          p: 'لأي سؤال بخصوص سياسة الخصوصية هذه أو معالجة بياناتك الشخصية، اكتب إلينا على: sarsaryassine@gmail.com',
+          p: 'لأي سؤال بخصوص سياسة الخصوصية هذه أو معالجة بياناتك الشخصية، اكتب إلينا على: contact@radiolive.ma',
         },
       ],
     },
@@ -381,7 +381,7 @@ export const LEGAL_PAGES = {
       sections: [
         {
           h2: 'Email principal',
-          p: "Pour toute demande, écrivez-nous à : sarsaryassine@gmail.com",
+          p: "Pour toute demande, écrivez-nous à : contact@radiolive.ma",
           p2: "Nous traitons les emails dans l'ordre d'arrivée et répondons généralement sous 72 heures (jours ouvrables). Pour les signalements urgents (flux audio cassé, contenu inapproprié), nous essayons de répondre plus rapidement.",
         },
         {
@@ -399,7 +399,7 @@ export const LEGAL_PAGES = {
         {
           h2: 'Identité du responsable',
           p: 'Le site radiolive.ma est édité et maintenu par :',
-          p2: 'Yassine Sarsar — Maroc — sarsaryassine@gmail.com',
+          p2: 'Yassine Sarsar — Maroc — contact@radiolive.ma',
         },
         {
           h2: 'Vous êtes une radio marocaine ?',
@@ -428,7 +428,7 @@ export const LEGAL_PAGES = {
       sections: [
         {
           h2: 'البريد الإلكتروني الرئيسي',
-          p: 'لأي طلب، اكتب إلينا على: sarsaryassine@gmail.com',
+          p: 'لأي طلب، اكتب إلينا على: contact@radiolive.ma',
           p2: 'نعالج الرسائل بالترتيب الذي تصلنا به ونرد عمومًا خلال 72 ساعة (أيام العمل). للإبلاغات العاجلة (تدفق صوتي معطل، محتوى غير لائق)، نحاول الرد بشكل أسرع.',
         },
         {
@@ -446,7 +446,7 @@ export const LEGAL_PAGES = {
         {
           h2: 'هوية المسؤول',
           p: 'موقع radiolive.ma يحرره ويصونه:',
-          p2: 'ياسين سرسار — المغرب — sarsaryassine@gmail.com',
+          p2: 'ياسين سرسار — المغرب — contact@radiolive.ma',
         },
         {
           h2: 'هل أنت إذاعة مغربية؟',
