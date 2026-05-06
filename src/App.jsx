@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { CheckCircle2, AlertTriangle } from 'lucide-react';
 
@@ -38,6 +38,7 @@ import DiasporaPage from './pages/DiasporaPage.jsx';
 import SeoLandingPage from './pages/SeoLandingPage.jsx';
 import EmissionPage from './pages/EmissionPage.jsx';
 import EmissionsIndexPage from './pages/EmissionsIndexPage.jsx';
+import LegalPage from './pages/LegalPage.jsx';
 import NowPlayingStationPage from './pages/NowPlayingStationPage.jsx';
 
 export default function App() {
@@ -165,6 +166,12 @@ function AppShell() {
               <Route path="/emissions"                          element={<EmissionsIndexPage />} />
               <Route path="/emissions/conseil-psy-mamoun-dribi" element={<EmissionPage emissionKey="conseil-psy-mamoun-dribi" />} />
 
+              {/* Pages légales (RGPD + loi 09-08, AdSense compliance) */}
+              <Route path="/politique-confidentialite" element={<LegalPage pageKey="politique-confidentialite" />} />
+              <Route path="/conditions-utilisation"    element={<LegalPage pageKey="conditions-utilisation" />} />
+              <Route path="/a-propos"                  element={<LegalPage pageKey="a-propos" />} />
+              <Route path="/contact"                   element={<LegalPage pageKey="contact" />} />
+
               {/* Redirects 301 — mots-clés cousins consolidés sur la page principale */}
               <Route path="/radio-maroc-en-ligne" element={<Navigate to="/radio-maroc-en-direct" replace />} />
               <Route path="/ecouter-radio-maroc"  element={<Navigate to="/radio-maroc-en-direct" replace />} />
@@ -216,6 +223,12 @@ function AppShell() {
               {/* Émissions — miroir AR */}
               <Route path="/ar/baramij"                                element={<EmissionsIndexPage />} />
               <Route path="/ar/baramij/istichara-nafsiya-mamoun-dribi" element={<EmissionPage emissionKey="conseil-psy-mamoun-dribi" />} />
+
+              {/* Pages légales — miroir AR */}
+              <Route path="/ar/siyasa-khusousia"  element={<LegalPage pageKey="politique-confidentialite" />} />
+              <Route path="/ar/shoroot-isti3mal"  element={<LegalPage pageKey="conditions-utilisation" />} />
+              <Route path="/ar/3an"               element={<LegalPage pageKey="a-propos" />} />
+              <Route path="/ar/ittisal"           element={<LegalPage pageKey="contact" />} />
 
               {/* Pages SEO arabes — live, sport, Idha3a Wataniya */}
               <Route path="/ar/radio-maroc-mubashir"        element={<SeoLandingPage landingKey="radio-maroc-mubashir" />} />
@@ -321,11 +334,40 @@ function SyncToast({ status, hasPlayer }) {
 }
 
 function Footer() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
+  const isAr = lang === 'ar';
+  const links = isAr
+    ? [
+        { to: '/ar/3an',               label: 'حول الموقع' },
+        { to: '/ar/ittisal',           label: 'اتصل بنا' },
+        { to: '/ar/siyasa-khusousia',  label: 'سياسة الخصوصية' },
+        { to: '/ar/shoroot-isti3mal',  label: 'شروط الاستخدام' },
+        { to: '/ar/blog',              label: 'المدونة' },
+      ]
+    : [
+        { to: '/a-propos',                  label: 'À propos' },
+        { to: '/contact',                   label: 'Contact' },
+        { to: '/politique-confidentialite', label: 'Politique de confidentialité' },
+        { to: '/conditions-utilisation',    label: "Conditions d'utilisation" },
+        { to: '/blog',                      label: 'Blog' },
+      ];
   return (
-    <footer className="mt-20 px-4 sm:px-6 pb-28">
-      <div className="mx-auto max-w-7xl text-center text-xs text-white/40">
-        {t('footer.copyright', { year: new Date().getFullYear() })}
+    <footer className="mt-20 px-4 sm:px-6 pb-28 border-t border-white/8">
+      <div className="mx-auto max-w-7xl pt-8 flex flex-col items-center gap-4">
+        <nav className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-[12px] text-white/55">
+          {links.map((l) => (
+            <Link
+              key={l.to}
+              to={l.to}
+              className="hover:text-white transition-colors"
+            >
+              {l.label}
+            </Link>
+          ))}
+        </nav>
+        <p className="text-xs text-white/40 text-center">
+          {t('footer.copyright', { year: new Date().getFullYear() })}
+        </p>
       </div>
     </footer>
   );

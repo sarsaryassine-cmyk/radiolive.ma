@@ -93,6 +93,18 @@ const EMISSIONS_PAIRS = [
 ];
 
 /**
+ * Pages légales — Privacy, Terms, About, Contact (FR + AR).
+ * Indispensables pour AdSense + conformité RGPD/loi 09-08.
+ * Priorité basse (0.4), changefreq yearly.
+ */
+const LEGAL_PAIRS = [
+  { fr: '/politique-confidentialite', ar: '/ar/siyasa-khusousia' },
+  { fr: '/conditions-utilisation',    ar: '/ar/shoroot-isti3mal' },
+  { fr: '/a-propos',                  ar: '/ar/3an' },
+  { fr: '/contact',                   ar: '/ar/ittisal' },
+];
+
+/**
  * SEO landings — pilier, live, sport, national. FR + AR siblings via hreflang.
  * altPath:null pour les pages sans miroir (pilier FR seul).
  */
@@ -195,6 +207,21 @@ async function main() {
     <xhtml:link rel="alternate" hreflang="ar-MA" href="${escape(arUrl)}"/>
     <xhtml:link rel="alternate" hreflang="fr" href="${escape(frUrl)}"/>
     <xhtml:link rel="alternate" hreflang="ar" href="${escape(arUrl)}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="${escape(frUrl)}"/>
+  </url>`);
+    }
+  }
+  for (const l of LEGAL_PAIRS) {
+    const frUrl = `${SITE_URL}${l.fr}`;
+    const arUrl = `${SITE_URL}${l.ar}`;
+    for (const loc of [frUrl, arUrl]) {
+      out.push(`  <url>
+    <loc>${escape(loc)}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="${escape(frUrl)}"/>
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="${escape(arUrl)}"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="${escape(frUrl)}"/>
   </url>`);
     }
