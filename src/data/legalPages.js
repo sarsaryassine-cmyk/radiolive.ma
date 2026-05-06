@@ -158,7 +158,7 @@ export const LEGAL_PAGES = {
         },
         {
           h2: 'Propriété du site et marques',
-          p: "Le design, les textes éditoriaux (descriptions de stations, articles de blog, pages SEO), les graphismes, le code source, et la marque « Radio Live MA » / « radiolive.ma » sont la propriété de Yassine Sarsar. Toute reproduction, distribution, modification ou utilisation commerciale sans autorisation écrite préalable est interdite.",
+          p: "Le design, les textes éditoriaux (descriptions de stations, articles de blog, pages SEO), les graphismes, le code source, et la marque « Radio Live MA » / « radiolive.ma » sont la propriété exclusive de Radio Live MA. Toute reproduction, distribution, modification ou utilisation commerciale sans autorisation écrite préalable est interdite.",
           p2: "Les noms et logos des radios marocaines (Hit Radio, Medi 1, Radio Mars, etc.) sont des marques déposées appartenant à leurs propriétaires respectifs et utilisés à titre informatif uniquement.",
         },
         {
@@ -219,7 +219,7 @@ export const LEGAL_PAGES = {
         },
         {
           h2: 'ملكية الموقع والعلامات التجارية',
-          p: 'التصميم، النصوص التحريرية (أوصاف المحطات، مقالات المدونة، صفحات SEO)، الرسوم، الكود المصدري، وعلامة «راديو لايف المغرب» / «radiolive.ma» هي ملكية ياسين سرسار. أي إعادة إنتاج أو توزيع أو تعديل أو استخدام تجاري بدون إذن كتابي مسبق ممنوع.',
+          p: 'التصميم، النصوص التحريرية (أوصاف المحطات، مقالات المدونة، صفحات SEO)، الرسوم، الكود المصدري، وعلامة «راديو لايف المغرب» / «radiolive.ma» هي ملكية حصرية لـ Radio Live MA. أي إعادة إنتاج أو توزيع أو تعديل أو استخدام تجاري بدون إذن كتابي مسبق ممنوع.',
           p2: 'أسماء وشعارات الإذاعات المغربية (Hit Radio، Medi 1، Radio Mars، إلخ) هي علامات تجارية مسجلة تخص أصحابها وتُستخدم لأغراض إعلامية فقط.',
         },
         {
@@ -307,7 +307,7 @@ export const LEGAL_PAGES = {
         },
         {
           h2: 'Le projet et son créateur',
-          p: "Radio Live MA est un projet personnel développé et maintenu par Yassine Sarsar, ingénieur passionné par le paysage médiatique marocain et l'expérience web. Le site est construit avec des technologies modernes (React, Vite, Cloudflare) pour offrir une expérience fluide et accessible. Le code est privé mais le projet a vocation à servir l'écosystème radiophonique marocain.",
+          p: "Radio Live MA est un projet éditorial indépendant qui se consacre exclusivement au paysage radiophonique marocain. Le site est construit avec des technologies modernes (React, Vite, Cloudflare) pour offrir une expérience fluide et accessible sur tous les appareils. Notre vocation est de servir l'écosystème radiophonique marocain en centralisant l'ensemble des stations sur une plateforme moderne, gratuite et respectueuse de la vie privée.",
           p2: "Si vous êtes une radio marocaine non encore référencée, ou si vous avez des suggestions d'amélioration, contactez-nous via la page Contact.",
         },
         {
@@ -356,7 +356,7 @@ export const LEGAL_PAGES = {
         },
         {
           h2: 'المشروع ومُنشئه',
-          p: 'راديو لايف المغرب هو مشروع شخصي طوّره ويصونه ياسين سرسار، مهندس شغوف بالمشهد الإعلامي المغربي وتجربة الويب. الموقع مبني بتقنيات حديثة (React، Vite، Cloudflare) لتقديم تجربة سلسة وسهلة الوصول. الكود خاص لكن المشروع يهدف إلى خدمة منظومة الإذاعات المغربية.',
+          p: 'راديو لايف المغرب هو مشروع تحريري مستقل مكرس حصريًا للمشهد الإذاعي المغربي. الموقع مبني بتقنيات حديثة (React، Vite، Cloudflare) لتقديم تجربة سلسة وسهلة الوصول على جميع الأجهزة. مهمتنا هي خدمة منظومة الإذاعات المغربية من خلال تجميع جميع المحطات على منصة عصرية ومجانية وتحترم الخصوصية.',
           p2: 'إذا كنت إذاعة مغربية غير مسجلة بعد، أو إذا كانت لديك اقتراحات للتحسين، اتصل بنا عبر صفحة الاتصال.',
         },
         {
@@ -399,7 +399,7 @@ export const LEGAL_PAGES = {
         {
           h2: 'Identité du responsable',
           p: 'Le site radiolive.ma est édité et maintenu par :',
-          p2: 'Yassine Sarsar — Maroc — contact@radiolive.ma',
+          p2: 'Radio Live MA — Maroc — contact@radiolive.ma',
         },
         {
           h2: 'Vous êtes une radio marocaine ?',
@@ -446,7 +446,7 @@ export const LEGAL_PAGES = {
         {
           h2: 'هوية المسؤول',
           p: 'موقع radiolive.ma يحرره ويصونه:',
-          p2: 'ياسين سرسار — المغرب — contact@radiolive.ma',
+          p2: 'Radio Live MA — المغرب — contact@radiolive.ma',
         },
         {
           h2: 'هل أنت إذاعة مغربية؟',
