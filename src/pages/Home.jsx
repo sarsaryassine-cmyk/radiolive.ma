@@ -277,15 +277,26 @@ function SeoCopy() {
 
       <p className="mb-5">
         Bienvenue sur <strong>Radio Maroc</strong>, le portail de référence
-        pour écouter en direct toutes les <strong>radios marocaines</strong>
-        en streaming. Plus de 30 stations FM, AM et webradios du royaume
-        diffusent leur signal sur notre plateforme : <em>Hit Radio</em>,{' '}
-        <em>Radio Mars</em>, <em>Chada FM</em>, <em>Medi 1 Radio</em>,{' '}
-        <em>Radio 2M</em>, <em>MFM</em>, <em>Medina FM</em>, <em>Cap Radio</em>,{' '}
-        <em>Atlantic Radio</em>, <em>Radio Aswat</em>, <em>Skyrock Casablanca</em>,{' '}
-        <em>Radio Coran</em> et bien d'autres. <strong>L'écoute est gratuite,
-        sans inscription, sans téléchargement</strong>, et fonctionne sur
-        ordinateur, tablette ou smartphone, partout dans le monde.
+        pour écouter <strong>la radio au Maroc</strong> en direct et{' '}
+        <strong>en ligne</strong>. Plus de 49 stations FM, AM et webradios
+        du royaume diffusent leur signal sur notre plateforme :{' '}
+        <Link to="/station/hit-radio" className="text-white hover:text-brand-300 underline-offset-2 hover:underline">Hit Radio Maroc</Link>,{' '}
+        <Link to="/station/radio-mars" className="text-white hover:text-brand-300 underline-offset-2 hover:underline">Radio Mars Maroc</Link>,{' '}
+        <Link to="/station/mfm" className="text-white hover:text-brand-300 underline-offset-2 hover:underline">MFM Radio Maroc</Link>,{' '}
+        <em>Chada FM</em>, <em>Medi 1 Radio</em>, <em>Radio 2M</em>,{' '}
+        <em>Medina FM</em>, <em>Cap Radio</em>, <em>Atlantic Radio</em>,{' '}
+        <em>Radio Aswat</em>, <em>Skyrock Casablanca</em>, <em>Radio Coran</em>{' '}
+        et bien d'autres. <strong>L'écoute est gratuite, sans inscription,
+        sans téléchargement</strong>, et fonctionne sur ordinateur, tablette
+        ou smartphone, partout dans le monde.
+      </p>
+
+      <p className="mb-5">
+        Que vous cherchiez à écouter <strong>la radio du Maroc</strong> depuis
+        Casablanca, à profiter de la <strong>radio en direct au Maroc</strong>{' '}
+        pendant vos trajets, ou à suivre <strong>Radio Maroc en ligne</strong>{' '}
+        depuis l'étranger, notre lecteur de streaming HD vous reconnecte
+        instantanément à la pulsation sonore du royaume.
       </p>
 
       <h2 className="font-display text-2xl font-bold text-white mt-10 mb-4">
@@ -342,6 +353,30 @@ function SeoCopy() {
           Yabiladi pour la diaspora marocaine.
         </li>
       </ul>
+
+      <h2 className="font-display text-2xl font-bold text-white mt-10 mb-4">
+        Les 3 radios marocaines les plus écoutées
+      </h2>
+      <p className="mb-5">
+        Trois stations dominent l'audience nationale et concentrent l'essentiel
+        des recherches sur Google. <Link to="/station/hit-radio" className="text-white font-semibold hover:text-brand-300 underline-offset-2 hover:underline">Hit Radio Maroc</Link>,
+        lancée en 2006 par Younes Boumehdi, est la 1ʳᵉ radio musicale privée
+        du royaume, leader sur le segment 15-35 ans avec son format pop /
+        R&B / hits internationaux et arabes. <Link to="/station/radio-mars" className="text-white font-semibold hover:text-brand-300 underline-offset-2 hover:underline">Radio Mars Maroc</Link> —
+        ou <strong>Mars Radio Maroc</strong> selon les recherches — est la 1ʳᵉ
+        radio sportive 100 % marocaine, indispensable pour suivre la Botola
+        Pro et les Lions de l'Atlas. Enfin, <Link to="/station/mfm" className="text-white font-semibold hover:text-brand-300 underline-offset-2 hover:underline">MFM Radio Maroc</Link>{' '}
+        s'impose comme la référence sur les musiques afro-orientales
+        (raï, chaabi, gnawa, amazigh) et la grande chanson maghrébine.
+      </p>
+      <p className="mb-5">
+        Ces trois stations — <strong>Radio Maroc Mars</strong>, Hit Radio et
+        MFM — couvrent les principaux segments d'audience (sport, jeunes urbains,
+        adultes amateurs de musiques traditionnelles) et sont accessibles 24 h /
+        24 sur notre lecteur, en streaming HD, sans inscription ni publicité
+        intrusive. Que vous écoutiez depuis le Maroc ou depuis l'étranger,
+        l'expérience reste identique.
+      </p>
 
       <h2 className="font-display text-2xl font-bold text-white mt-10 mb-4">
         Écouter la radio marocaine partout dans le monde

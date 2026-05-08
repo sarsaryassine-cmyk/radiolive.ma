@@ -17,8 +17,8 @@ export const STRINGS = {
     switch_lang: '🇲🇦 العربية',
 
     meta: {
-      home_title: "Radio Maroc en direct — Écouter toutes les radios marocaines en ligne",
-      home_description: "Écoutez en direct toutes les radios marocaines : Hit Radio, Radio Mars, Chada FM, Medi 1, Radio 2M, MFM et plus de 30 stations FM marocaines en streaming HD gratuit, sans inscription, depuis n'importe où dans le monde.",
+      home_title: "Radio Maroc en direct & en ligne — Hit Radio, Mars, MFM, Medi 1",
+      home_description: "Radio Maroc en direct et en ligne. Écoutez Hit Radio Maroc, Radio Mars Maroc, MFM Radio Maroc, Medi 1, Chada FM et 49 radios marocaines en streaming HD gratuit, sans inscription, depuis le Maroc ou l'étranger.",
       og_locale: 'fr_MA',
     },
 
@@ -61,8 +61,8 @@ export const STRINGS = {
     },
 
     hero: {
-      h1: 'Le Maroc en direct, à portée d\'écoute.',
-      h1_part1: 'Le Maroc en direct,',
+      h1: 'Radio Maroc en direct, à portée d\'écoute.',
+      h1_part1: 'Radio Maroc en direct,',
       h1_part2: 'à portée d\'écoute.',
       stations_in_live: 'stations en direct',
       preparing: 'Préparation…',
