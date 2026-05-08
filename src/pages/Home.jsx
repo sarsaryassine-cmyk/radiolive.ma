@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { RadioIcon as RadioBig, Sparkles, RefreshCw } from 'lucide-react';
@@ -32,6 +32,37 @@ export default function Home() {
 
   const [query, setQuery] = useState('');
   const { t, lang } = useI18n();
+
+  // Autoplay Hit Radio on first user interaction.
+  // Browsers block autoplay without user gesture (Chrome/Safari/Firefox policy
+  // since 2018), so we listen for the first click/touch/keypress on the page
+  // and trigger play() at that exact moment — that counts as a user gesture
+  // and bypasses the autoplay block. Only fires once per session and only if
+  // the user hasn't manually picked another station first.
+  useEffect(() => {
+    if (!radios?.length) return;
+    if (audio.current) return;
+    const hitRadio = radios.find((r) => r.name === 'Hit Radio');
+    if (!hitRadio) return;
+
+    let fired = false;
+    const triggerPlay = () => {
+      if (fired) return;
+      fired = true;
+      // Re-check audio.current at fire-time — user may have clicked a station
+      // card between effect setup and this event.
+      if (!audio.current) playRadio(hitRadio);
+      cleanup();
+    };
+    const events = ['pointerdown', 'keydown', 'touchstart'];
+    const cleanup = () => {
+      events.forEach((e) => document.removeEventListener(e, triggerPlay));
+    };
+    events.forEach((e) =>
+      document.addEventListener(e, triggerPlay, { once: true, passive: true })
+    );
+    return cleanup;
+  }, [radios, audio.current, playRadio]);
 
   const filtered = useMemo(() => {
     const list =
