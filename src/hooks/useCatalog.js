@@ -4,15 +4,21 @@ import {
   syncCatalog,
   shouldSync,
   SYNC_INTERVAL_MS,
+  SCHEMA_VERSION,
 } from '../services/radioService.js';
 import { resolveCategory } from '../utils/categories.js';
 
 // Cache of name → description, populated once per session.
+// Cache-busting via SCHEMA_VERSION : sans ça, le navigateur servait l'ancienne
+// version de radioDescriptions.json même après mise à jour des descriptions
+// (typique : la page station affichait l'ancienne description Radio Mars
+// "2007 / Eco-Médias" alors que le serveur avait déjà la nouvelle "2009 /
+// Hicham El Khlifi"). Le query string force un fresh fetch à chaque bump.
 let descriptionsCache = null;
 async function loadDescriptions() {
   if (descriptionsCache) return descriptionsCache;
   try {
-    const res = await fetch('/radioDescriptions.json');
+    const res = await fetch(`/radioDescriptions.json?v=${SCHEMA_VERSION}`);
     if (res.ok) descriptionsCache = await res.json();
   } catch (_) { /* ignore — page-level fallback handles this */ }
   return descriptionsCache || {};
