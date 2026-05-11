@@ -105,11 +105,17 @@ export function organizationJsonLd(lang = 'fr') {
     name: siteName(lang),
     alternateName: lang === 'ar' ? SITE_NAME_FR : SITE_NAME_AR,
     url: SITE_URL,
-    logo: `${SITE_URL}/icons/RADIO%20MARS.png`,
+    logo: `${SITE_URL}/favicon.svg`,
+    // sameAs : profils officiels qui prouvent à Google que c'est bien la même
+    // entité. Important pour le Knowledge Panel et les sitelinks à terme.
+    // Ne lister QUE les profils existants — jamais d'URL fake type
+    // "facebook.com/" sans path (Google ignore + signal de faible qualité).
     sameAs: [
-      'https://www.facebook.com/',
-      'https://twitter.com/',
-      'https://www.instagram.com/',
+      'https://twitter.com/radiolivemaroc',
+      'https://medium.com/@radiolive.ma',
+      'https://radiolivemaroc.substack.com',
+      'https://github.com/sarsaryassine-cmyk',
+      'https://about.me/yassyass',
     ],
   };
 }
