@@ -137,10 +137,10 @@ const POPULARITY_RANK = {
   'aswat-fm':               5,
   'med-radio':              6, // ex-MEDRADIO renommé via BRAND_RENAME
   'chada-fm':               7,
-  'atlantic-radio':         8,
-  'radio-2m':               9,
-  'cap-radio':             10,
-  // 11 Hit Radio Mgharba — pas une station distincte, ignorer
+  'u-radio':                8, // U Radio (Rabat 99 FM, pop/dance 80s-00s)
+  'atlantic-radio':         9,
+  'radio-2m':              10,
+  'cap-radio':             11,
   'mfm-saghir':            12, // placeholder, pas encore de stream
   'luxe-radio':            13, // placeholder
   'radio-plus-agadir':     14,

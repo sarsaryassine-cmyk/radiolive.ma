@@ -42,22 +42,28 @@
     "popularity_rank": 7
   },
   {
+    "name": "U Radio",
+    "stream": "https://uradio-aac.ice.infomaniak.ch/uradio.aac",
+    "icon": "/logos/u-radio.png",
+    "popularity_rank": 8
+  },
+  {
     "name": "Atlantic Radio",
     "stream": "https://atlantic-sonic.nindohost.net:9300/stream",
     "icon": "/logos/atlantic-radio.webp",
-    "popularity_rank": 8
+    "popularity_rank": 9
   },
   {
     "name": "Radio 2M",
     "stream": "https://cdnamd-hls-globecast.akamaized.net/live/ramdisk/radio_2m/radio_hls_ts/index.m3u8",
     "icon": "/icons/Radio%202M.png",
-    "popularity_rank": 9
+    "popularity_rank": 10
   },
   {
     "name": "Cap Radio",
     "stream": "https://listen.radioking.com/radio/710810/stream/776366",
     "icon": "/icons/CAP%20RADIO.png",
-    "popularity_rank": 10
+    "popularity_rank": 11
   },
   {
     "name": "Radio Plus Agadir",
@@ -291,12 +297,6 @@
     "name": "Radio Sawt Alamal",
     "stream": "https://stream.zeno.fm/qgw73bqh5qruv",
     "icon": "/logos/radio-sawt-alamal.png",
-    "popularity_rank": 999
-  },
-  {
-    "name": "U Radio",
-    "stream": "https://uradio-aac.ice.infomaniak.ch/uradio.aac",
-    "icon": "/logos/u-radio.png",
     "popularity_rank": 999
   }
 ]

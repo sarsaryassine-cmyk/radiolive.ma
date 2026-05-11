@@ -33,7 +33,7 @@ const API_PATHS = [
 const CACHE_KEY = 'radio-maroc:catalog';
 const SYNC_KEY = 'radio-maroc:lastSync';
 const SCHEMA_KEY = 'radio-maroc:cacheSchema';
-const SCHEMA_VERSION = 41;
+const SCHEMA_VERSION = 42;
 
 export const SYNC_INTERVAL_MS = 24 * 60 * 60 * 1000; // 24 h
 export const DEFAULT_ICON = '/default-radio.svg';
