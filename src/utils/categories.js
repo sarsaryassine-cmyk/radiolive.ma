@@ -101,6 +101,7 @@ const EXPLICIT = {
   radiotangermed:           'regionale',
   radiostarmarocfm:         'musicale',
   radiosawtalamal:          'culturelle',
+  uradio:                   'musicale',
 };
 
 /**

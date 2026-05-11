@@ -292,5 +292,11 @@
     "stream": "https://stream.zeno.fm/qgw73bqh5qruv",
     "icon": "/logos/radio-sawt-alamal.png",
     "popularity_rank": 999
+  },
+  {
+    "name": "U Radio",
+    "stream": "https://uradio-aac.ice.infomaniak.ch/uradio.aac",
+    "icon": "/logos/u-radio.png",
+    "popularity_rank": 999
   }
 ]

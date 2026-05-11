@@ -64,6 +64,27 @@
       "_manual_overrides": ["names.fr", "names.ar", "stream_url", "logo_url", "tags", "language"]
     },
     {
+      "slug": "u-radio",
+      "names": {
+        "fr": "U Radio",
+        "ar": "يو راديو"
+      },
+      "stream_url": "https://uradio-aac.ice.infomaniak.ch/uradio.aac",
+      "stream_codec": "AAC",
+      "bitrate": 128,
+      "logo_url": "/logos/u-radio.png",
+      "logo_external": null,
+      "tags": ["musicale", "hits", "dance", "pop", "80s", "90s", "00s"],
+      "language": ["francais", "arabe"],
+      "homepage": "https://uradio.ma",
+      "frequencies": { "rabat": "99.0 FM" },
+      "stationuuid": null,
+      "geo": { "city": "Rabat", "region": "Rabat-Salé-Kénitra" },
+      "_source": "manual",
+      "_last_synced": "2026-05-11T00:00:00.000Z",
+      "_manual_overrides": ["names.fr", "names.ar", "stream_url", "logo_url", "tags", "language", "geo", "frequencies", "homepage"]
+    },
+    {
       "slug": "radio-sawt-alamal",
       "names": {
         "fr": "Radio Sawt Alamal",
