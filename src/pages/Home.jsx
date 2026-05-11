@@ -11,6 +11,7 @@ import Seo, { websiteJsonLd, organizationJsonLd } from '../components/Seo.jsx';
 import { EmptyFavorites } from '../components/Favorites.jsx';
 import { useAppContext } from '../AppContext.jsx';
 import useI18n from '../i18n/useI18n.js';
+import useReducedMotion from '../hooks/useReducedMotion.js';
 import HomeContentAr from './HomeContentAr.jsx';
 import DiasporaBlock from '../components/DiasporaBlock.jsx';
 import { POSTS, slugForLang } from '../blog/posts.js';
@@ -32,6 +33,7 @@ export default function Home() {
 
   const [query, setQuery] = useState('');
   const { t, lang } = useI18n();
+  const { isMobile } = useReducedMotion();
 
   // Autoplay Hit Radio on first user interaction.
   // Browsers block autoplay without user gesture (Chrome/Safari/Firefox policy
@@ -39,7 +41,14 @@ export default function Home() {
   // and trigger play() at that exact moment — that counts as a user gesture
   // and bypasses the autoplay block. Only fires once per session and only if
   // the user hasn't manually picked another station first.
+  //
+  // Désactivé sur mobile : Chrome Android et Safari iOS sont encore plus
+  // stricts et exigent que le play() vienne d'un clic DIRECTEMENT sur un
+  // bouton play, pas d'un clic ailleurs sur la page. Le first-interaction
+  // trigger fait juste apparaître une bannière d'erreur "Playback was unable
+  // to start". Mieux vaut ne pas tenter du tout sur mobile.
   useEffect(() => {
+    if (isMobile) return;
     if (!radios?.length) return;
     if (audio.current) return;
     const hitRadio = radios.find((r) => r.name === 'Hit Radio');
@@ -62,7 +71,7 @@ export default function Home() {
       document.addEventListener(e, triggerPlay, { once: true, passive: true })
     );
     return cleanup;
-  }, [radios, audio.current, playRadio]);
+  }, [radios, audio.current, playRadio, isMobile]);
 
   const filtered = useMemo(() => {
     const list =
