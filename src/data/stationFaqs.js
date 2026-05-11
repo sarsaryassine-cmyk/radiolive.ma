@@ -11,7 +11,7 @@ export const STATION_FAQS = {
     fr: [
       {
         q: 'Quelle fréquence pour Radio Mars ?',
-        a: "Radio Mars émet sur 88.0 FM à Casablanca, 90.6 FM à Rabat, 92.3 FM à Marrakech et sur diverses fréquences régionales selon les villes. En streaming, elle est disponible 24h/24 gratuitement sur radiolive.ma.",
+        a: "Radio Mars émet sur 10 fréquences FM : 91.2 FM à Casablanca (siège), 96.5 FM à Rabat, 98.2 FM à Marrakech, 89.4 FM à Fès, 91.8 FM à Agadir, 90.7 FM à Meknès, 97.7 FM à Oujda, 91.6 FM à Beni Mellal, 91.5 FM à El Jadida, et 94.7 FM à Settat. En streaming live, Radio Mars est disponible 24h/24 gratuitement sur radiolive.ma.",
       },
       {
         q: 'Radio Mars retransmet-elle les matchs des Lions de l\'Atlas ?',
