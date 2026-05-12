@@ -289,9 +289,7 @@ export default function StationPage() {
         <div className="lg:col-span-2 glass rounded-3xl p-6 sm:p-8">
           <h2 className="font-display text-xl font-semibold mb-4">À propos de {radio.name}</h2>
           {radio.description ? (
-            <p className="text-white/75 leading-relaxed text-[15px] whitespace-pre-line">
-              {radio.description}
-            </p>
+            <DescriptionBody text={radio.description} />
           ) : (
             <p className="text-white/55 leading-relaxed text-sm italic">
               Aucune description détaillée n'est disponible pour cette station pour le moment.
@@ -502,6 +500,52 @@ function Info({ label, value }) {
     <div className="flex justify-between items-start gap-3">
       <dt className="text-white/45 text-[12px] uppercase tracking-wider">{label}</dt>
       <dd className="text-white/90 text-right">{value}</dd>
+    </div>
+  );
+}
+
+/**
+ * Rend une description multi-paragraphes avec support des titres ##.
+ *
+ * Le contenu de radioDescriptions.json est plat (un seul gros string).
+ * Sans parsing, tout passe dans un <p> unique → mauvais SEO (Google adore
+ * les <h2> remplis de keywords). Cette fonction split le texte par lignes,
+ * détecte les "## Titre" (markdown) et les rend en vrais H2 sémantiques.
+ * Le reste devient des <p> séparés par paragraphes (blocs séparés par \n\n).
+ *
+ * Permet de cibler des keywords long-tail via des H2 dans la description :
+ *   "## Écouter Radio Mars en direct"
+ *   "## Fréquences FM Radio Mars"
+ *   "## Animateurs Radio Mars"
+ * Ces H2 boostent considérablement le ranking sur ces variantes de keywords.
+ */
+function DescriptionBody({ text }) {
+  if (!text) return null;
+  // Split en blocs par double saut de ligne
+  const blocks = text.split(/\n\n+/);
+  return (
+    <div className="space-y-4 text-white/75 leading-relaxed text-[15px]">
+      {blocks.map((block, i) => {
+        const trimmed = block.trim();
+        if (!trimmed) return null;
+        // Titre H2 markdown
+        if (trimmed.startsWith('## ')) {
+          return (
+            <h2
+              key={i}
+              className="font-display text-lg sm:text-xl font-semibold text-white mt-6 mb-2"
+            >
+              {trimmed.slice(3).trim()}
+            </h2>
+          );
+        }
+        // Paragraphe normal — préserve les sauts de ligne internes
+        return (
+          <p key={i} className="whitespace-pre-line">
+            {trimmed}
+          </p>
+        );
+      })}
     </div>
   );
 }
