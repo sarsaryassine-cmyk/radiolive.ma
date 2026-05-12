@@ -153,6 +153,23 @@ export default function BlogPostPage() {
 
   useEffect(() => { window.scrollTo({ top: 0 }); }, [slug]);
 
+  // ─── ALL HOOKS BEFORE EARLY RETURN (Rules of Hooks) ───
+  // Articles liés via slugs explicites OU partage de tags
+  const related = useMemo(() => {
+    if (!rawPost) return [];
+    const explicit = (rawPost.relatedArticles || [])
+      .map((s) => POST_BY_SLUG[s])
+      .filter(Boolean);
+    if (explicit.length >= 3) return explicit.slice(0, 3);
+    const byTag = POSTS.filter(
+      (p) =>
+        p.slug !== rawPost.slug &&
+        !explicit.some((e) => e.slug === p.slug) &&
+        rawPost.tags?.some((tag) => p.tags?.includes(tag))
+    );
+    return [...explicit, ...byTag].slice(0, 3);
+  }, [rawPost]);
+
   if (!post) {
     return (
       <div className="py-20 max-w-md mx-auto text-center">
@@ -175,21 +192,6 @@ export default function BlogPostPage() {
   const canonical = `${SITE_URL}${arPrefix}/blog/${lang === 'ar' ? arSlug : frSlug}`;
   const frHref = `${SITE_URL}/blog/${frSlug}`;
   const arHref = `${SITE_URL}/ar/blog/${arSlug}`;
-
-  // Articles liés via slugs explicites OU partage de tags
-  const related = useMemo(() => {
-    const explicit = (rawPost.relatedArticles || [])
-      .map((s) => POST_BY_SLUG[s])
-      .filter(Boolean);
-    if (explicit.length >= 3) return explicit.slice(0, 3);
-    const byTag = POSTS.filter(
-      (p) =>
-        p.slug !== rawPost.slug &&
-        !explicit.some((e) => e.slug === p.slug) &&
-        rawPost.tags?.some((tag) => p.tags?.includes(tag))
-    );
-    return [...explicit, ...byTag].slice(0, 3);
-  }, [rawPost]);
 
   return (
     <article className="pt-6 sm:pt-10 pb-16 max-w-3xl mx-auto">

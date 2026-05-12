@@ -19,6 +19,14 @@ function TiltCard({ children, max = 10, glare = true, className = '' }) {
   const rotateY = useTransform(sx, [0, 1], [-max, max]);
   const lightX = useTransform(sx, [0, 1], ['0%', '100%']);
   const lightY = useTransform(sy, [0, 1], ['0%', '100%']);
+  // Pré-calcul du glare gradient — useTransform DOIT être appelé
+  // inconditionnellement (Rules of Hooks). On l'utilise ensuite seulement
+  // si glare === true dans le JSX. Sans ça, monter un TiltCard avec
+  // glare=false puis glare=true changeait le nombre de hooks → crash.
+  const glareBackground = useTransform(
+    [lightX, lightY],
+    ([x, y]) => `radial-gradient(220px circle at ${x} ${y}, rgba(255,255,255,0.35), transparent 60%)`
+  );
 
   const onMove = (e) => {
     if (!ref.current) return;
@@ -51,13 +59,7 @@ function TiltCard({ children, max = 10, glare = true, className = '' }) {
         <motion.div
           aria-hidden
           className="pointer-events-none absolute inset-0 rounded-3xl mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity"
-          style={{
-            background: useTransform(
-              [lightX, lightY],
-              ([x, y]) =>
-                `radial-gradient(220px circle at ${x} ${y}, rgba(255,255,255,0.35), transparent 60%)`
-            ),
-          }}
+          style={{ background: glareBackground }}
         />
       )}
     </motion.div>

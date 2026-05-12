@@ -27,6 +27,12 @@ export default function EmissionPage({ emissionKey }) {
   const { radios, audio, playRadio } = useAppContext();
   const { t, lang } = useI18n();
 
+  // ─── ALL HOOKS BEFORE EARLY RETURN (Rules of Hooks) ───
+  const station = useMemo(
+    () => (data ? radios?.find((r) => r.id === data.station_id) : null),
+    [radios, data]
+  );
+
   if (!data) {
     return (
       <div className="mt-16 mx-auto max-w-md text-center glass rounded-3xl p-8">
@@ -41,11 +47,6 @@ export default function EmissionPage({ emissionKey }) {
   const emissionsHref = isAr ? '/ar/baramij' : '/emissions';
   const stationHref = `${isAr ? '/ar' : ''}/station/${data.station_id}`;
   const stationName = isAr ? data.station_name_ar : data.station_name;
-
-  const station = useMemo(
-    () => radios?.find((r) => r.id === data.station_id),
-    [radios, data.station_id]
-  );
 
   const canonical = `${SITE_URL}${isAr ? data.ar_path : data.fr_path}`;
   const frHref = `${SITE_URL}${data.fr_path}`;
