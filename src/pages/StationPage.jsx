@@ -31,6 +31,14 @@ export default function StationPage() {
   const isAr = lang === 'ar';
   const homeHref = isAr ? '/ar' : '/';
 
+  // ─── ALL HOOKS FIRST (CRITICAL: hooks must NEVER be conditional) ───
+  // React error #310 = "Rendered more hooks than during the previous render."
+  // Si on fait `if (!radio) return …` AVANT certains hooks, et que radio
+  // passe d'undefined à défini entre deux renders, le nombre de hooks change
+  // → crash. Tous les hooks doivent donc être appelés dans le même ordre,
+  // que `radio` soit défini ou non. Les useMemo gèrent radio === undefined
+  // via optional chaining + fallback.
+
   const radio = useMemo(() => radios.find((r) => r.id === slug), [radios, slug]);
   const { data: topSongs } = useStationTopSongs(slug);
 
@@ -39,6 +47,54 @@ export default function StationPage() {
     window.scrollTo({ top: 0, behavior: 'auto' });
   }, [slug]);
 
+  const related = useMemo(
+    () =>
+      radio
+        ? radios
+            .filter((r) => r.id !== radio.id && r.category === radio.category)
+            .slice(0, 6)
+        : [],
+    [radios, radio]
+  );
+
+  // Articles de blog mentionnant cette station (champ relatedStations)
+  const linkedArticles = useMemo(
+    () => (radio ? POSTS.filter((p) => p.relatedStations?.includes(radio.id)).slice(0, 3) : []),
+    [radio?.id]
+  );
+
+  // FAQ station-spécifique pour Featured Snippets (Radio Mars, Hit Radio, Medi 1, Chada FM)
+  const stationFaqs = useMemo(
+    () => (radio ? getStationFaqs(radio.id, lang) : []),
+    [radio?.id, lang]
+  );
+
+  // Émissions phares de cette station (Conseil psy Mamoun Dribi pour Med Radio, etc.)
+  const stationEmissions = useMemo(
+    () => (radio ? getEmissionsByStation(radio.id) : []),
+    [radio?.id]
+  );
+
+  // Live now-playing (Worker → fallback static JSON) pour MusicRecording schema
+  const livePlaying = useLiveNowPlaying(radio?.id);
+  const musicRecordingJsonLd = useMemo(() => {
+    if (!radio) return null;
+    if (!livePlaying?.artist && !livePlaying?.title) return null;
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'MusicRecording',
+      name: livePlaying.title,
+      byArtist: { '@type': 'MusicGroup', name: livePlaying.artist },
+      ...(livePlaying.artwork ? { image: livePlaying.artwork } : {}),
+      isPartOf: {
+        '@type': 'RadioBroadcastService',
+        name: radio.name,
+        url: `https://radiolive.ma${isAr ? '/ar' : ''}/station/${radio.id}`,
+      },
+    };
+  }, [livePlaying, radio, isAr]);
+
+  // ─── EARLY RETURNS AFTER ALL HOOKS ───
   if (loading && !radio) {
     return (
       <div className="py-24 flex flex-col items-center gap-4">
@@ -66,48 +122,12 @@ export default function StationPage() {
     );
   }
 
+  // ─── NON-HOOK COMPUTATIONS (radio is guaranteed defined past here) ───
   const playingHere = audio.current?.id === radio.id && audio.isPlaying;
   const loadingHere = audio.current?.id === radio.id && audio.isLoading;
   const fav = isFavorite(radio.id);
   const categoryLabel = resolveCategoryLabel(radio.category, lang) || (isAr ? 'إذاعة' : 'Radio');
 
-  const related = useMemo(
-    () =>
-      radios
-        .filter((r) => r.id !== radio.id && r.category === radio.category)
-        .slice(0, 6),
-    [radios, radio]
-  );
-
-  // Articles de blog mentionnant cette station (champ relatedStations)
-  const linkedArticles = useMemo(
-    () => POSTS.filter((p) => p.relatedStations?.includes(radio.id)).slice(0, 3),
-    [radio.id]
-  );
-
-  // FAQ station-spécifique pour Featured Snippets (Radio Mars, Hit Radio, Medi 1, Chada FM)
-  const stationFaqs = useMemo(() => getStationFaqs(radio.id, lang), [radio.id, lang]);
-
-  // Émissions phares de cette station (Conseil psy Mamoun Dribi pour Med Radio, etc.)
-  const stationEmissions = useMemo(() => getEmissionsByStation(radio.id), [radio.id]);
-
-  // Live now-playing (Worker → fallback static JSON) pour MusicRecording schema
-  const livePlaying = useLiveNowPlaying(radio.id);
-  const musicRecordingJsonLd = useMemo(() => {
-    if (!livePlaying?.artist && !livePlaying?.title) return null;
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'MusicRecording',
-      name: livePlaying.title,
-      byArtist: { '@type': 'MusicGroup', name: livePlaying.artist },
-      ...(livePlaying.artwork ? { image: livePlaying.artwork } : {}),
-      isPartOf: {
-        '@type': 'RadioBroadcastService',
-        name: radio.name,
-        url: `https://radiolive.ma${isAr ? '/ar' : ''}/station/${radio.id}`,
-      },
-    };
-  }, [livePlaying, radio.id, radio.name, isAr]);
   const faqJsonLd = stationFaqs.length
     ? {
         '@context': 'https://schema.org',
