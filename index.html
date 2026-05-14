@@ -48,10 +48,53 @@
     <style>
       html, body { margin: 0; height: 100%; background: #07060d; color: #fff;
         font-family: 'Inter', system-ui, sans-serif; }
+
+      /* Pré-rendu du hero — visible dès le parse du HTML (~80 ms), avant
+         que le bundle JS soit chargé. Supprimé dès que React monte #root. */
+      #pre-hero {
+        position: fixed; inset: 0; z-index: 1;
+        padding: 5.5rem 1.5rem 0;
+        max-width: 80rem; margin: 0 auto;
+        pointer-events: none;
+        transition: opacity 150ms ease-out;
+      }
+      #pre-hero h2 {
+        font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+        font-weight: 700; line-height: 1.15;
+        letter-spacing: -0.02em;
+        margin: 0; max-width: 64rem;
+      }
+      #pre-hero .accent {
+        background: linear-gradient(90deg, #FF2A3C 0%, #FF6B7A 60%, #FFA07A 100%);
+        -webkit-background-clip: text; background-clip: text;
+        -webkit-text-fill-color: transparent; color: transparent;
+      }
+      #pre-hero.hidden { opacity: 0; }
     </style>
   </head>
   <body class="bg-ink-950 text-white antialiased">
     <div id="root"></div>
+    <div id="pre-hero" aria-hidden="true">
+      <h2>Radio Maroc en direct, <span class="accent">à portée d'écoute.</span></h2>
+    </div>
+    <script>
+      (function () {
+        var root = document.getElementById('root');
+        var pre = document.getElementById('pre-hero');
+        if (!root || !pre) return;
+        var obs = new MutationObserver(function () {
+          if (root.children.length > 0) {
+            pre.classList.add('hidden');
+            obs.disconnect();
+            setTimeout(function () {
+              if (pre.parentNode) pre.parentNode.removeChild(pre);
+            }, 200);
+          }
+        });
+        obs.observe(root, { childList: true });
+      })();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
