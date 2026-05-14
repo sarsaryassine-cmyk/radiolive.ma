@@ -25,7 +25,7 @@ import { ChevronRight, Mic2 } from 'lucide-react';
  */
 export default function Home() {
   const {
-    radios, syncStatus, resync, error,
+    radios, loading, syncStatus, resync, error,
     audio, playRadio,
     favorites, isFavorite, toggleFavorite,
     view, setView,
@@ -124,7 +124,7 @@ export default function Home() {
         <ErrorState message={error} />
       ) : view === 'favorites' && favorites.length === 0 ? (
         <EmptyFavorites onBrowse={() => setView('all')} />
-      ) : filtered.length === 0 ? (
+      ) : filtered.length === 0 && !loading && (query || radios.length > 0) ? (
         <EmptySearch query={query} />
       ) : (
         <motion.div
