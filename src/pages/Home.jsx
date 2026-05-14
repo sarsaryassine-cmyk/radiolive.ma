@@ -129,7 +129,7 @@ export default function Home() {
       ) : (
         <motion.div
           layout
-          className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-5"
+          className="mt-8 grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2.5 sm:gap-5"
         >
           <AnimatePresence mode="popLayout">
             {filtered.map((radio) => (

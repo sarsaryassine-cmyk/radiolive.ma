@@ -3,7 +3,7 @@ import useIconChain from '../hooks/useIconChain.js';
 
 const SIZE_CLASSES = {
   sm: 'h-10 w-10 text-base',
-  md: 'h-16 w-16 text-2xl',
+  md: 'h-10 w-10 sm:h-16 sm:w-16 text-base sm:text-2xl',
   lg: 'h-24 w-24 text-3xl',
   xl: 'h-32 w-32 text-4xl',
 };
