@@ -5,7 +5,6 @@ import { CheckCircle2, AlertTriangle } from 'lucide-react';
 
 import Header from './components/Header.jsx';
 import AudioPlayer from './components/AudioPlayer.jsx';
-import Loader from './components/Loader.jsx';
 import SceneBackground from './components/SceneBackground.jsx';
 import SideMenu from './components/SideMenu.jsx';
 import AdBanner from './components/AdBanner.jsx';
@@ -51,7 +50,6 @@ export default function App() {
 
 function AppShell() {
   const { radios, loading, error, syncStatus, resync } = useCatalog();
-  const [splash, setSplash] = useState(true);
   const [view, setView] = useState('all');
 
   const { theme, toggle: toggleTheme } = useTheme();
@@ -59,13 +57,6 @@ function AppShell() {
   const audio = useAudioEngine();
   const { reduced, isMobile } = useReducedMotion();
   useLenis({ enabled: !reduced && !isMobile });
-
-  // Splash: hide as soon as the catalog has loaded (with a tiny minimum)
-  useEffect(() => {
-    if (loading) return;
-    const t = setTimeout(() => setSplash(false), 600);
-    return () => clearTimeout(t);
-  }, [loading]);
 
   const playRadio = useCallback((radio) => audio.play(radio), [audio]);
 
@@ -110,8 +101,6 @@ function AppShell() {
         slot={import.meta.env.VITE_ADSENSE_SLOT_RIGHT_TOP || ''} />
       <AdBanner position="right-bottom"
         slot={import.meta.env.VITE_ADSENSE_SLOT_RIGHT_BOTTOM || ''} />
-
-      <AnimatePresence>{splash && <Loader />}</AnimatePresence>
 
       <div className="relative z-10 min-h-screen flex flex-col">
         <Header

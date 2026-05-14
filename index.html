@@ -46,69 +46,12 @@
       crossorigin="anonymous"
     ></script>
     <style>
-      /* fallback shown until React boots; React will replace #root entirely */
       html, body { margin: 0; height: 100%; background: #07060d; color: #fff;
         font-family: 'Inter', system-ui, sans-serif; }
-      #boot {
-        position: fixed; inset: 0; display: flex; align-items: center;
-        justify-content: center; flex-direction: column; gap: 18px; z-index: 0;
-      }
-      #boot .ring {
-        width: 56px; height: 56px; border-radius: 50%;
-        border: 3px solid rgba(255,255,255,0.08);
-        border-top-color: #7c4dff; animation: spin 1s linear infinite;
-      }
-      @keyframes spin { to { transform: rotate(360deg) } }
-      #boot small { color: rgba(255,255,255,0.45); font-size: 12px; letter-spacing: .04em; }
-      #boot.fail .ring { display: none; }
-      #boot .err { display: none; max-width: 480px; padding: 20px 24px;
-        background: rgba(255,80,120,0.1); border: 1px solid rgba(255,120,160,0.25);
-        border-radius: 16px; }
-      #boot.fail .err { display: block; }
-      #boot .err h2 { margin: 0 0 8px; font-size: 16px; }
-      #boot .err p { margin: 4px 0; font-size: 13px; color: rgba(255,255,255,0.7); }
-      #boot .err code { background: rgba(255,255,255,0.06); padding: 2px 6px;
-        border-radius: 4px; font-size: 12px; }
     </style>
   </head>
   <body class="bg-ink-950 text-white antialiased">
     <div id="root"></div>
-    <div id="boot">
-      <div class="ring"></div>
-      <small>Chargement de Radio Maroc…</small>
-      <div class="err">
-        <h2>Le JavaScript n'a pas pu démarrer</h2>
-        <p>1. Vérifiez la console du navigateur (F12 → onglet Console) pour voir l'erreur.</p>
-        <p>2. Forcez un rechargement complet sans cache : <code>Ctrl + Shift + R</code></p>
-        <p>3. Ou ouvrez le site en navigation privée pour contourner le cache.</p>
-      </div>
-    </div>
-    <script>
-      // If React hasn't replaced #root within 6s, show the failure banner.
-      (function () {
-        var tStart = Date.now();
-        var failTimer = setTimeout(function () {
-          var root = document.getElementById('root');
-          if (!root || root.children.length === 0) {
-            var boot = document.getElementById('boot');
-            if (boot) boot.classList.add('fail');
-            console.error('[radio-maroc] React did not mount within 6s. Check the bundle and console for errors.');
-          }
-        }, 6000);
-        // Hide the boot screen once React mounts something into #root
-        var observer = new MutationObserver(function () {
-          var root = document.getElementById('root');
-          if (root && root.children.length > 0) {
-            clearTimeout(failTimer);
-            var boot = document.getElementById('boot');
-            if (boot) boot.remove();
-            observer.disconnect();
-            console.info('[radio-maroc] App mounted in', Date.now() - tStart, 'ms');
-          }
-        });
-        observer.observe(document.getElementById('root'), { childList: true });
-      })();
-    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

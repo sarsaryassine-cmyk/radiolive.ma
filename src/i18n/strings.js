@@ -56,10 +56,6 @@ export const STRINGS = {
       stations_count: '{n} stations',
     },
 
-    loader: {
-      tagline: 'Chargement des stations…',
-    },
-
     hero: {
       h1: 'Radio Maroc en direct, à portée d\'écoute.',
       h1_part1: 'Radio Maroc en direct,',
@@ -217,10 +213,6 @@ export const STRINGS = {
       label: 'ابحث عن إذاعة',
       clear: 'مسح البحث',
       stations_count: '{n} محطة',
-    },
-
-    loader: {
-      tagline: 'جاري تحميل الإذاعات…',
     },
 
     hero: {
