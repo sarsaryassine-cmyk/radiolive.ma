@@ -36,7 +36,7 @@ export const STRINGS = {
     },
 
     header: {
-      brand_streaming: 'Streaming premium · 100% en direct',
+      brand_streaming: 'En direct et en ligne',
       open_menu: 'Ouvrir le menu',
       toggle_theme: 'Basculer le thème',
       open_search: 'Ouvrir la recherche',
@@ -195,7 +195,7 @@ export const STRINGS = {
     },
 
     header: {
-      brand_streaming: 'بث مباشر بجودة عالية · ٢٤/٢٤',
+      brand_streaming: 'مباشر وعلى الإنترنت',
       open_menu: 'فتح القائمة',
       toggle_theme: 'تبديل النمط',
       open_search: 'فتح البحث',
