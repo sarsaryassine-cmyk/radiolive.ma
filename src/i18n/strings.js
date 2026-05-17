@@ -36,7 +36,7 @@ export const STRINGS = {
     },
 
     header: {
-      brand_streaming: 'En direct et en ligne',
+      brand_streaming: 'En direct et en ligne · +50 Stations Radio Marocaines',
       open_menu: 'Ouvrir le menu',
       toggle_theme: 'Basculer le thème',
       open_search: 'Ouvrir la recherche',
@@ -195,7 +195,7 @@ export const STRINGS = {
     },
 
     header: {
-      brand_streaming: 'مباشر وعلى الإنترنت',
+      brand_streaming: 'مباشر وعلى الإنترنت · +50 محطة إذاعية مغربية',
       open_menu: 'فتح القائمة',
       toggle_theme: 'تبديل النمط',
       open_search: 'فتح البحث',

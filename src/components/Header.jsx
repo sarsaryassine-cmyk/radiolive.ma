@@ -38,10 +38,10 @@ export default function Header({
           </div>
         </div>
 
-        {/* Égaliseur décoratif animé — visible sur écrans larges, collé à droite du bloc Radio Maroc */}
+        {/* Égaliseur décoratif animé — visible sur écrans larges, espacé à droite du bloc Radio Maroc */}
         <div
           aria-hidden
-          className="hidden lg:flex items-end gap-0.5 h-6 ml-3"
+          className="hidden lg:flex items-end gap-0.5 h-6 ml-8"
         >
           <span className="eq-bar" />
           <span className="eq-bar" />
