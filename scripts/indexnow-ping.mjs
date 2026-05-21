@@ -1,92 +1,132 @@
 #!/usr/bin/env node
 /**
- * IndexNow ping — pousse une liste d'URLs à Bing/Yandex/Seznam (les moteurs
- * supportant IndexNow) en une requête. À lancer après chaque déploiement
- * pour accélérer le crawl des nouvelles pages.
+ * IndexNow ping — pousse toutes les URLs du sitemap à Bing/Yandex/Seznam
+ * (moteurs supportant IndexNow) en une seule requête.
+ *
+ * Stratégie : lit dist/sitemap.xml (généré par build-sitemap.mjs) et extrait
+ * toutes les <loc> pour les soumettre à l'endpoint IndexNow. Fallback sur
+ * une liste minimale si le sitemap est introuvable (pas encore buildé).
  *
  * Usage :
- *   node scripts/indexnow-ping.mjs
+ *   npm run indexnow                    # ping toutes les URLs du sitemap
+ *   node scripts/indexnow-ping.mjs      # idem
  *
- * Ou en intégration CI / Cloudflare Pages post-deploy hook :
- *   npm run indexnow
+ * Intégré au postbuild : se déclenche automatiquement après chaque
+ * `npm run build` (= chaque déploiement Cloudflare Pages).
  *
  * Spec : https://www.indexnow.org/documentation
  */
 
+import { readFileSync, existsSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { dirname, join } from 'node:path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const ROOT = join(__dirname, '..');
+
 const HOST = 'radiolive.ma';
 const KEY = '2a6164376d871eabe6ce30e127d79d8b';
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
+const ENDPOINT = 'https://api.indexnow.org/indexnow';
+const SITEMAP_PATH = join(ROOT, 'dist', 'sitemap.xml');
 
-// Liste des URLs prioritaires à indexer rapidement (Phase 1).
-// Pour chaque page modifiée significativement, ajoute-la ici avant push prod.
-const URLS = [
-  // Pilier
+// Fallback : URLs minimales si dist/sitemap.xml n'existe pas encore
+// (premier build ou exécution avant build).
+const FALLBACK_URLS = [
   `https://${HOST}/`,
   `https://${HOST}/ar`,
-
-  // Émissions (high-volume keyword 8K-15K/mois)
-  `https://${HOST}/emissions/conseil-psy-mamoun-dribi`,
-  `https://${HOST}/ar/baramij/istichara-nafsiya-mamoun-dribi`,
-
-  // SEO landings
-  `https://${HOST}/radio-maroc`,
-  `https://${HOST}/radio-maroc-en-direct`,
-  `https://${HOST}/radio-sport-maroc`,
-  `https://${HOST}/radio-nationale-marocaine`,
-  `https://${HOST}/ar/radio-maroc-mubashir`,
-  `https://${HOST}/ar/radio-riyada-maghreb`,
-  `https://${HOST}/ar/radio-al-idha3a-al-wataniya`,
-
-  // Articles musique (paires FR + AR)
-  `https://${HOST}/blog/musique-chaabi-marocaine`,
-  `https://${HOST}/ar/blog/al-musiqa-al-chaabia-al-maghribiya`,
-  `https://${HOST}/blog/elgrandetoto-rappeur-marocain`,
-  `https://${HOST}/ar/blog/elgrandetoto-rapper-maghribi`,
-  `https://${HOST}/blog/saad-lamjarred-biographie`,
-  `https://${HOST}/ar/blog/saad-lamjarred-sira`,
-  `https://${HOST}/blog/histoire-rap-marocain`,
-  `https://${HOST}/ar/blog/tarikh-al-rap-al-maghribi`,
-  `https://${HOST}/blog/meilleures-radios-marocaines-musique-streaming`,
-  `https://${HOST}/ar/blog/afdal-idaat-maghribiya-musiqa`,
-  `https://${HOST}/blog/musique-gnawa-maroc`,
-  `https://${HOST}/ar/blog/musiqa-gnawa-al-maghrib`,
-  `https://${HOST}/blog/nass-el-ghiwane-groupe-mythique`,
-  `https://${HOST}/ar/blog/nass-el-ghiwane`,
-  `https://${HOST}/blog/festival-mawazine-rabat`,
-  `https://${HOST}/ar/blog/mahrajan-mawazine`,
-  `https://${HOST}/blog/musique-amazighe-maroc`,
-  `https://${HOST}/ar/blog/al-musiqa-al-amazighiya`,
-  `https://${HOST}/blog/top-10-chansons-marocaines-incontournables`,
-  `https://${HOST}/ar/blog/afdal-10-aghani-maghribiya`,
-
-  // Sitemap
   `https://${HOST}/sitemap.xml`,
 ];
 
-const ENDPOINT = 'https://api.indexnow.org/indexnow';
+function extractUrlsFromSitemap(xml) {
+  // Regex simple — suffisant pour un sitemap standard avec <loc>URL</loc>
+  const matches = xml.matchAll(/<loc>([^<]+)<\/loc>/g);
+  const urls = [];
+  for (const m of matches) {
+    const url = m[1].trim();
+    // Garde uniquement les URLs du host (ignore les sitemaps imbriqués
+    // qui pourraient pointer ailleurs)
+    if (url.startsWith(`https://${HOST}/`) || url === `https://${HOST}`) {
+      urls.push(url);
+    }
+  }
+  return urls;
+}
 
-async function main() {
+function loadUrls() {
+  if (!existsSync(SITEMAP_PATH)) {
+    console.warn(`[IndexNow] ⚠ dist/sitemap.xml introuvable — fallback (${FALLBACK_URLS.length} URLs)`);
+    console.warn(`[IndexNow] Lance d'abord 'npm run build' pour générer le sitemap complet.`);
+    return FALLBACK_URLS;
+  }
+  const xml = readFileSync(SITEMAP_PATH, 'utf-8');
+  const urls = extractUrlsFromSitemap(xml);
+  if (urls.length === 0) {
+    console.warn(`[IndexNow] ⚠ sitemap.xml vide ou format inattendu — fallback`);
+    return FALLBACK_URLS;
+  }
+  return urls;
+}
+
+async function pingBatch(urls) {
   const body = {
     host: HOST,
     key: KEY,
     keyLocation: KEY_LOCATION,
-    urlList: URLS,
+    urlList: urls,
   };
-
-  console.log(`[IndexNow] pushing ${URLS.length} URLs to ${ENDPOINT}`);
   const res = await fetch(ENDPOINT, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json; charset=utf-8' },
     body: JSON.stringify(body),
   });
+  return res;
+}
 
-  if (res.status >= 200 && res.status < 300) {
-    console.log(`[IndexNow] ✓ accepted (${res.status})`);
-  } else if (res.status === 422) {
-    console.warn(`[IndexNow] ⚠ unprocessable — host mismatch ou clé invalide`);
-  } else {
-    const text = await res.text().catch(() => '');
-    console.error(`[IndexNow] ✗ error ${res.status}: ${text.slice(0, 200)}`);
+async function main() {
+  const urls = loadUrls();
+  console.log(`[IndexNow] pushing ${urls.length} URLs to ${ENDPOINT}`);
+
+  // IndexNow limite à 10 000 URLs par requête — split par batchs de 10k
+  const BATCH_SIZE = 10000;
+  const batches = [];
+  for (let i = 0; i < urls.length; i += BATCH_SIZE) {
+    batches.push(urls.slice(i, i + BATCH_SIZE));
+  }
+
+  let okCount = 0;
+  let failCount = 0;
+
+  for (let i = 0; i < batches.length; i++) {
+    const batch = batches[i];
+    const label = batches.length > 1 ? ` (batch ${i + 1}/${batches.length}, ${batch.length} URLs)` : '';
+
+    try {
+      const res = await pingBatch(batch);
+      if (res.status >= 200 && res.status < 300) {
+        console.log(`[IndexNow] ✓ accepted${label} (${res.status})`);
+        okCount += batch.length;
+      } else if (res.status === 422) {
+        const text = await res.text().catch(() => '');
+        console.warn(`[IndexNow] ⚠ unprocessable${label} — clé invalide ou host mismatch : ${text.slice(0, 200)}`);
+        failCount += batch.length;
+      } else if (res.status === 429) {
+        console.warn(`[IndexNow] ⚠ rate-limited${label} (429) — réessaye dans quelques heures`);
+        failCount += batch.length;
+      } else {
+        const text = await res.text().catch(() => '');
+        console.error(`[IndexNow] ✗ error${label} ${res.status}: ${text.slice(0, 200)}`);
+        failCount += batch.length;
+      }
+    } catch (err) {
+      console.error(`[IndexNow] ✗ network error${label}:`, err.message || err);
+      failCount += batch.length;
+    }
+  }
+
+  console.log(`[IndexNow] done — ${okCount} accepted, ${failCount} failed`);
+  if (failCount > 0 && okCount === 0) {
     process.exit(1);
   }
 }
