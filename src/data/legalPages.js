@@ -281,6 +281,11 @@ export const LEGAL_PAGES = {
           p2: "Le projet est né d'un constat simple : aucune plateforme ne réunissait l'ensemble des radios marocaines avec une interface moderne, rapide et fiable. Les listes existantes étaient dispersées, les flux souvent cassés, l'expérience utilisateur datée. Radio Live Maroc comble ce vide.",
         },
         {
+          h2: 'Une histoire qui remonte à 2016',
+          p: "Le domaine radiolive.ma est actif depuis mai 2016. Pendant près d'une décennie, le portail a évolué au rythme du paysage radiophonique marocain — d'abord comme simple page de présentation, puis comme premier agrégateur de stations en 2021-2022. Le projet est aujourd'hui complètement refondé pour offrir l'expérience moderne, rapide et bilingue que mérite l'écosystème radio marocain en 2026.",
+          p2: "Cette continuité historique fait de radiolive.ma l'un des plus anciens noms de domaine consacrés à la radio marocaine sur internet — un héritage que nous honorons avec une plateforme à la hauteur des attentes actuelles : streaming HD via HLS, interface bilingue Français / Arabe avec support RTL natif, pages dédiées pour la diaspora MRE en France, Belgique, Pays-Bas, Espagne, Italie, Canada et États-Unis, et catalogue mis à jour quotidiennement.",
+        },
+        {
           h2: 'Pour qui ?',
           p: 'Notre site est conçu pour trois publics principaux :',
           ul: [
@@ -328,6 +333,11 @@ export const LEGAL_PAGES = {
           h2: 'مهمتنا',
           p: 'تجميع كل المحطات الإذاعية المغربية على منصة واحدة حديثة وسهلة الوصول. سواء كنت في الدار البيضاء داخل سيارتك، أو في بروكسل صباح الأحد، أو في مونتريال في عز يوم العمل، يعيدك راديو لايف المغرب فورًا إلى نبض المغرب الصوتي — Hit Radio، Radio Mars، Medi 1، Chada FM، Aswat، وأكثر من 45 محطة أخرى.',
           p2: 'وُلد المشروع من ملاحظة بسيطة: لم تكن هناك منصة تجمع كل الإذاعات المغربية بواجهة حديثة وسريعة وموثوقة. القوائم الموجودة كانت مشتتة، التدفقات معطلة في الغالب، وتجربة المستخدم قديمة. راديو لايف المغرب يسد هذه الفجوة.',
+        },
+        {
+          h2: 'قصة تعود إلى عام 2016',
+          p: 'النطاق radiolive.ma نشط منذ مايو 2016. على مدى قرابة عقد من الزمن، تطورت البوابة بإيقاع المشهد الإذاعي المغربي — أولاً كصفحة تعريف بسيطة، ثم كأول مجمّع للمحطات في 2021-2022. تم إعادة تأسيس المشروع اليوم بالكامل ليقدم التجربة الحديثة والسريعة وثنائية اللغة التي تستحقها منظومة الإذاعات المغربية في 2026.',
+          p2: 'هذه الاستمرارية التاريخية تجعل من radiolive.ma أحد أقدم النطاقات المكرسة للإذاعة المغربية على الإنترنت — إرث نحترمه بمنصة في مستوى التطلعات الحالية: بث HD عبر HLS، واجهة ثنائية اللغة بالفرنسية والعربية مع دعم RTL أصلي، صفحات مخصصة للجالية المغربية في فرنسا وبلجيكا وهولندا وإسبانيا وإيطاليا وكندا والولايات المتحدة، وكتالوج محدث يوميًا.',
         },
         {
           h2: 'لمن؟',
