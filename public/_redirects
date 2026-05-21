@@ -1,17 +1,17 @@
 # Cloudflare Pages / Netlify SPA fallback + 301 SEO redirects.
 
-# 301 — mots-clés cousins consolidés sur la page principale (anti-cannibalisation).
+# === 301 — mots-clés cousins consolidés sur la page principale (anti-cannibalisation) ===
 /radio-maroc-en-ligne   /radio-maroc-en-direct   301
 /ecouter-radio-maroc    /radio-maroc-en-direct   301
 /radio-mars-maroc       /station/radio-mars      301
 
-# 301 — stations renommées suite au cleanup (casse normalisée).
+# === 301 — stations renommées suite au cleanup (casse normalisée) ===
 /station/medradio              /station/med-radio    301
 /station/medinafm              /station/medina-fm    301
 /ar/station/medradio           /ar/station/med-radio    301
 /ar/station/medinafm           /ar/station/medina-fm    301
 
-# 301 — doublons fusionnés vers la station principale.
+# === 301 — doublons fusionnés vers la station principale ===
 /station/ma-hit-radio-maroc                   /station/hit-radio          301
 /station/ma-radio-sawt-alamal                 /station/sawt-al-amal       301
 /station/mrc-radio-plus                       /station/radio-plus-agadir  301
@@ -19,7 +19,7 @@
 /ar/station/ma-radio-sawt-alamal              /ar/station/sawt-al-amal       301
 /ar/station/mrc-radio-plus                    /ar/station/radio-plus-agadir  301
 
-# 301 — préfixes MA:-/MRC:- supprimés (Q5).
+# === 301 — préfixes MA:-/MRC:- supprimés (Q5) ===
 /station/mrc-sawt-al-amal                     /station/sawt-al-amal                301
 /station/mrc-hip-hop-soul-radio-radio-music   /station/hip-hop-soul-radio-radio-music   301
 /station/mrc-radio-adwaa-atfal-4              /station/radio-adwaa-atfal-4         301
@@ -30,6 +30,110 @@
 /ar/station/mrc-radio-adwaa-atfal-4              /ar/station/radio-adwaa-atfal-4         301
 /ar/station/mrc-radio-adwaa-mazika-5             /ar/station/radio-adwaa-mazika-5        301
 /ar/station/mrc-radio-adwaa-music-3              /ar/station/radio-adwaa-music-3         301
+
+# === 301 — alias des URLs déjà utilisées dans nos backlinks externes ===
+# Plusieurs backlinks pointent vers /station/medi-1 (forme courte) alors que
+# le slug réel est /station/medi-1-radio. Sans ce redirect, les liens Tumblr/
+# Medium/YouTube/Linktree pointant vers medi-1 retournaient 404.
+/station/medi-1         /station/medi-1-radio       301
+/ar/station/medi-1      /ar/station/medi-1-radio    301
+
+# === Wayback Machine recovery — anciens contenus radiolive.ma 2021-2022 ===
+# Le domaine hébergeait un agrégateur de radios marocaines de fév 2021 à
+# nov 2022. ~80 URLs anciennes peuvent encore recevoir du trafic résiduel
+# + des backlinks anciens. Mapping vers les pages équivalentes du nouveau
+# site pour transférer l'autorité SEO via redirect 301.
+
+# --- Stations avec correspondance directe dans le catalogue actuel ---
+/adwaafm                /station/adwaa-fm                       301
+/aswat                  /station/aswat-fm                       301
+/atlantic-radio         /station/atlantic-radio                 301
+/cap-radio              /station/cap-radio                      301
+/chada-fm               /station/chada-fm                       301
+/med-radio              /station/med-radio                      301
+/medi-1-andalouse       /station/medi-1-radio-andalouse         301
+/medi-1-tarab           /station/medi-1-tarab                   301
+/medina-fm              /station/medina-fm                      301
+/mfm-radio              /station/mfm                            301
+/monte-calro-doualiya   /station/radio-monte-carlo-doualiya     301
+/ness-radio             /station/ness-radio                     301
+/plus-marrakech         /station/marrakech-plus                 301
+/radio-2m               /station/radio-2m                       301
+/radio-atbir            /station/radio-atbir                    301
+/radio-azawan           /station/radio-azawan                   301
+/radio-coran            /station/qoran-radio                    301
+/radio-manarat          /station/radio-manarat                  301
+/radio-mars             /station/radio-mars                     301
+/radio-only-rai         /station/only-rai                       301
+/radio-yabiladi         /station/radio-yabiladi                 301
+/skyrock-casablanca     /station/skyrock-casablanca             301
+/star-maroc-fm          /station/radio-star-maroc-fm            301
+/zine-bladi             /station/zine-bladi                     301
+
+# --- Hit Radio sub-channels (consolidés sur Hit Radio principal) ---
+/hit-radio              /station/hit-radio                 301
+/hit-buzz               /station/hit-radio                 301
+/hit-cover              /station/hit-radio                 301
+/hit-dancefloor         /station/hit-radio                 301
+/hit-french             /station/hit-radio                 301
+/hit-gold               /station/hit-radio                 301
+/hit-mgharba            /station/hit-radio                 301
+/hit-rnb                /station/hit-radio                 301
+/hit-rock-metal         /station/hit-radio                 301
+
+# --- Medi 1 sub-channels (consolidés sur Medi 1 principal) ---
+/medi-1                 /station/medi-1-radio              301
+/medi-1-jazz            /station/medi-1-radio              301
+/medi-1-latino          /station/medi-1-radio              301
+/medi-1-nayda           /station/medi-1-radio              301
+
+# --- Pages légales (équivalents actuels) ---
+/privacy-policy         /politique-confidentialite         301
+/disclaimer             /politique-confidentialite         301
+/dmca                   /politique-confidentialite         301
+/terms-of-service       /conditions-utilisation            301
+
+# --- Landings catégorie ---
+/amazighia              /radio-maroc-amazigh               301
+/izlan                  /radio-maroc-amazigh               301
+/izlanzik-radio         /radio-maroc-amazigh               301
+/maroc-radio            /radio-maroc                       301
+/moroccan-radio         /radio-maroc                       301
+/watania                /radio-nationale-marocaine         301
+/radio-aljalia          /radio-maroc-mre                   301
+/hits-1-maroc           /radio-maroc-hit                   301
+/100-hit-100-music      /radio-maroc-hit                   301
+/nrj-maroc              /radio-maroc-hit                   301
+
+# --- Anciens contenus sans équivalent direct (redirect vers home) ---
+/4u-classic-rock        /    301
+/ajial-radio            /    301
+/al-jazeera-arabic      /    301
+/al-jazeera-english     /    301
+/anwa-rock              /    301
+/assadissa              /    301
+/bbc-arabic             /    301
+/chaine                 /    301
+/france-maghreb-2       /    301
+/love-radio             /    301
+/love-maroc             /    301
+/luxe-radio             /    301
+/nota-magharibia        /    301
+/ohayo                  /    301
+/orient-fm              /    301
+/radio-azrou            /    301
+/radio-chabab           /    301
+/radio-habayiib         /    301
+/radio-itma             /    301
+/radio-nador            /    301
+/radio-sawa             /    301
+/radio-sawte-ouarzazate /    301
+/radio-soleil           /    301
+/radioweb               /    301
+/rif-melody             /    301
+/rim                    /    301
+/sawt-ouarzazate        /    301
+/sawtlmoustahlik        /    301
 
 # SPA fallback : tous les autres chemins client-side servent index.html.
 /*    /index.html   200
