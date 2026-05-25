@@ -29,8 +29,12 @@ export default function Seo({
   alternates,
 }) {
   const brand = siteName(lang);
+  // Smart suffix : on n'ajoute "| Radio Maroc" que si le titre ne contient pas
+  // déjà la marque. Évite des titres type "Radio Maroc en direct ... | Radio Maroc"
+  // (95+ caractères tronqués par Google, look spam, perte d'espace SERP).
+  const titleHasBrand = title && title.toLowerCase().includes(brand.toLowerCase());
   const fullTitle = title
-    ? `${title} | ${brand}`
+    ? (titleHasBrand ? title : `${title} | ${brand}`)
     : (lang === 'ar'
         ? `${brand} | إذاعات مغربية مباشر`
         : `${brand} en direct — Écouter toutes les radios marocaines en ligne`);

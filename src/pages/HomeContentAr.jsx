@@ -9,9 +9,9 @@ import { Link } from 'react-router-dom';
 export default function HomeContentAr() {
   return (
     <section className="mt-16 sm:mt-24 max-w-4xl mx-auto text-white/75 leading-loose">
-      <h1 className="font-display text-3xl sm:text-4xl font-bold text-white mb-6 text-balance">
+      <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-6 text-balance">
         إذاعات المغرب مباشر — استمع إلى جميع راديوهات المغرب أون لاين مجاناً
-      </h1>
+      </h2>
 
       <p className="mb-5 text-[15px]">
         مرحباً بكم في <strong>إذاعات المغرب</strong>، البوابة المرجعية للاستماع

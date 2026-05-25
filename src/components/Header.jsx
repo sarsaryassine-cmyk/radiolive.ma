@@ -28,10 +28,13 @@ export default function Header({
             <RadioMarocLogo size={48} />
           </span>
           <div className="min-w-0">
-            <h1 className="font-display font-bold text-base sm:text-lg leading-tight">
+            {/* Marque affichée dans le header — pas un H1 sémantique pour éviter
+                de dupliquer l'H1 réel de chaque page (station, landing, blog…).
+                Le H1 de chaque page reste celui spécifique au contenu. */}
+            <p className="font-display font-bold text-base sm:text-lg leading-tight">
               {t('site_name').split(' ')[0]}{' '}
               <span className="gradient-text">{t('site_name').split(' ').slice(1).join(' ') || 'Maroc'}</span>
-            </h1>
+            </p>
             <p className="text-[11px] text-white/50 -mt-0.5 hidden sm:block">
               {t('header.brand_streaming')}
             </p>

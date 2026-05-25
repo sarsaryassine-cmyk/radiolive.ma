@@ -280,9 +280,9 @@ function EmissionsSection({ lang }) {
 function SeoCopy() {
   return (
     <section className="mt-16 sm:mt-24 max-w-4xl mx-auto text-white/75 leading-relaxed">
-      <h1 className="font-display text-3xl sm:text-4xl font-bold text-white mb-6 text-balance">
+      <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-6 text-balance">
         Radio Maroc en direct — Écouter toutes les radios marocaines en ligne
-      </h1>
+      </h2>
 
       <p className="mb-5">
         Bienvenue sur <strong>Radio Maroc</strong>, le portail de référence
@@ -493,10 +493,10 @@ function CompactHero({ count, syncStatus, onResync }) {
     >
       <div className="flex items-end justify-between gap-4 flex-wrap">
         <div className="min-w-0">
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-balance">
+          <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-balance">
             {t('hero.h1_part1')}{' '}
             <span className="gradient-text">{t('hero.h1_part2')}</span>
-          </h2>
+          </h1>
         </div>
 
         <div className="flex items-center gap-2 flex-wrap">
