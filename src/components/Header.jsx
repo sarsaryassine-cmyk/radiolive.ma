@@ -3,6 +3,7 @@ import { Moon, Sun, Heart, Sparkles, Languages } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 import useI18n from '../i18n/useI18n.js';
 import RadioMarocLogo from './RadioMarocLogo.jsx';
+import { useAppContext } from '../AppContext.jsx';
 
 export default function Header({
   theme,
@@ -11,14 +12,31 @@ export default function Header({
   onViewChange,
   favoritesCount,
 }) {
-  const { t, switchLang } = useI18n();
-  // Sur les pages station, le hero affiche déjà le nom de la station en grand
-  // (Radio Mars, Hit Radio, etc.) — on masque la tagline du header pour éviter
-  // le conflit visuel "Radio Maroc · +50 Stations…" qui domine sur la page.
+  const { t, switchLang, lang } = useI18n();
+  const { radios } = useAppContext();
+
+  // Sur les pages station, on remplace le branding "Radio Maroc" par
+  // "Écouter [nom de la station]" — devient à la fois un signal de contexte
+  // pour l'utilisateur ("je suis sur la page Radio Mars") et un signal SEO
+  // ciblant le mot-clef intention "écouter [station]".
   const location = useLocation();
-  const isStationPage =
-    location.pathname.startsWith('/station/') ||
-    location.pathname.startsWith('/ar/station/');
+  const stationSlug =
+    location.pathname.match(/\/(?:ar\/)?station\/([^/]+)/)?.[1] || null;
+  const station = stationSlug ? radios.find((r) => r.id === stationSlug) : null;
+  const isStationPage = !!stationSlug;
+
+  // Construction du brand display selon le contexte
+  let brandPrefix;
+  let brandAccent;
+  if (isStationPage && station) {
+    brandPrefix = lang === 'ar' ? 'استمع إلى' : 'Écouter';
+    brandAccent = station.name;
+  } else {
+    const siteName = t('site_name');
+    const parts = siteName.split(' ');
+    brandPrefix = parts[0];
+    brandAccent = parts.slice(1).join(' ') || 'Maroc';
+  }
   return (
     <motion.header
       initial={{ opacity: 0, y: -16 }}
@@ -39,9 +57,9 @@ export default function Header({
             {/* Marque affichée dans le header — pas un H1 sémantique pour éviter
                 de dupliquer l'H1 réel de chaque page (station, landing, blog…).
                 Le H1 de chaque page reste celui spécifique au contenu. */}
-            <p className="font-display font-bold text-base sm:text-lg leading-tight">
-              {t('site_name').split(' ')[0]}{' '}
-              <span className="gradient-text">{t('site_name').split(' ').slice(1).join(' ') || 'Maroc'}</span>
+            <p className="font-display font-bold text-base sm:text-lg leading-tight truncate">
+              {brandPrefix}{' '}
+              <span className="gradient-text">{brandAccent}</span>
             </p>
             {!isStationPage && (
               <p className="text-[11px] text-white/50 -mt-0.5 hidden sm:block">
