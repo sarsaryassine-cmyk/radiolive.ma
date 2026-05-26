@@ -1,15 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-512 -512 1024 1024">
-  <defs>
-    <radialGradient id="bg" cx="0" cy="-40" r="0.8" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#1a0a14"/>
-      <stop offset="100%" stop-color="#07060d"/>
-    </radialGradient>
-  </defs>
-  <circle cx="0" cy="0" r="500" fill="url(#bg)"/>
-  <circle cx="0" cy="0" r="430" fill="none" stroke="rgba(244,239,227,0.25)" stroke-width="6"/>
-  <path d="M 0.00 -200.00 L 117.56 161.80 L -190.21 -61.80 L 190.21 -61.80 L -117.56 161.80 Z"
-        fill="none" stroke="#2EE39F" stroke-width="22" stroke-linejoin="round" stroke-linecap="round" opacity="0.9"/>
-  <path d="M 0.00 -260.00 L 59.61 -82.03 L 247.27 -80.34 L 96.43 31.33 L 152.83 210.34 L 0.00 101.40 L -152.83 210.34 L -96.43 31.33 L -247.27 -80.34 L -59.61 -82.03 Z"
-        fill="none" stroke="#E60E1F" stroke-width="22" stroke-linejoin="round" stroke-linecap="round"/>
-  <circle cx="0" cy="0" r="14" fill="#F4EFE3"/>
+  <!-- Cercle rouge marocain (couleur drapeau officiel) -->
+  <circle cx="0" cy="0" r="500" fill="#C1272D"/>
+
+  <!-- Pentagramme vert (étoile du drapeau du Maroc) — dessiné en ligne continue
+       qui se croise pour former le khatam à 5 branches, comme sur le drapeau.
+       Stroke épais (60) pour rester visible à 16×16 dans Google SERPs. -->
+  <path d="M 0 -340 L 199.86 275.13 L -323.37 -105.05 L 323.37 -105.05 L -199.86 275.13 Z"
+        fill="none"
+        stroke="#006233"
+        stroke-width="60"
+        stroke-linejoin="round"
+        stroke-linecap="round"/>
 </svg>
