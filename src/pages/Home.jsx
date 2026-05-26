@@ -534,8 +534,11 @@ function CompactHero({ count, syncStatus, onResync }) {
       transition={{ duration: 0.5, ease: 'easeOut' }}
       className="pt-6 sm:pt-10 pb-2"
     >
-      <div className="flex items-start justify-between gap-4 flex-wrap">
-        <div className="min-w-0 flex-1 max-w-4xl">
+      {/* Mobile : H1 + p en pleine largeur en haut, badge/refresh en chips
+          compacts dessous. Tablet/desktop (sm:) : H1+p à gauche, chips à
+          droite alignés en haut (avec wrap si nécessaire). */}
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-4">
+        <div className="min-w-0 sm:flex-1 sm:max-w-4xl">
           <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-balance">
             Radio Maroc en direct —{' '}
             <span className="gradient-text">Écouter en ligne toutes les stations marocaines</span>
@@ -549,7 +552,7 @@ function CompactHero({ count, syncStatus, onResync }) {
           </p>
         </div>
 
-        <div className="flex items-center gap-2 flex-wrap shrink-0">
+        <div className="flex items-center gap-2 flex-wrap sm:shrink-0">
           <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-[11px] font-medium text-white/80">
             <Sparkles className="h-3.5 w-3.5 text-brand-300" />
             {count > 0 ? (
