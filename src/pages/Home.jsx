@@ -536,14 +536,15 @@ function CompactHero({ count, syncStatus, onResync }) {
     >
       {/* Mobile : H1 + p en pleine largeur en haut, badge/refresh en chips
           compacts dessous. Tablet/desktop (sm:) : H1+p à gauche, chips à
-          droite alignés en haut (avec wrap si nécessaire). */}
-      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-4">
-        <div className="min-w-0 sm:flex-1 sm:max-w-4xl">
-          <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-balance">
+          droite alignés en haut. Le texte utilise toute la largeur disponible
+          (pas de max-width) pour gagner en compacité verticale. */}
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-6">
+        <div className="min-w-0 sm:flex-1">
+          <h1 className="font-display text-xl sm:text-xl md:text-2xl font-bold leading-tight text-balance">
             Radio Maroc en direct —{' '}
             <span className="gradient-text">Écouter en ligne toutes les stations marocaines</span>
           </h1>
-          <p className="mt-3 sm:mt-4 text-[13px] sm:text-[15px] text-white/70 leading-relaxed max-w-3xl">
+          <p className="mt-2 sm:mt-3 text-[13px] sm:text-[13.5px] text-white/65 leading-relaxed">
             Écoutez les radios du Maroc en direct, gratuitement et sans
             inscription. Plus de 30 stations FM et webradios diffusent leur
             signal 24 heures sur 24 sur notre plateforme. Sélectionnez une
