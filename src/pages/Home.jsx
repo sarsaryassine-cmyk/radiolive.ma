@@ -281,48 +281,72 @@ function SeoCopy() {
   return (
     <section className="mt-16 sm:mt-24 max-w-4xl mx-auto text-white/75 leading-relaxed">
       <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-6 text-balance">
-        Radio Maroc en direct — Écouter toutes les radios marocaines en ligne
+        Radio Maroc en direct — Écouter en ligne toutes les stations marocaines
       </h2>
 
       <p className="mb-5">
-        Bienvenue sur <strong>Radio Maroc</strong>, le portail de référence
-        pour écouter <strong>la radio au Maroc</strong> en direct et{' '}
-        <strong>en ligne</strong>. Plus de 49 stations FM, AM et webradios
-        du royaume diffusent leur signal sur notre plateforme :{' '}
-        <Link to="/station/hit-radio" className="text-white hover:text-brand-300 underline-offset-2 hover:underline">Hit Radio Maroc</Link>,{' '}
-        <Link to="/station/radio-mars" className="text-white hover:text-brand-300 underline-offset-2 hover:underline">Radio Mars Maroc</Link>,{' '}
-        <Link to="/station/mfm" className="text-white hover:text-brand-300 underline-offset-2 hover:underline">MFM Radio Maroc</Link>,{' '}
-        <em>Chada FM</em>, <em>Medi 1 Radio</em>, <em>Radio 2M</em>,{' '}
-        <em>Medina FM</em>, <em>Cap Radio</em>, <em>Atlantic Radio</em>,{' '}
-        <em>Radio Aswat</em>, <em>Skyrock Casablanca</em>, <em>Radio Coran</em>{' '}
-        et bien d'autres. <strong>L'écoute est gratuite, sans inscription,
-        sans téléchargement</strong>, et fonctionne sur ordinateur, tablette
-        ou smartphone, partout dans le monde.
-      </p>
-
-      <p className="mb-5">
-        Que vous cherchiez à écouter <strong>la radio du Maroc</strong> depuis
-        Casablanca, à profiter de la <strong>radio en direct au Maroc</strong>{' '}
-        pendant vos trajets, ou à suivre <strong>Radio Maroc en ligne</strong>{' '}
-        depuis l'étranger, notre lecteur de streaming HD vous reconnecte
-        instantanément à la pulsation sonore du royaume.
+        Toutes les radios du Maroc en direct, gratuitement et sans inscription.
+        Plus de 30 stations FM et webradios diffusent leur signal 24 heures sur
+        24 sur notre plateforme. Sélectionnez une station, cliquez sur écouter,
+        et profitez du Maroc en direct depuis n'importe où dans le monde.
       </p>
 
       <h2 className="font-display text-2xl font-bold text-white mt-10 mb-4">
-        Toutes les radios marocaines réunies sur une seule plateforme
+        Toutes les radios marocaines en direct, à un clic
       </h2>
       <p className="mb-5">
-        Le paysage radiophonique marocain est l'un des plus riches du monde
-        arabe. Depuis la libéralisation des ondes en 2006, des dizaines de
-        nouvelles radios privées ont rejoint les chaînes historiques de la{' '}
-        <strong>SNRT</strong> et du groupe public 2M. Notre site centralise
-        ces stations pour vous permettre d'<strong>écouter la radio
-        marocaine</strong> en direct, en haute qualité, où que vous soyez.
-        Chaque station dispose de sa propre <Link to="/" className="text-brand-300 hover:underline">page dédiée</Link>{' '}
-        avec une présentation détaillée, son histoire, son format musical et
-        son lecteur audio embarqué — tout en restant connecté à la grille
-        principale grâce à notre lecteur global qui suit votre navigation.
+        Notre plateforme centralise plus de trente stations marocaines en direct.{' '}
+        <Link to="/station/hit-radio" className="text-white hover:text-brand-300 underline-offset-2 hover:underline">Hit Radio</Link>,{' '}
+        <Link to="/station/medi-1-radio" className="text-white hover:text-brand-300 underline-offset-2 hover:underline">Medi 1 Radio</Link>,{' '}
+        <Link to="/station/chada-fm" className="text-white hover:text-brand-300 underline-offset-2 hover:underline">Chada FM</Link>,{' '}
+        <Link to="/station/radio-mars" className="text-white hover:text-brand-300 underline-offset-2 hover:underline">Radio Mars</Link>,{' '}
+        <Link to="/station/radio-2m" className="text-white hover:text-brand-300 underline-offset-2 hover:underline">Radio 2M</Link>,{' '}
+        <Link to="/station/mfm" className="text-white hover:text-brand-300 underline-offset-2 hover:underline">MFM</Link>,
+        Medina FM, Aswat, Cap Radio, Med Radio, Skyrock Casablanca, Radio Coran
+        et bien d'autres y sont diffusées en direct, sans coupure publicitaire
+        intrusive et avec une qualité audio adaptée à votre connexion (jusqu'à
+        256 kbps en HLS HD).
       </p>
+      <p className="mb-5">
+        Le principe est simple : aucun téléchargement d'application, aucune
+        création de compte, aucune limite d'écoute. Vous ouvrez le site, vous
+        choisissez une radio, et le lecteur audio démarre immédiatement. Le
+        flux reste actif quand vous changez de page : pratique pour découvrir
+        une nouvelle station tout en continuant d'écouter votre programme
+        préféré.
+      </p>
+
+      <h2 className="font-display text-2xl font-bold text-white mt-10 mb-4">
+        Comment fonctionne l'écoute en direct ?
+      </h2>
+      <p className="mb-5">
+        Chaque radio marocaine diffuse son signal sous forme d'un flux audio
+        numérique transmis en temps réel par les serveurs de la station. Notre
+        plateforme se connecte à ces flux officiels (HLS, AAC, MP3 selon les
+        radios) et les relit dans votre navigateur via un lecteur Web compatible
+        avec tous les appareils modernes : ordinateur, smartphone iOS et
+        Android, tablette, smart TV.
+      </p>
+      <p className="mb-5">
+        Le décalage entre la diffusion réelle et votre écoute est généralement
+        compris entre 5 et 30 secondes selon la radio et votre connexion. Sur
+        la fibre, le délai est imperceptible ; sur 4G ou 5G, il reste très
+        court. Si votre débit fluctue, le lecteur ajuste automatiquement la
+        qualité pour éviter les coupures. Aucune installation, aucun
+        paramétrage.
+      </p>
+
+      <h2 className="font-display text-2xl font-bold text-white mt-10 mb-4">
+        Sur quels appareils écouter la radio marocaine en ligne ?
+      </h2>
+      <ul className="list-disc pl-6 mb-5 space-y-2 marker:text-brand-300">
+        <li>Ordinateur (Windows, Mac, Linux) : navigateur Chrome, Firefox, Edge ou Safari récent.</li>
+        <li>Smartphone Android : Chrome ou navigateur d'origine, écoute possible en arrière-plan.</li>
+        <li>iPhone et iPad : Safari ou Chrome, contrôle depuis le centre de contrôle iOS.</li>
+        <li>Smart TV : Chromecast, Apple TV, navigateur intégré.</li>
+        <li>Voiture : Apple CarPlay et Android Auto via Bluetooth ou USB.</li>
+        <li>Enceintes connectées : Google Home, Amazon Echo (en lançant l'URL via le navigateur du smartphone).</li>
+      </ul>
 
       <h2 className="font-display text-2xl font-bold text-white mt-10 mb-4">
         Radios marocaines par catégorie
@@ -364,27 +388,23 @@ function SeoCopy() {
       </ul>
 
       <h2 className="font-display text-2xl font-bold text-white mt-10 mb-4">
-        Les 3 radios marocaines les plus écoutées
+        Pourquoi écouter la radio en ligne plutôt qu'en FM ?
       </h2>
       <p className="mb-5">
-        Trois stations dominent l'audience nationale et concentrent l'essentiel
-        des recherches sur Google. <Link to="/station/hit-radio" className="text-white font-semibold hover:text-brand-300 underline-offset-2 hover:underline">Hit Radio Maroc</Link>,
-        lancée en 2006 par Younes Boumehdi, est la 1ʳᵉ radio musicale privée
-        du royaume, leader sur le segment 15-35 ans avec son format pop /
-        R&B / hits internationaux et arabes. <Link to="/station/radio-mars" className="text-white font-semibold hover:text-brand-300 underline-offset-2 hover:underline">Radio Mars Maroc</Link> —
-        ou <strong>Mars Radio Maroc</strong> selon les recherches — est la 1ʳᵉ
-        radio sportive 100 % marocaine, indispensable pour suivre la Botola
-        Pro et les Lions de l'Atlas. Enfin, <Link to="/station/mfm" className="text-white font-semibold hover:text-brand-300 underline-offset-2 hover:underline">MFM Radio Maroc</Link>{' '}
-        s'impose comme la référence sur les musiques afro-orientales
-        (raï, chaabi, gnawa, amazigh) et la grande chanson maghrébine.
+        L'écoute en ligne via Internet apporte plusieurs avantages décisifs
+        sur la diffusion FM classique. D'abord, la qualité audio : les radios
+        marocaines diffusent généralement entre 64 kbps (mono) et 256 kbps
+        (stéréo HD), bien supérieure à la modulation analogique parasitée par
+        les zones d'ombre, les tunnels et les obstacles urbains. Ensuite, la
+        couverture : depuis Casablanca, Rabat, Marrakech, Tanger ou n'importe
+        quelle ville du monde, le signal est identique. Aucune zone blanche.
       </p>
       <p className="mb-5">
-        Ces trois stations — <strong>Radio Maroc Mars</strong>, Hit Radio et
-        MFM — couvrent les principaux segments d'audience (sport, jeunes urbains,
-        adultes amateurs de musiques traditionnelles) et sont accessibles 24 h /
-        24 sur notre lecteur, en streaming HD, sans inscription ni publicité
-        intrusive. Que vous écoutiez depuis le Maroc ou depuis l'étranger,
-        l'expérience reste identique.
+        L'écoute en ligne permet aussi d'accéder à des webradios qui n'ont
+        pas de fréquence FM officielle (Yabiladi Chaabi Maroc, Yabiladi
+        Azawan Amazigh, Rap Lbeldi Maroc, Fayroz, Adwaa FM). Pour les
+        Marocains résidant à l'étranger (MRE), c'est le seul moyen pratique
+        d'écouter la radio nationale en temps réel.
       </p>
 
       <h2 className="font-display text-2xl font-bold text-white mt-10 mb-4">
@@ -397,87 +417,100 @@ function SeoCopy() {
         <Link to="/radio-tanger" className="text-brand-300 hover:underline">Tanger</Link>,{' '}
         <Link to="/radio-fes" className="text-brand-300 hover:underline">Fès</Link>,{' '}
         <Link to="/radio-agadir" className="text-brand-300 hover:underline">Agadir</Link> ou
-        à l'étranger, notre plateforme vous donne accès à votre radio préférée
-        sans coupure et sans publicité intrusive. <strong>Radio Maroc en
-        direct</strong> est particulièrement utilisée par les{' '}
-        <strong>Marocains du monde (MRE)</strong> qui souhaitent rester
-        connectés à la culture, à l'actualité et à la musique de leur pays
-        d'origine. La diaspora marocaine — en France, en Belgique, aux
+        à l'étranger, notre plateforme vous donne accès à votre radio
+        préférée sans coupure et sans publicité intrusive.{' '}
+        <strong>Radio Maroc en direct</strong> est particulièrement utilisée
+        par les <strong>Marocains du monde (MRE)</strong> qui souhaitent
+        rester connectés à la culture, à l'actualité et à la musique de leur
+        pays d'origine. La diaspora marocaine — en France, en Belgique, aux
         Pays-Bas, au Canada ou aux États-Unis — peut écouter Hit Radio,
         Medi 1 ou Chada FM exactement comme s'ils étaient à la maison.
       </p>
 
       <h2 className="font-display text-2xl font-bold text-white mt-10 mb-4">
-        Pourquoi écouter la radio en streaming plutôt qu'en FM ?
+        Les stations les plus écoutées en ligne
       </h2>
       <p className="mb-5">
-        Le <strong>streaming radio</strong> apporte plusieurs avantages par
-        rapport à la diffusion FM classique : qualité audio supérieure
-        (jusqu'à 256 kbps en HLS HD pour Radio 2M ou Medi 1), absence de
-        parasitage, écoute simultanée sur plusieurs appareils, accès à des
-        webradios qui n'ont pas de fréquence FM (Yabiladi, Rap Lbeldi Maroc,
-        Fayroz). De plus, la plupart des grandes radios marocaines diffusent
-        désormais leur signal en {' '}
-        <a href="https://en.wikipedia.org/wiki/HTTP_Live_Streaming" target="_blank" rel="noopener" className="text-brand-300 hover:underline">HLS</a>{' '}
-        ou en MP3, ce qui garantit un son net et une faible consommation de
-        données mobiles.
+        Selon nos statistiques d'utilisation,{' '}
+        <Link to="/station/hit-radio" className="text-white font-semibold hover:text-brand-300 underline-offset-2 hover:underline">Hit Radio</Link>,{' '}
+        <Link to="/station/medi-1-radio" className="text-white font-semibold hover:text-brand-300 underline-offset-2 hover:underline">Medi 1 Radio</Link>,{' '}
+        <Link to="/station/chada-fm" className="text-white font-semibold hover:text-brand-300 underline-offset-2 hover:underline">Chada FM</Link>,{' '}
+        <Link to="/station/radio-mars" className="text-white font-semibold hover:text-brand-300 underline-offset-2 hover:underline">Radio Mars</Link>{' '}
+        et MFM concentrent plus de 60 % des écoutes en ligne. Ces cinq radios
+        cumulent les avantages de la notoriété FM, d'une grille moderne et
+        d'une qualité de flux stable. Pour l'auditeur exigeant, Medi 1 Tarab
+        (musique arabe classique), Radio Mohammed VI du Saint Coran et Cap
+        Radio offrent des contenus de niche très appréciés. Notre{' '}
+        <Link to="/top-radio-maroc" className="text-brand-300 hover:underline">top 10 dynamique</Link>{' '}
+        reflète les écoutes en temps réel.
       </p>
 
       <h2 className="font-display text-2xl font-bold text-white mt-10 mb-4">
-        Une plateforme moderne, rapide et 100 % gratuite
+        Écouter la radio marocaine 24h/24, sans coupure
       </h2>
       <p className="mb-5">
-        Notre site s'efforce d'offrir l'une des meilleures expériences
-        d'écoute du marché marocain : design soigné, lecteur audio Spotify-like
-        qui suit votre navigation, mode sombre, recherche instantanée,
-        favoris persistants, mise à jour automatique du catalogue. Le tout
-        100 % gratuit, financé par une publicité discrète qui ne perturbe
-        jamais l'écoute. Découvrez aussi notre{' '}
-        <Link to="/blog" className="text-brand-300 hover:underline">blog dédié au paysage radiophonique marocain</Link>,{' '}
-        avec des dossiers sur l'histoire des radios, des classements des
-        meilleures stations et des guides pratiques.
-      </p>
-
-      <h2 className="font-display text-2xl font-bold text-white mt-10 mb-4">
-        Live radio Maroc, FM gratuite et stations radio en ligne
-      </h2>
-      <p className="mb-5">
-        Que vous cherchiez la <strong>radio Maroc en direct</strong>, la{' '}
-        <strong>radio en ligne du Maroc</strong>, ou simplement à{' '}
-        <Link to="/ecouter-radio-maroc" className="text-brand-300 hover:underline">écouter la radio marocaine</Link>{' '}
-        depuis n'importe où, notre plateforme regroupe tout sur une seule
-        page. Plus de trente <strong>stations radio Maroc</strong> couvrant
-        chaque format : <Link to="/radio-sport-maroc" className="text-brand-300 hover:underline">radio sport Maroc</Link>{' '}
-        (Radio Mars retransmet la Botola Pro et les Lions de l'Atlas en live),{' '}
-        radios musicales (Hit Radio, MFM, Chada FM), spirituelles (Radio
-        Coran, Radio Manarat), nationales et institutionnelles avec la{' '}
-        <Link to="/radio-nationale-marocaine" className="text-brand-300 hover:underline">Radio Nationale Marocaine</Link>{' '}
-        opérée par la SNRT (Al Idha3a Al Wataniya).
-      </p>
-      <p className="mb-5">
-        La <strong>FM Maroc</strong> reste accessible dans toutes les villes
-        — consultez nos pages dédiées aux{' '}
+        Toutes les radios listées sur cette page diffusent en continu, sans
+        interruption nocturne. Pendant le mois sacré du Ramadan, l'audience
+        explose sur les radios religieuses (Radio Coran, Radio Manarat,
+        Radio Mohammed VI). Les vendredis matins, les radios généralistes
+        diffusent l'appel à la prière et le sermon. Les samedis et dimanches,
+        les programmes culturels et musicaux dominent. Bref, quel que soit le
+        moment, il y a toujours une radio marocaine à écouter en direct sur
+        notre plateforme. Pour aller plus loin, consultez nos pages dédiées
+        aux{' '}
         <Link to="/frequences-radio-maroc" className="text-brand-300 hover:underline">fréquences FM par ville</Link>{' '}
         (Casablanca, Rabat, Marrakech, Tanger, Fès, Agadir, Oujda, Tétouan,
-        Nador, Laâyoune et 6 autres) — mais le <strong>streaming live</strong>{' '}
-        offre la meilleure qualité audio sur smartphone, ordinateur, smart
-        speaker et voiture connectée. Pour un panorama complet du paysage
-        radio au Maroc, consultez notre{' '}
-        <Link to="/radio-maroc" className="text-brand-300 hover:underline">guide pilier Radio au Maroc</Link>{' '}
-        qui retrace l'histoire, les opérateurs et les grands formats.
+        Nador, Laâyoune et 6 autres), au panorama complet du{' '}
+        <Link to="/radio-maroc" className="text-brand-300 hover:underline">paysage radio au Maroc</Link>, à la{' '}
+        <Link to="/radio-sport-maroc" className="text-brand-300 hover:underline">radio sport marocaine</Link>{' '}
+        (Radio Mars retransmet la Botola Pro et les Lions de l'Atlas) ou à la{' '}
+        <Link to="/radio-nationale-marocaine" className="text-brand-300 hover:underline">Radio Nationale Marocaine</Link>{' '}
+        opérée par la SNRT.
       </p>
 
       <h2 className="font-display text-2xl font-bold text-white mt-10 mb-4">
         Foire aux questions
       </h2>
-      <h3 className="font-display text-lg font-semibold text-white mt-5 mb-2">L'écoute est-elle vraiment gratuite ?</h3>
-      <p className="mb-3">Oui, totalement. Aucun compte, aucun abonnement, aucune limite d'écoute.</p>
-      <h3 className="font-display text-lg font-semibold text-white mt-5 mb-2">Puis-je écouter depuis l'étranger ?</h3>
-      <p className="mb-3">Oui, toutes les radios marocaines présentes sur le site sont accessibles depuis l'international, sans VPN.</p>
-      <h3 className="font-display text-lg font-semibold text-white mt-5 mb-2">La qualité audio est-elle bonne ?</h3>
-      <p className="mb-3">Nous diffusons les flux officiels des radios. La qualité dépend du flux fourni par la station — entre 64 et 256 kbps selon la radio.</p>
-      <h3 className="font-display text-lg font-semibold text-white mt-5 mb-2">Comment ajouter une radio manquante ?</h3>
-      <p className="mb-3">Notre catalogue se synchronise automatiquement chaque jour avec l'API publique Radio-Browser. Les nouvelles stations apparaissent automatiquement.</p>
+      <h3 className="font-display text-lg font-semibold text-white mt-5 mb-2">
+        Comment écouter la radio marocaine en direct ?
+      </h3>
+      <p className="mb-3">
+        Ouvrez notre page d'accueil, choisissez une radio dans le catalogue
+        (plus de 30 stations disponibles) et cliquez sur Écouter. L'écoute
+        démarre en quelques secondes, sans inscription ni téléchargement.
+      </p>
+      <h3 className="font-display text-lg font-semibold text-white mt-5 mb-2">
+        L'écoute est-elle vraiment gratuite ?
+      </h3>
+      <p className="mb-3">
+        Oui, totalement. Aucun abonnement, aucun compte, aucune limite. Le
+        site est financé par une publicité discrète qui ne perturbe jamais
+        l'écoute audio.
+      </p>
+      <h3 className="font-display text-lg font-semibold text-white mt-5 mb-2">
+        Puis-je écouter la radio marocaine depuis l'étranger ?
+      </h3>
+      <p className="mb-3">
+        Oui, toutes les radios sont accessibles depuis n'importe quel pays,
+        sans VPN. Particulièrement populaire auprès des MRE en France,
+        Belgique, Pays-Bas, Espagne, Canada et États-Unis.
+      </p>
+      <h3 className="font-display text-lg font-semibold text-white mt-5 mb-2">
+        Quelle qualité audio pour l'écoute en ligne ?
+      </h3>
+      <p className="mb-3">
+        La qualité dépend de la station : entre 64 kbps (mono basique) et
+        256 kbps (stéréo HD HLS). Medi 1 Radio, Hit Radio et Radio 2M
+        proposent les flux les plus nets.
+      </p>
+      <h3 className="font-display text-lg font-semibold text-white mt-5 mb-2">
+        L'écoute fonctionne-t-elle en arrière-plan sur smartphone ?
+      </h3>
+      <p className="mb-3">
+        Oui, sur Android l'audio continue après verrouillage de l'écran. Sur
+        iOS, lancez le lecteur puis verrouillez : la radio reste audible,
+        contrôlable depuis le centre de contrôle.
+      </p>
     </section>
   );
 }
