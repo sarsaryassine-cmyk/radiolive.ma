@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Moon, Sun, Heart, Sparkles, Languages } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 import useI18n from '../i18n/useI18n.js';
 import RadioMarocLogo from './RadioMarocLogo.jsx';
 
@@ -11,6 +12,13 @@ export default function Header({
   favoritesCount,
 }) {
   const { t, switchLang } = useI18n();
+  // Sur les pages station, le hero affiche déjà le nom de la station en grand
+  // (Radio Mars, Hit Radio, etc.) — on masque la tagline du header pour éviter
+  // le conflit visuel "Radio Maroc · +50 Stations…" qui domine sur la page.
+  const location = useLocation();
+  const isStationPage =
+    location.pathname.startsWith('/station/') ||
+    location.pathname.startsWith('/ar/station/');
   return (
     <motion.header
       initial={{ opacity: 0, y: -16 }}
@@ -35,9 +43,11 @@ export default function Header({
               {t('site_name').split(' ')[0]}{' '}
               <span className="gradient-text">{t('site_name').split(' ').slice(1).join(' ') || 'Maroc'}</span>
             </p>
-            <p className="text-[11px] text-white/50 -mt-0.5 hidden sm:block">
-              {t('header.brand_streaming')}
-            </p>
+            {!isStationPage && (
+              <p className="text-[11px] text-white/50 -mt-0.5 hidden sm:block">
+                {t('header.brand_streaming')}
+              </p>
+            )}
           </div>
         </div>
 

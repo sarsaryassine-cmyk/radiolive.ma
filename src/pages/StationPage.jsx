@@ -287,14 +287,16 @@ export default function StationPage() {
       {/* Description */}
       <section className="mt-10 grid lg:grid-cols-3 gap-6 lg:gap-10">
         <div className="lg:col-span-2 glass rounded-3xl p-6 sm:p-8">
-          <h2 className="font-display text-xl font-semibold mb-4">À propos de {radio.name}</h2>
           {radio.description ? (
-            <DescriptionBody text={radio.description} />
+            <DescriptionBody text={radio.description} stationName={radio.name} />
           ) : (
-            <p className="text-white/55 leading-relaxed text-sm italic">
-              Aucune description détaillée n'est disponible pour cette station pour le moment.
-              Vous pouvez l'écouter en direct ci-dessus.
-            </p>
+            <>
+              <h2 className="font-display text-xl font-semibold mb-4">À propos de {radio.name}</h2>
+              <p className="text-white/55 leading-relaxed text-sm italic">
+                Aucune description détaillée n'est disponible pour cette station pour le moment.
+                Vous pouvez l'écouter en direct ci-dessus.
+              </p>
+            </>
           )}
         </div>
 
@@ -519,30 +521,66 @@ function Info({ label, value }) {
  *   "## Animateurs Radio Mars"
  * Ces H2 boostent considérablement le ranking sur ces variantes de keywords.
  */
-function DescriptionBody({ text }) {
+function DescriptionBody({ text, stationName }) {
   if (!text) return null;
-  // Split en blocs par double saut de ligne
-  const blocks = text.split(/\n\n+/);
+  // Split en blocs par double saut de ligne, trim + drop empties
+  const rawBlocks = text.split(/\n\n+/).map((b) => b.trim()).filter(Boolean);
+
+  // Réordonnage SEO : si la description contient une section "## Écouter…"
+  // (= mot-clef cible direct), on la met en PREMIER pour qu'elle soit la
+  // première H2 visible. L'intro avant cette section passe sous une H2
+  // "## À propos de {stationName}" généré automatiquement.
+  // Si pas de section "## Écouter…", l'ordre original est conservé.
+  const ecouterIdx = rawBlocks.findIndex(
+    (b) => b.startsWith('## ') && /Écouter|استمع|Listen/i.test(b.slice(3))
+  );
+
+  let blocks;
+  if (ecouterIdx <= 0) {
+    // Pas de "## Écouter…" trouvé, ou déjà en première position → ordre original
+    blocks = rawBlocks;
+  } else {
+    // Trouve où s'arrête la section "Écouter…" (= prochain "## " ou fin)
+    let endIdx = rawBlocks.length;
+    for (let i = ecouterIdx + 1; i < rawBlocks.length; i++) {
+      if (rawBlocks[i].startsWith('## ')) {
+        endIdx = i;
+        break;
+      }
+    }
+    const ecouterSection = rawBlocks.slice(ecouterIdx, endIdx);
+    const beforeEcouter = rawBlocks.slice(0, ecouterIdx);
+    const afterEcouter = rawBlocks.slice(endIdx);
+
+    // Si l'intro avant "Écouter…" contient déjà un "## " (rare), on ne touche pas
+    // — sinon, on ajoute un H2 "À propos de {stationName}" pour la sémantique.
+    const introHasH2 = beforeEcouter.some((b) => b.startsWith('## '));
+    const introWithHeading =
+      beforeEcouter.length > 0 && !introHasH2 && stationName
+        ? [`## À propos de ${stationName}`, ...beforeEcouter]
+        : beforeEcouter;
+
+    blocks = [...ecouterSection, ...introWithHeading, ...afterEcouter];
+  }
+
   return (
     <div className="space-y-4 text-white/75 leading-relaxed text-[15px]">
       {blocks.map((block, i) => {
-        const trimmed = block.trim();
-        if (!trimmed) return null;
         // Titre H2 markdown
-        if (trimmed.startsWith('## ')) {
+        if (block.startsWith('## ')) {
           return (
             <h2
               key={i}
               className="font-display text-lg sm:text-xl font-semibold text-white mt-6 mb-2"
             >
-              {trimmed.slice(3).trim()}
+              {block.slice(3).trim()}
             </h2>
           );
         }
         // Paragraphe normal — préserve les sauts de ligne internes
         return (
           <p key={i} className="whitespace-pre-line">
-            {trimmed}
+            {block}
           </p>
         );
       })}
