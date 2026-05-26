@@ -25,7 +25,7 @@ function RadioCard({ radio, isActive, isPlaying, isFavorite, onPlay, onToggleFav
         }}
       />
       <div
-        className={`relative glass rounded-2xl sm:rounded-3xl p-2.5 sm:p-5 flex flex-col gap-2 sm:gap-4 h-full transition-shadow overflow-hidden ${
+        className={`relative glass rounded-2xl sm:rounded-3xl p-2.5 sm:p-4 flex flex-col gap-2 sm:gap-3 h-full transition-shadow overflow-hidden ${
           isActive ? 'ring-2 ring-brand-400/60 shadow-glow' : ''
         }`}
       >
