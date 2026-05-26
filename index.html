@@ -50,25 +50,34 @@
         font-family: 'Inter', system-ui, sans-serif; }
 
       /* Pré-rendu du hero — visible dès le parse du HTML (~80 ms), avant
-         que le bundle JS soit chargé. Supprimé dès que React monte #root. */
+         que le bundle JS ne soit téléchargé/parsé. Le texte est strictement
+         identique à celui que React rend après mount, donc pas de flash de
+         transition pour l'utilisateur. Supprimé via MutationObserver dès
+         que React injecte du contenu dans #root. */
       #pre-hero {
         position: fixed; inset: 0; z-index: 1;
-        padding: 5.5rem 1.5rem 0;
+        padding: 6.5rem 1.5rem 0;
         max-width: 80rem; margin: 0 auto;
         pointer-events: none;
         transition: opacity 150ms ease-out;
       }
       #pre-hero h1 {
         font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
-        font-size: clamp(1.5rem, 5vw, 2.5rem);
-        font-weight: 700; line-height: 1.15;
-        letter-spacing: -0.02em;
-        margin: 0; max-width: 64rem;
+        font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+        font-weight: 700; line-height: 1.2;
+        letter-spacing: -0.01em;
+        margin: 0;
       }
       #pre-hero .accent {
         background: linear-gradient(90deg, #FF2A3C 0%, #FF6B7A 60%, #FFA07A 100%);
         -webkit-background-clip: text; background-clip: text;
         -webkit-text-fill-color: transparent; color: transparent;
+      }
+      #pre-hero p {
+        margin: 0.75rem 0 0;
+        font-size: clamp(0.8125rem, 1.3vw, 0.875rem);
+        color: rgba(255,255,255,0.65);
+        line-height: 1.55;
       }
       #pre-hero.hidden { opacity: 0; }
     </style>
@@ -76,7 +85,8 @@
   <body class="bg-ink-950 text-white antialiased">
     <div id="root"></div>
     <div id="pre-hero" aria-hidden="true">
-      <h1>Radio Maroc en direct, <span class="accent">à portée d'écoute.</span></h1>
+      <h1>Radio Maroc en direct — <span class="accent">Écouter en ligne toutes les stations marocaines</span></h1>
+      <p>Écoutez les radios du Maroc en direct, gratuitement et sans inscription. Plus de 30 stations FM et webradios diffusent leur signal 24 heures sur 24 sur notre plateforme. Sélectionnez une station, cliquez sur écouter, et profitez du Maroc en direct depuis n'importe où dans le monde.</p>
     </div>
     <script>
       (function () {
