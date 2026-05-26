@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* cache-bust marker — keeps CSS hash changing when needed to bypass CDN
+   asset cache poisoning. Non-minifiable since it's an actual rule. */
+[data-cache-bust="2026-05-26-11h13"] { display: revert; }
+
 @layer base {
   html,
   body,
