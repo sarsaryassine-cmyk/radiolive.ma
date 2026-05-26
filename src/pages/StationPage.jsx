@@ -287,17 +287,7 @@ export default function StationPage() {
       {/* Description */}
       <section className="mt-10 grid lg:grid-cols-3 gap-6 lg:gap-10">
         <div className="lg:col-span-2 glass rounded-3xl p-6 sm:p-8">
-          {radio.description ? (
-            <DescriptionBody text={radio.description} stationName={radio.name} />
-          ) : (
-            <>
-              <h2 className="font-display text-xl font-semibold mb-4">À propos de {radio.name}</h2>
-              <p className="text-white/55 leading-relaxed text-sm italic">
-                Aucune description détaillée n'est disponible pour cette station pour le moment.
-                Vous pouvez l'écouter en direct ci-dessus.
-              </p>
-            </>
-          )}
+          <DescriptionBody text={radio.description} stationName={radio.name} />
         </div>
 
         <aside className="glass rounded-3xl p-6 sm:p-8 flex flex-col gap-6">
@@ -521,23 +511,53 @@ function Info({ label, value }) {
  *   "## Animateurs Radio Mars"
  * Ces H2 boostent considérablement le ranking sur ces variantes de keywords.
  */
-function DescriptionBody({ text, stationName }) {
-  if (!text) return null;
-  // Split en blocs par double saut de ligne, trim + drop empties
-  const rawBlocks = text.split(/\n\n+/).map((b) => b.trim()).filter(Boolean);
+/**
+ * Texte SEO générique pour la section "Écouter [station] en direct" — utilisé
+ * comme fallback pour les stations sans description riche, ou comme premier
+ * bloc pour celles qui ont juste un paragraphe d'intro. Cible les mots-clefs
+ * "écouter [station]", "[station] streaming HD", "[station] depuis l'étranger".
+ */
+function buildEcouterFallback(stationName) {
+  return `## Écouter ${stationName} en direct — Streaming HD gratuit
 
-  // Réordonnage SEO : si la description contient une section "## Écouter…"
-  // (= mot-clef cible direct), on la met en PREMIER pour qu'elle soit la
-  // première H2 visible. L'intro avant cette section passe sous une H2
-  // "## À propos de {stationName}" généré automatiquement.
-  // Si pas de section "## Écouter…", l'ordre original est conservé.
+Pour écouter ${stationName} en direct, il suffit de cliquer sur le bouton "Écouter en direct" en haut de cette page. Le streaming démarre instantanément en qualité HD, sans inscription, sans téléchargement d'application, et fonctionne depuis n'importe quel pays du monde. ${stationName} est disponible 24h/24, 7 jours sur 7 — idéal pour écouter votre station marocaine préférée que vous soyez à Casablanca, Rabat, Marrakech, Tanger, Fès, Agadir, ou depuis la diaspora marocaine en France, Belgique, Pays-Bas, Espagne, Italie, Canada ou États-Unis.
+
+L'expérience ${stationName} en streaming HD est compatible avec ordinateur, smartphone, tablette, smart speaker et voiture connectée (CarPlay, Android Auto). Notre lecteur audio reste actif lorsque vous naviguez sur les autres pages du site — vous pouvez continuer à écouter ${stationName} tout en explorant les autres radios marocaines ou en consultant les actualités.`;
+}
+
+function DescriptionBody({ text, stationName }) {
+  const rawText = (text || '').trim();
+
+  // Garantit que TOUTES les pages station commencent par un H2 "## Écouter…".
+  // Si la description fournie en contient déjà un (cas Radio Mars avec ses
+  // sections custom), on garde le contenu existant — la reorder logic plus bas
+  // s'occupera de le placer en premier. Sinon, on prepend une section générique
+  // de qualité (CTA + SEO cibles "écouter X", "streaming HD", "diaspora MRE").
+  const hasEcouterSection = /^##\s+(?:Écouter|استمع|Listen)/m.test(rawText);
+
+  let effectiveText;
+  if (!stationName) {
+    effectiveText = rawText;
+  } else if (!hasEcouterSection) {
+    const ecouterFallback = buildEcouterFallback(stationName);
+    effectiveText = rawText ? `${ecouterFallback}\n\n${rawText}` : ecouterFallback;
+  } else {
+    effectiveText = rawText;
+  }
+
+  if (!effectiveText) return null;
+
+  // Split en blocs par double saut de ligne, trim + drop empties
+  const rawBlocks = effectiveText.split(/\n\n+/).map((b) => b.trim()).filter(Boolean);
+
+  // Réordonnage SEO : la section "## Écouter…" doit être la 1ère H2 visible.
+  // L'intro avant cette section passe sous une H2 "## À propos de {name}".
   const ecouterIdx = rawBlocks.findIndex(
     (b) => b.startsWith('## ') && /Écouter|استمع|Listen/i.test(b.slice(3))
   );
 
   let blocks;
   if (ecouterIdx <= 0) {
-    // Pas de "## Écouter…" trouvé, ou déjà en première position → ordre original
     blocks = rawBlocks;
   } else {
     // Trouve où s'arrête la section "Écouter…" (= prochain "## " ou fin)
@@ -552,8 +572,6 @@ function DescriptionBody({ text, stationName }) {
     const beforeEcouter = rawBlocks.slice(0, ecouterIdx);
     const afterEcouter = rawBlocks.slice(endIdx);
 
-    // Si l'intro avant "Écouter…" contient déjà un "## " (rare), on ne touche pas
-    // — sinon, on ajoute un H2 "À propos de {stationName}" pour la sémantique.
     const introHasH2 = beforeEcouter.some((b) => b.startsWith('## '));
     const introWithHeading =
       beforeEcouter.length > 0 && !introHasH2 && stationName
@@ -566,7 +584,6 @@ function DescriptionBody({ text, stationName }) {
   return (
     <div className="space-y-4 text-white/75 leading-relaxed text-[15px]">
       {blocks.map((block, i) => {
-        // Titre H2 markdown
         if (block.startsWith('## ')) {
           return (
             <h2
@@ -577,7 +594,6 @@ function DescriptionBody({ text, stationName }) {
             </h2>
           );
         }
-        // Paragraphe normal — préserve les sauts de ligne internes
         return (
           <p key={i} className="whitespace-pre-line">
             {block}
