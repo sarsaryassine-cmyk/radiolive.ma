@@ -518,11 +518,11 @@ function Info({ label, value }) {
  * "écouter [station]", "[station] streaming HD", "[station] depuis l'étranger".
  */
 function buildEcouterFallback(stationName) {
-  return `## Écouter ${stationName} en direct — Streaming HD gratuit
+  return `## Écouter ${stationName} en direct & en ligne gratuitement
 
-Pour écouter ${stationName} en direct, il suffit de cliquer sur le bouton "Écouter en direct" en haut de cette page. Le streaming démarre instantanément en qualité HD, sans inscription, sans téléchargement d'application, et fonctionne depuis n'importe quel pays du monde. ${stationName} est disponible 24h/24, 7 jours sur 7 — idéal pour écouter votre station marocaine préférée que vous soyez à Casablanca, Rabat, Marrakech, Tanger, Fès, Agadir, ou depuis la diaspora marocaine en France, Belgique, Pays-Bas, Espagne, Italie, Canada ou États-Unis.
+Pour écouter ${stationName} en direct, il suffit de cliquer sur le bouton "Écouter en direct" en haut de cette page. L'écoute démarre instantanément en haute qualité audio, sans inscription, sans téléchargement d'application, et fonctionne depuis n'importe quel pays du monde. ${stationName} est disponible 24h/24, 7 jours sur 7 — idéal pour écouter votre station marocaine préférée que vous soyez à Casablanca, Rabat, Marrakech, Tanger, Fès, Agadir, ou depuis la diaspora marocaine en France, Belgique, Pays-Bas, Espagne, Italie, Canada ou États-Unis.
 
-L'expérience ${stationName} en streaming HD est compatible avec ordinateur, smartphone, tablette, smart speaker et voiture connectée (CarPlay, Android Auto). Notre lecteur audio reste actif lorsque vous naviguez sur les autres pages du site — vous pouvez continuer à écouter ${stationName} tout en explorant les autres radios marocaines ou en consultant les actualités.`;
+L'écoute en ligne de ${stationName} est compatible avec ordinateur, smartphone, tablette, smart speaker et voiture connectée (CarPlay, Android Auto). Notre lecteur audio reste actif lorsque vous naviguez sur les autres pages du site — vous pouvez continuer à écouter ${stationName} tout en explorant les autres radios marocaines ou en consultant les actualités.`;
 }
 
 function DescriptionBody({ text, stationName }) {
