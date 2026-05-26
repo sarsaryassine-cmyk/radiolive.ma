@@ -116,6 +116,21 @@ export default function Home() {
 
       <CompactHero count={radios.length} syncStatus={syncStatus} onResync={resync} />
 
+      {/* Intro SEO en haut de page — H2 + paragraphe clés positionnés au-dessus
+          du fold pour signaler immédiatement la cible "Radio Maroc en direct"
+          aux crawlers + premier contexte pour l'utilisateur. */}
+      <section className="mt-5 sm:mt-8 max-w-4xl mx-auto">
+        <h2 className="font-display text-lg sm:text-2xl md:text-3xl font-bold text-white mb-2 sm:mb-3 text-balance leading-tight">
+          Radio Maroc en direct — Écouter en ligne toutes les stations marocaines
+        </h2>
+        <p className="text-white/70 leading-relaxed text-[13px] sm:text-[15px]">
+          Toutes les radios du Maroc en direct, gratuitement et sans inscription.
+          Plus de 30 stations FM et webradios diffusent leur signal 24 heures
+          sur 24 sur notre plateforme. Sélectionnez une station, cliquez sur
+          écouter, et profitez du Maroc en direct depuis n'importe où dans le monde.
+        </p>
+      </section>
+
       <div id="grid" className="mt-5 sm:mt-6 scroll-mt-24">
         <SearchBar value={query} onChange={setQuery} count={filtered.length} />
       </div>
@@ -280,18 +295,10 @@ function EmissionsSection({ lang }) {
 function SeoCopy() {
   return (
     <section className="mt-16 sm:mt-24 max-w-4xl mx-auto text-white/75 leading-relaxed">
-      <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-6 text-balance">
-        Radio Maroc en direct — Écouter en ligne toutes les stations marocaines
-      </h2>
-
-      <p className="mb-5">
-        Toutes les radios du Maroc en direct, gratuitement et sans inscription.
-        Plus de 30 stations FM et webradios diffusent leur signal 24 heures sur
-        24 sur notre plateforme. Sélectionnez une station, cliquez sur écouter,
-        et profitez du Maroc en direct depuis n'importe où dans le monde.
-      </p>
-
-      <h2 className="font-display text-2xl font-bold text-white mt-10 mb-4">
+      {/* Note : le H2 d'ouverture "Radio Maroc en direct — Écouter en ligne…"
+          et son paragraphe d'intro sont maintenant rendus en HAUT de la page
+          (juste sous le hero) pour maximiser leur visibilité crawl + UX. */}
+      <h2 className="font-display text-2xl font-bold text-white mb-4">
         Toutes les radios marocaines en direct, à un clic
       </h2>
       <p className="mb-5">
