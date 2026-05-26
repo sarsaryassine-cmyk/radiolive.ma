@@ -111,25 +111,14 @@ export default function Home() {
           { hreflang: 'ar-US', href: 'https://radiolive.ma/ar/min-amrika' },
           { hreflang: 'x-default', href: 'https://radiolive.ma/' },
         ]}
-        jsonLd={[websiteJsonLd(lang), organizationJsonLd(lang)]}
+        jsonLd={
+          lang === 'ar'
+            ? [websiteJsonLd(lang), organizationJsonLd(lang)]
+            : [websiteJsonLd(lang), organizationJsonLd(lang), homeFaqJsonLd()]
+        }
       />
 
       <CompactHero count={radios.length} syncStatus={syncStatus} onResync={resync} />
-
-      {/* Intro SEO en haut de page — H2 + paragraphe clés positionnés au-dessus
-          du fold pour signaler immédiatement la cible "Radio Maroc en direct"
-          aux crawlers + premier contexte pour l'utilisateur. */}
-      <section className="mt-5 sm:mt-8 max-w-4xl mx-auto">
-        <h2 className="font-display text-lg sm:text-2xl md:text-3xl font-bold text-white mb-2 sm:mb-3 text-balance leading-tight">
-          Radio Maroc en direct — Écouter en ligne toutes les stations marocaines
-        </h2>
-        <p className="text-white/70 leading-relaxed text-[13px] sm:text-[15px]">
-          Toutes les radios du Maroc en direct, gratuitement et sans inscription.
-          Plus de 30 stations FM et webradios diffusent leur signal 24 heures
-          sur 24 sur notre plateforme. Sélectionnez une station, cliquez sur
-          écouter, et profitez du Maroc en direct depuis n'importe où dans le monde.
-        </p>
-      </section>
 
       <div id="grid" className="mt-5 sm:mt-6 scroll-mt-24">
         <SearchBar value={query} onChange={setQuery} count={filtered.length} />
@@ -475,51 +464,65 @@ function SeoCopy() {
         opérée par la SNRT.
       </p>
 
-      <h2 className="font-display text-2xl font-bold text-white mt-10 mb-4">
+      <h2 className="font-display text-2xl font-bold text-white mt-10 mb-6">
         Foire aux questions
       </h2>
-      <h3 className="font-display text-lg font-semibold text-white mt-5 mb-2">
-        Comment écouter la radio marocaine en direct ?
-      </h3>
-      <p className="mb-3">
-        Ouvrez notre page d'accueil, choisissez une radio dans le catalogue
-        (plus de 30 stations disponibles) et cliquez sur Écouter. L'écoute
-        démarre en quelques secondes, sans inscription ni téléchargement.
-      </p>
-      <h3 className="font-display text-lg font-semibold text-white mt-5 mb-2">
-        L'écoute est-elle vraiment gratuite ?
-      </h3>
-      <p className="mb-3">
-        Oui, totalement. Aucun abonnement, aucun compte, aucune limite. Le
-        site est financé par une publicité discrète qui ne perturbe jamais
-        l'écoute audio.
-      </p>
-      <h3 className="font-display text-lg font-semibold text-white mt-5 mb-2">
-        Puis-je écouter la radio marocaine depuis l'étranger ?
-      </h3>
-      <p className="mb-3">
-        Oui, toutes les radios sont accessibles depuis n'importe quel pays,
-        sans VPN. Particulièrement populaire auprès des MRE en France,
-        Belgique, Pays-Bas, Espagne, Canada et États-Unis.
-      </p>
-      <h3 className="font-display text-lg font-semibold text-white mt-5 mb-2">
-        Quelle qualité audio pour l'écoute en ligne ?
-      </h3>
-      <p className="mb-3">
-        La qualité dépend de la station : entre 64 kbps (mono basique) et
-        256 kbps (stéréo HD HLS). Medi 1 Radio, Hit Radio et Radio 2M
-        proposent les flux les plus nets.
-      </p>
-      <h3 className="font-display text-lg font-semibold text-white mt-5 mb-2">
-        L'écoute fonctionne-t-elle en arrière-plan sur smartphone ?
-      </h3>
-      <p className="mb-3">
-        Oui, sur Android l'audio continue après verrouillage de l'écran. Sur
-        iOS, lancez le lecteur puis verrouillez : la radio reste audible,
-        contrôlable depuis le centre de contrôle.
-      </p>
+      <div className="space-y-3">
+        {HOME_FAQS.map((item, i) => (
+          <details
+            key={i}
+            className="group glass rounded-2xl px-5 py-4 cursor-pointer transition-all hover:bg-white/[0.06]"
+          >
+            <summary className="font-display font-semibold text-white text-[15px] flex items-center justify-between gap-4 list-none">
+              <span>{item.q}</span>
+              <ChevronRight className="h-4 w-4 text-white/50 transition-transform group-open:rotate-90 shrink-0" />
+            </summary>
+            <p className="mt-3 text-sm text-white/70 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
     </section>
   );
+}
+
+/**
+ * FAQ home (FR) — questions affichées dans SeoCopy + JSON-LD FAQPage pour
+ * éligibilité au Featured Snippet Google. Le contenu correspond exactement
+ * à ce qui était sur /radio-maroc-en-direct avant fusion.
+ */
+const HOME_FAQS = [
+  {
+    q: 'Comment écouter la radio marocaine en direct ?',
+    a: "Ouvrez notre page d'accueil, choisissez une radio dans le catalogue (plus de 30 stations disponibles) et cliquez sur Écouter. L'écoute démarre en quelques secondes, sans inscription ni téléchargement.",
+  },
+  {
+    q: "L'écoute est-elle vraiment gratuite ?",
+    a: "Oui, totalement. Aucun abonnement, aucun compte, aucune limite. Le site est financé par une publicité discrète qui ne perturbe jamais l'écoute audio.",
+  },
+  {
+    q: "Puis-je écouter la radio marocaine depuis l'étranger ?",
+    a: "Oui, toutes les radios sont accessibles depuis n'importe quel pays, sans VPN. Particulièrement populaire auprès des MRE en France, Belgique, Pays-Bas, Espagne, Canada et États-Unis.",
+  },
+  {
+    q: "Quelle qualité audio pour l'écoute en ligne ?",
+    a: "La qualité dépend de la station : entre 64 kbps (mono basique) et 256 kbps (stéréo HD HLS). Medi 1 Radio, Hit Radio et Radio 2M proposent les flux les plus nets.",
+  },
+  {
+    q: "L'écoute fonctionne-t-elle en arrière-plan sur smartphone ?",
+    a: "Oui, sur Android l'audio continue après verrouillage de l'écran. Sur iOS, lancez le lecteur puis verrouillez : la radio reste audible, contrôlable depuis le centre de contrôle.",
+  },
+];
+
+export function homeFaqJsonLd() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: HOME_FAQS.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  };
 }
 
 function CompactHero({ count, syncStatus, onResync }) {
@@ -531,15 +534,22 @@ function CompactHero({ count, syncStatus, onResync }) {
       transition={{ duration: 0.5, ease: 'easeOut' }}
       className="pt-6 sm:pt-10 pb-2"
     >
-      <div className="flex items-end justify-between gap-4 flex-wrap">
-        <div className="min-w-0">
+      <div className="flex items-start justify-between gap-4 flex-wrap">
+        <div className="min-w-0 flex-1 max-w-4xl">
           <h1 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-balance">
-            {t('hero.h1_part1')}{' '}
-            <span className="gradient-text">{t('hero.h1_part2')}</span>
+            Radio Maroc en direct —{' '}
+            <span className="gradient-text">Écouter en ligne toutes les stations marocaines</span>
           </h1>
+          <p className="mt-3 sm:mt-4 text-[13px] sm:text-[15px] text-white/70 leading-relaxed max-w-3xl">
+            Écoutez les radios du Maroc en direct, gratuitement et sans
+            inscription. Plus de 30 stations FM et webradios diffusent leur
+            signal 24 heures sur 24 sur notre plateforme. Sélectionnez une
+            station, cliquez sur écouter, et profitez du Maroc en direct
+            depuis n'importe où dans le monde.
+          </p>
         </div>
 
-        <div className="flex items-center gap-2 flex-wrap">
+        <div className="flex items-center gap-2 flex-wrap shrink-0">
           <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-[11px] font-medium text-white/80">
             <Sparkles className="h-3.5 w-3.5 text-brand-300" />
             {count > 0 ? (
