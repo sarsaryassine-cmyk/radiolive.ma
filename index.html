@@ -25,7 +25,6 @@
     <meta property="og:image" content="https://radiolive.ma/og-default.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
     <!-- Trim font weights to only the ones the UI actually uses -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap"
@@ -35,16 +34,13 @@
     <title>Radio Maroc en direct & en ligne — Hit Radio, Mars, MFM, Medi 1</title>
 
     <!--
-      Google AdSense loader.
-      Replace ca-pub-XXXXXXXXXXXXXXXX with YOUR publisher ID once your AdSense
-      account is approved. The two side banners read it automatically.
-      Leave the line as-is in dev — they'll show the "Publicité" placeholder.
+      Google AdSense loader — intentionally NOT loaded yet.
+      The previous placeholder (client=ca-pub-XXXXXXXXXXXXXXXX) shipped an
+      invalid publisher ID on every page, adding a useless third-party request
+      and a crawl signal for an unverified ad account. Re-add the official
+      <script async src="…adsbygoogle.js?client=ca-pub-REAL_ID"> tag here only
+      once the AdSense account is approved and the real publisher ID is known.
     -->
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
-      crossorigin="anonymous"
-    ></script>
     <style>
       html, body { margin: 0; height: 100%; background: #07060d; color: #fff;
         font-family: 'Inter', system-ui, sans-serif; }

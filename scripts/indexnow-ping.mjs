@@ -126,12 +126,16 @@ async function main() {
   }
 
   console.log(`[IndexNow] done — ${okCount} accepted, ${failCount} failed`);
+  // NB : on ne fait JAMAIS échouer le build sur un ping IndexNow raté. Un 429
+  // (rate-limit) ou une erreur réseau transitoire ne doit pas bloquer un
+  // déploiement Cloudflare ni faire perdre le prérendu déjà généré. Le ping
+  // est best-effort : Bing re-crawlera de toute façon via le sitemap.
   if (failCount > 0 && okCount === 0) {
-    process.exit(1);
+    console.warn('[IndexNow] ⚠ aucun ping accepté — ignoré (non bloquant pour le build).');
   }
 }
 
 main().catch((err) => {
-  console.error('[IndexNow] fatal:', err);
-  process.exit(1);
+  console.error('[IndexNow] non-fatal:', err);
+  // best-effort : ne bloque pas le build.
 });
