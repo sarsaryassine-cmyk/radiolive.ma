@@ -1,16 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /radioDescriptions.json
-Disallow: /radios.json
-Disallow: /songs/
-
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Googlebot-Image
-Allow: /
 
 Sitemap: https://radiolive.ma/sitemap.xml
