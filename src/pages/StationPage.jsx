@@ -12,6 +12,7 @@ import useI18n from '../i18n/useI18n.js';
 import { POSTS, slugForLang } from '../blog/posts.js';
 import { getStationFaqs } from '../data/stationFaqs.js';
 import { getEmissionsByStation } from '../data/emissions.js';
+import { STATION_HEADINGS } from '../data/stationHeadings.js';
 
 /**
  * Dedicated page for a single station: hero with logo, big play button,
@@ -127,6 +128,9 @@ export default function StationPage() {
   const loadingHere = audio.current?.id === radio.id && audio.isLoading;
   const fav = isFavorite(radio.id);
   const categoryLabel = resolveCategoryLabel(radio.category, lang) || (isAr ? 'إذاعة' : 'Radio');
+  // H1/H2 optimisés pour l'intention de recherche (FR uniquement ; les pages AR
+  // conservent le nom + le H2 par défaut). Slug absent → repli sur radio.name.
+  const heads = isAr ? {} : (STATION_HEADINGS[radio.id] || {});
 
   const faqJsonLd = stationFaqs.length
     ? {
@@ -227,7 +231,7 @@ export default function StationPage() {
             </div>
 
             <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-balance mb-4">
-              {radio.name}
+              {heads.h1 || radio.name}
             </h1>
 
             <div className="flex items-center gap-3 flex-wrap">
@@ -287,7 +291,7 @@ export default function StationPage() {
       {/* Description */}
       <section className="mt-10 grid lg:grid-cols-3 gap-6 lg:gap-10">
         <div className="lg:col-span-2 glass rounded-3xl p-6 sm:p-8">
-          <DescriptionBody text={radio.description} stationName={radio.name} />
+          <DescriptionBody text={radio.description} stationName={radio.name} leadHeading={heads.h2} />
         </div>
 
         <aside className="glass rounded-3xl p-6 sm:p-8 flex flex-col gap-6">
@@ -512,86 +516,50 @@ function Info({ label, value }) {
  * Ces H2 boostent considérablement le ranking sur ces variantes de keywords.
  */
 /**
- * Texte SEO générique pour la section "Écouter [station] en direct" — utilisé
- * comme fallback pour les stations sans description riche, ou comme premier
- * bloc pour celles qui ont juste un paragraphe d'intro. Cible les mots-clefs
- * "écouter [station]", "[station] streaming HD", "[station] depuis l'étranger".
+ * Paragraphe CTA d'écoute (sans titre), placé sous le H2 de tête. Cible les
+ * mots-clés "écouter [station]", "streaming HD", multi-appareils, diaspora MRE.
  */
-function buildEcouterFallback(stationName) {
-  return `## Écouter ${stationName} en direct & en ligne gratuitement
-
-Pour écouter ${stationName} en direct, il suffit de cliquer sur le bouton "Écouter en direct" en haut de cette page. L'écoute démarre instantanément en haute qualité audio, sans inscription, sans téléchargement d'application, et fonctionne depuis n'importe quel pays du monde. ${stationName} est disponible 24h/24, 7 jours sur 7 — idéal pour écouter votre station marocaine préférée que vous soyez à Casablanca, Rabat, Marrakech, Tanger, Fès, Agadir, ou depuis la diaspora marocaine en France, Belgique, Pays-Bas, Espagne, Italie, Canada ou États-Unis.
+function howtoParagraphs(stationName) {
+  return `Pour écouter ${stationName} en direct, il suffit de cliquer sur le bouton "Écouter en direct" en haut de cette page. L'écoute démarre instantanément en haute qualité audio, sans inscription, sans téléchargement d'application, et fonctionne depuis n'importe quel pays du monde. ${stationName} est disponible 24h/24, 7 jours sur 7 — idéal pour écouter votre station marocaine préférée que vous soyez à Casablanca, Rabat, Marrakech, Tanger, Fès, Agadir, ou depuis la diaspora marocaine en France, Belgique, Pays-Bas, Espagne, Italie, Canada ou États-Unis.
 
 L'écoute en ligne de ${stationName} est compatible avec ordinateur, smartphone, tablette, smart speaker et voiture connectée (CarPlay, Android Auto). Notre lecteur audio reste actif lorsque vous naviguez sur les autres pages du site — vous pouvez continuer à écouter ${stationName} tout en explorant les autres radios marocaines ou en consultant les actualités.`;
 }
 
-function DescriptionBody({ text, stationName }) {
-  const rawText = (text || '').trim();
+function DescriptionBody({ text, stationName, leadHeading }) {
+  let rawText = (text || '').trim();
 
-  // Garantit que TOUTES les pages station commencent par un H2 "## Écouter…".
-  // Si la description fournie en contient déjà un (cas Radio Mars avec ses
-  // sections custom), on garde le contenu existant — la reorder logic plus bas
-  // s'occupera de le placer en premier. Sinon, on prepend une section générique
-  // de qualité (CTA + SEO cibles "écouter X", "streaming HD", "diaspora MRE").
-  const hasEcouterSection = /^##\s+(?:Écouter|استمع|Listen)/m.test(rawText);
-
-  let effectiveText;
-  if (!stationName) {
-    effectiveText = rawText;
-  } else if (!hasEcouterSection) {
-    const ecouterFallback = buildEcouterFallback(stationName);
-    effectiveText = rawText ? `${ecouterFallback}\n\n${rawText}` : ecouterFallback;
-  } else {
-    effectiveText = rawText;
+  if (stationName) {
+    // H2 de tête : le H2 optimisé fourni (STATION_HEADINGS) sinon le générique.
+    const lead = leadHeading || `Écouter ${stationName} en direct & en ligne gratuitement`;
+    // On retire le titre générique d'intro "## Écouter … en direct …" si la
+    // description en contient un (sinon il doublonnerait le H1 et le H2 de tête).
+    // Le texte qui suit est conservé. Les sections "## Écouter … depuis
+    // l'étranger" ne matchent pas (pas de "en direct") → préservées.
+    rawText = rawText.replace(/^##\s+Écouter[^\n]*en\s+direct[^\n]*\n?/mi, '').replace(/^\s+/, '');
+    const leadBlock = `## ${lead}\n\n${howtoParagraphs(stationName)}`;
+    rawText = rawText ? `${leadBlock}\n\n${rawText}` : leadBlock;
   }
 
-  if (!effectiveText) return null;
+  if (!rawText) return null;
 
-  // Split en blocs par double saut de ligne, trim + drop empties
-  const rawBlocks = effectiveText.split(/\n\n+/).map((b) => b.trim()).filter(Boolean);
-
-  // Réordonnage SEO : la section "## Écouter…" doit être la 1ère H2 visible.
-  // L'intro avant cette section passe sous une H2 "## À propos de {name}".
-  const ecouterIdx = rawBlocks.findIndex(
-    (b) => b.startsWith('## ') && /Écouter|استمع|Listen/i.test(b.slice(3))
-  );
-
-  let blocks;
-  if (ecouterIdx <= 0) {
-    blocks = rawBlocks;
-  } else {
-    // Trouve où s'arrête la section "Écouter…" (= prochain "## " ou fin)
-    let endIdx = rawBlocks.length;
-    for (let i = ecouterIdx + 1; i < rawBlocks.length; i++) {
-      if (rawBlocks[i].startsWith('## ')) {
-        endIdx = i;
-        break;
-      }
-    }
-    const ecouterSection = rawBlocks.slice(ecouterIdx, endIdx);
-    const beforeEcouter = rawBlocks.slice(0, ecouterIdx);
-    const afterEcouter = rawBlocks.slice(endIdx);
-
-    const introHasH2 = beforeEcouter.some((b) => b.startsWith('## '));
-    const introWithHeading =
-      beforeEcouter.length > 0 && !introHasH2 && stationName
-        ? [`## À propos de ${stationName}`, ...beforeEcouter]
-        : beforeEcouter;
-
-    blocks = [...ecouterSection, ...introWithHeading, ...afterEcouter];
-  }
+  const blocks = rawText.split(/\n\n+/).map((b) => b.trim()).filter(Boolean);
 
   return (
     <div className="space-y-4 text-white/75 leading-relaxed text-[15px]">
       {blocks.map((block, i) => {
         if (block.startsWith('## ')) {
+          // Un bloc peut être "## Titre\nParagraphe" (titre + texte séparés par
+          // un simple \n) : on isole la 1ère ligne en H2, le reste en <p>.
+          const nl = block.indexOf('\n');
+          const heading = (nl === -1 ? block.slice(3) : block.slice(3, nl)).trim();
+          const rest = nl === -1 ? '' : block.slice(nl + 1).trim();
           return (
-            <h2
-              key={i}
-              className="font-display text-lg sm:text-xl font-semibold text-white mt-6 mb-2"
-            >
-              {block.slice(3).trim()}
-            </h2>
+            <div key={i}>
+              <h2 className="font-display text-lg sm:text-xl font-semibold text-white mt-6 mb-2">
+                {heading}
+              </h2>
+              {rest && <p className="whitespace-pre-line">{rest}</p>}
+            </div>
           );
         }
         return (
