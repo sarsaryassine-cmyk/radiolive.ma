@@ -46,8 +46,9 @@ export default function Seo({
       : "Écoutez toutes les radios marocaines en direct gratuitement : Hit Radio, Radio Mars, Chada FM, Medi 1, Radio 2M et plus de 30 stations. Streaming HD, sans inscription, depuis n'importe où.");
 
   const url = canonical || (typeof window !== 'undefined' ? window.location.href : SITE_URL);
-  // Prefer PNG once generated via `npm run og:png` — fall back to SVG.
-  const ogImage = image || `${SITE_URL}/og-default.svg`;
+  // PNG 1200×630 (généré via `npm run og:png`) — universel. Le SVG n'est pas
+  // rendu par Facebook/LinkedIn/WhatsApp/X ni la plupart des aperçus.
+  const ogImage = image || `${SITE_URL}/og-default.png`;
   const ogLocale = lang === 'ar' ? 'ar_MA' : 'fr_MA';
   const ogLocaleAlt = lang === 'ar' ? 'fr_MA' : 'ar_MA';
 
@@ -115,11 +116,12 @@ export function organizationJsonLd(lang = 'fr') {
     // Ne lister QUE les profils existants — jamais d'URL fake type
     // "facebook.com/" sans path (Google ignore + signal de faible qualité).
     sameAs: [
-      'https://twitter.com/radiolivemaroc',
+      'https://x.com/MarocLive123',
+      'https://www.facebook.com/share/1KHqPm4R4V/',
+      'https://www.youtube.com/@radiolivemaroc-u3j',
+      'https://www.linkedin.com/in/radio-live-maroc-00ab2240b/',
       'https://medium.com/@radiolive.ma',
       'https://radiolivemaroc.substack.com',
-      'https://github.com/sarsaryassine-cmyk',
-      'https://about.me/yassyass',
     ],
   };
 }

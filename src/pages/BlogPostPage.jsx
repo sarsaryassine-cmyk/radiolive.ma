@@ -32,7 +32,10 @@ const articleJsonLd = (post, lang) => ({
   dateModified: post.dateModified || post.date,
   description: post.excerpt,
   inLanguage: lang === 'ar' ? 'ar-MA' : 'fr-MA',
-  author: { '@type': 'Organization', name: lang === 'ar' ? 'إذاعات المغرب' : 'Radio Maroc' },
+  // Auteur humain (Person) plutôt qu'Organization : signal E-E-A-T plus fort
+  // pour Google et les LLM (« qui dit ça ? »). Nom de plume éditorial — l'identité
+  // réelle n'est volontairement pas exposée. Le publisher reste l'Organization.
+  author: { '@type': 'Person', name: 'Réda M.' },
   publisher: {
     '@type': 'Organization',
     name: lang === 'ar' ? 'إذاعات المغرب' : 'Radio Maroc',

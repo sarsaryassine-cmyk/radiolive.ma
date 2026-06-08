@@ -57,6 +57,23 @@ const detectStreamType = (url) => {
   return 'mp3';
 };
 
+// Liens d'entité (Wikipedia / Wikidata) par station, alimentent radio.sameAs
+// dans le JSON-LD RadioStation. C'est l'un des signaux les plus rentables pour
+// la reconnaissance d'entité par Google (Knowledge Graph) et la citation par
+// les LLM. RÈGLE : n'ajouter QUE des URLs vérifiées et exactes — une mauvaise
+// URL sameAs dégrade la confiance plutôt que de l'améliorer.
+const STATION_SAMEAS = {
+  'hit-radio': ['https://fr.wikipedia.org/wiki/Hit_Radio'],
+  'medi-1-radio': [
+    'https://fr.wikipedia.org/wiki/Medi_1_radio',
+    'https://www.wikidata.org/wiki/Q2201536',
+  ],
+  'radio-mars': ['https://fr.wikipedia.org/wiki/Radio_Mars'],
+  'chada-fm': ['https://fr.wikipedia.org/wiki/Chada_FM'],
+  'radio-2m': ['https://fr.wikipedia.org/wiki/Radio_2M'],
+  'atlantic-radio': ['https://fr.wikipedia.org/wiki/Atlantic_Radio'],
+};
+
 /**
  * UI-decorate a service entry: adds id, gradient, streamType.
  * Memoized externally — pure function of name + stream + icon.
@@ -78,6 +95,8 @@ function decorate(entry, descriptions = {}) {
     gradientTo: to,
     category: entry.category || resolveCategory(entry.name),
     description: descriptions[entry.name] || null,
+    // Liens encyclopédiques (Wikipedia/Wikidata) → JSON-LD RadioStation.sameAs
+    sameAs: STATION_SAMEAS[id] || undefined,
     // Tri par popularité au Maroc (Médiamétrie / Radioscope 2024-2025).
     // 1-25 = stations classées dans la spec ; 999 = autres (alpha fallback).
     popularity_rank: typeof entry.popularity_rank === 'number' ? entry.popularity_rank : 999,
