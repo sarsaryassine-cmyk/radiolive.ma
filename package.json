@@ -16,6 +16,7 @@
     "sync:all": "npm run sync:stations && npm run sync:logos",
     "apply:stations": "node scripts/apply-stations.mjs",
     "og:png": "node scripts/build-og-image.mjs",
+    "favicon": "node scripts/build-favicon.mjs",
     "songs:seed": "node scripts/seed-songs.mjs",
     "songs:scrape": "node scripts/fetch-icy-metadata.mjs",
     "songs:top": "node scripts/compute-top-songs.mjs",
