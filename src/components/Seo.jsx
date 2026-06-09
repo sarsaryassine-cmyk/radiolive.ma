@@ -245,3 +245,54 @@ export function breadcrumbJsonLd(items = []) {
     })),
   };
 }
+
+// Base canonique en dur (et non window.origin) : ce builder alimente du JSON-LD
+// destiné au HTML PRÉRENDU — où window.origin vaut 127.0.0.1:port. On veut
+// toujours l'URL de prod absolue.
+const CANONICAL_BASE = 'https://radiolive.ma';
+
+/**
+ * NewsArticle — article d'actualité (page /info). Auteur Person, publisher
+ * Organization avec logo, image (fallback OG par défaut), dates + section.
+ */
+export function newsArticleJsonLd(article, lang = 'fr') {
+  if (!article) return null;
+  const isAr = lang === 'ar';
+  const arPrefix = isAr ? '/ar' : '';
+  const slug = isAr && article.slug_ar ? article.slug_ar : article.slug;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    headline: isAr ? article.title_ar || article.title : article.title,
+    description: isAr ? article.excerpt_ar || article.excerpt : article.excerpt,
+    datePublished: article.date,
+    dateModified: article.dateModified || article.date,
+    inLanguage: isAr ? 'ar-MA' : 'fr-MA',
+    author: { '@type': 'Person', name: article.author || 'Réda M.' },
+    publisher: {
+      '@type': 'Organization',
+      name: isAr ? 'إذاعات المغرب' : 'Radio Maroc',
+      logo: { '@type': 'ImageObject', url: `${CANONICAL_BASE}/favicon-96x96.png` },
+    },
+    image: [article.image ? `${CANONICAL_BASE}${article.image}` : `${CANONICAL_BASE}/og-default.png`],
+    articleSection: article.category,
+    keywords: (article.keywords || []).join(', '),
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${CANONICAL_BASE}${arPrefix}/info/${slug}` },
+    ...(article.sources && article.sources.length
+      ? { citation: article.sources.map((s) => s.url) }
+      : {}),
+  };
+}
+
+/** WebPage générique — pour les pages d'index/hub (ex. /info). */
+export function webPageJsonLd({ name, description, url, lang = 'fr' }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name,
+    description,
+    url: url || CANONICAL_BASE,
+    inLanguage: lang === 'ar' ? 'ar-MA' : 'fr-MA',
+    isPartOf: { '@type': 'WebSite', name: lang === 'ar' ? 'إذاعات المغرب' : 'Radio Maroc', url: CANONICAL_BASE },
+  };
+}

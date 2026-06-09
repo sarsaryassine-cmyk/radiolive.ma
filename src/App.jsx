@@ -39,6 +39,8 @@ import EmissionPage from './pages/EmissionPage.jsx';
 import EmissionsIndexPage from './pages/EmissionsIndexPage.jsx';
 import LegalPage from './pages/LegalPage.jsx';
 import NowPlayingStationPage from './pages/NowPlayingStationPage.jsx';
+import InfoPage from './pages/InfoPage.jsx';
+import InfoArticlePage from './pages/InfoArticlePage.jsx';
 
 export default function App() {
   return (
@@ -141,6 +143,12 @@ function AppShell() {
               <Route path="/radio-agadir"        element={<CityPage cityKey="agadir" />} />
               <Route path="/blog"           element={<BlogIndexPage />} />
               <Route path="/blog/:slug"     element={<BlogPostPage />} />
+
+              {/* Actualité / Info — hub éditorial (FR + AR) */}
+              <Route path="/info"            element={<InfoPage />} />
+              <Route path="/info/:slug"      element={<InfoArticlePage />} />
+              <Route path="/ar/info"         element={<InfoPage />} />
+              <Route path="/ar/info/:slug"   element={<InfoArticlePage />} />
 
               {/* Pages SEO de cluster — pilier, live, sport, national */}
               <Route path="/radio-maroc"                element={<SeoLandingPage landingKey="radio-maroc" />} />

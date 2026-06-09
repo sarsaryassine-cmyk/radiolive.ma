@@ -40,6 +40,7 @@ const STATIC_ROUTES = [
   { path: '/radio-maroc-hit',           changefreq: 'weekly',  priority: '0.8' },
   { path: '/radio-maroc-amazigh',       changefreq: 'weekly',  priority: '0.8' },
   { path: '/blog',                      changefreq: 'weekly',  priority: '0.7' },
+  { path: '/info',                      changefreq: 'daily',   priority: '0.9' },
 ];
 
 /**
@@ -277,6 +278,28 @@ async function main() {
   </url>`);
     }
   }
+  // Articles d'actualité (/info) — paires FR + AR avec slugs distincts.
+  try {
+    const infoMod = await import(
+      'file://' + resolve(ROOT, 'src/info/articles.js').replace(/\\/g, '/')
+    );
+    for (const a of infoMod.ARTICLES || []) {
+      const frUrl = `${SITE_URL}/info/${a.slug}`;
+      const arUrl = `${SITE_URL}/ar/info/${a.slug_ar || a.slug}`;
+      for (const loc of [frUrl, arUrl]) {
+        out.push(`  <url>
+    <loc>${escape(loc)}</loc>
+    <lastmod>${a.dateModified || a.date || today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="fr-MA" href="${escape(frUrl)}"/>
+    <xhtml:link rel="alternate" hreflang="ar-MA" href="${escape(arUrl)}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="${escape(frUrl)}"/>
+  </url>`);
+      }
+    }
+  } catch (e) { console.warn('sitemap info:', e.message); }
+
   for (const r of radios) {
     if (!r.name) continue;
     const id = slugify(r.name);

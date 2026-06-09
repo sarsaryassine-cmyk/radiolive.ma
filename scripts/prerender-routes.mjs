@@ -128,6 +128,17 @@ async function buildPaths() {
     '/ar/baramij/istichara-nafsiya-mamoun-dribi',
   ]) paths.add(p);
 
+  // 8. Actualité (/info) — index + articles FR/AR (NewsArticle en HTML statique)
+  paths.add('/info');
+  paths.add('/ar/info');
+  try {
+    const { ARTICLES } = await importData('src/info/articles.js');
+    for (const a of ARTICLES) {
+      paths.add(`/info/${a.slug}`);
+      paths.add(`/ar/info/${a.slug_ar || a.slug}`);
+    }
+  } catch (e) { console.warn('[prerender] info:', e.message); }
+
   return [...paths];
 }
 

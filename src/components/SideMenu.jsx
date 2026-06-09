@@ -165,6 +165,7 @@ export default function SideMenu({ radios = [] }) {
 
                 {/* SEO landing-page shortcuts */}
                 <div className="mt-2 pt-2 border-t border-white/8 grid grid-cols-2 gap-1">
+                  <SeoLink to={`${arPrefix}/info`}>{lang === 'ar' ? 'الأخبار' : 'Actualités'}</SeoLink>
                   <SeoLink to={`${arPrefix}/top-radio-maroc`}>{t('nav.top')}</SeoLink>
                   <SeoLink to={`${arPrefix}/frequences-radio-maroc`}>{t('nav.frequencies')}</SeoLink>
                   <SeoLink to={`${arPrefix}/blog`}>{t('nav.blog')}</SeoLink>
