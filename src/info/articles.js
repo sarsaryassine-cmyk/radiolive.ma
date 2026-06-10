@@ -87,6 +87,22 @@ export const ARTICLES = [
       p("Pour les téléspectateurs et auditeurs au Maroc, la compétition sera accessible à la fois sur les chaînes du bouquet sportif régional détenteur des droits et sur la chaîne publique nationale dédiée au sport. Cette double diffusion garantit une large couverture, et la radio jouera comme toujours un rôle d'accompagnement : commentaires en direct, débriefs d'après-match et émissions spéciales rythmeront le quotidien des supporters tout au long du tournoi. Pour la diaspora, les plateformes en ligne et les radios marocaines accessibles en streaming resteront un lien direct avec l'ambiance du pays."),
       p("Au-delà du résultat sportif, ce Mondial nord-américain s'inscrit dans une trajectoire plus large pour le football marocain, qui se projette déjà vers la co-organisation de la Coupe du monde 2030. L'enjeu de 2026 dépasse donc le simple cadre des résultats : il s'agit de confirmer un statut, de consolider une génération talentueuse et d'entretenir la ferveur populaire qui accompagne désormais chaque sortie des Lions de l'Atlas. Le premier acte sera donné le 13 juin, et tout un pays retiendra son souffle."),
     ],
+    slug_ar: 'kas-al-alam-2026-usud-atlas-brazil',
+    title_ar: 'كأس العالم 2026: أسود الأطلس يستهلّون مشوارهم أمام البرازيل',
+    excerpt_ar: 'البرنامج والمجموعة والمدرب وقنوات البث: كل ما تحتاج معرفته عن مشوار المغرب في كأس العالم 2026 التي تنطلق يوم 11 يونيو بالولايات المتحدة وكندا والمكسيك.',
+    body_ar: [
+      p('تنطلق كأس العالم 2026 يوم 11 يونيو وتتواصل حتى 19 يوليوز، موزَّعة لأول مرة على ثلاث دول مُستضيفة: الولايات المتحدة وكندا والمكسيك. ويمثّل هذا الموعد العالمي بالنسبة للمغرب محطة جديدة طال انتظارها بعد المشوار التاريخي في نسخة قطر، حين أصبح أسود الأطلس أول منتخب إفريقي وعربي يبلغ المربّع الذهبي في مونديال. وهكذا تأتي هذه المشاركة السابعة في نهائيات كأس العالم بمكانة جديدة: مكانة منتخب باتت كبرى المنتخبات تنظر إليه باحترام، بل وبشيء من الحذر.'),
+      h2('المجموعة الثالثة: برنامج أسود الأطلس'),
+      p('أوقعت القرعة المغرب في المجموعة الثالثة إلى جانب البرازيل واسكتلندا وهايتي. وقد بات برنامج دور المجموعات معروفًا. سيستهلّ رفاق أشرف حكيمي مشوارهم بمواجهة قوية أمام «السيليساو»، حاملة اللقب خمس مرات، يوم السبت 13 يونيو بمنطقة نيويورك/نيوجيرسي. ثم يواجهون اسكتلندا يوم الجمعة 19 يونيو ببوسطن، قبل أن يُسدلوا الستار على الدور الأول أمام هايتي يوم الأربعاء 24 يونيو بأطلانطا. وستُقام المباريات الثلاث مساءً على الساعة الحادية عشرة ليلاً بتوقيت الرباط، وهو توقيت مناسب للجماهير داخل المغرب وللجالية المقيمة بأوروبا على حدّ سواء.'),
+      h2('البرازيل: نكهة فرنسا 98'),
+      p('وتُعيد مواجهة الافتتاح أمام البرازيل إلى الأذهان ذكريات قديمة. ففي عام 1998، خلال مونديال فرنسا، سبق أن وُضع المغرب في المجموعة نفسها رفقة البرازيل واسكتلندا. وبعد نحو ثلاثة عقود، تبدّل السياق تمامًا: فقد تطوّرت كرة القدم المغربية واحترفت، وباتت تدفع بلاعبيها بانتظام إلى أعلى مستويات البطولات الأوروبية. حتى مدرب «السيليساو» نفسه اعترف، مع اقتراب المنافسة، بأن المغرب يمثّل أخطر منافس في المجموعة.'),
+      h2('وهبي وإعداد متفاوت'),
+      p('على رأس الجهاز الفني، يقود محمد وهبي هذه الحملة في أول منافسة كبرى له مع المنتخب الأول. وقد اتخذ المدرب عدة قرارات جريئة في تشكيل مجموعته، ورهَن على إعداد مكثّف. وفي آخر مبارياته الودية، تأرجح أسود الأطلس بين الاستعراض وإشارات التنبيه: فوز عريض على مدغشقر (4-0) مطلع يونيو، ثم تعادل أكثر صعوبة أمام النرويج (1-1) يوم 7 يونيو. وقد خلّفت هذه المباراة الأخيرة طعمًا مرًّا، إذ غادر عنصران أساسيان أرضية الميدان مصابَين، ما يثير قلق الطاقم قبيل بدء المشوار.'),
+      p('ومن الجانب البرازيلي أيضًا، يخيّم الغموض على بعض الأسماء، إذ تخضع فحوص طبية لمتابعة دقيقة لتقييم جاهزية لاعبين بارزين قبل صدام الافتتاح. وقد يُعيد هذا الغموض شيئًا من التوازن إلى موازين قوى كان كثيرون يرونها مائلة على الورق. أما المغرب، فيمكنه الاعتماد على هيكل خبير وقائد رمزي ودينامية جماعية صُقلت خلال أكبر المواعيد القارية والعالمية الأخيرة.'),
+      h2('أين تتابع المونديال بالمغرب والمهجر'),
+      p('بالنسبة للمشاهدين والمستمعين بالمغرب، ستكون المنافسة متاحة على القنوات الرياضية الإقليمية المالكة للحقوق، وكذلك على القناة العمومية الوطنية المخصّصة للرياضة. ويضمن هذا البث المزدوج تغطية واسعة، فيما تؤدّي الإذاعة كعادتها دور المرافِق: تعليق مباشر، وتحليلات بعد المباريات، وبرامج خاصة ستطبع يوميات الجماهير طيلة البطولة. أما الجالية، فستظلّ المنصات الرقمية والإذاعات المغربية المتاحة عبر البثّ المباشر صلة وصلٍ مباشرة بأجواء الوطن.'),
+      p('وأبعد من النتيجة الرياضية، تندرج هذه النسخة الأمريكية الشمالية ضمن مسار أوسع لكرة القدم المغربية التي تتطلّع بالفعل إلى تنظيم كأس العالم 2030 بشكل مشترك. لذا يتجاوز رهان 2026 مجرد إطار النتائج: فالأمر يتعلق بتأكيد مكانة، وترسيخ جيل موهوب، وإذكاء الحماس الشعبي الذي بات يرافق كل خرجة لأسود الأطلس. الفصل الأول سيُكتب يوم 13 يونيو، وستحبس بلاد بأكملها أنفاسها.'),
+    ],
   },
   {
     slug: 'lions-atlas-prochains-matchs-radio',
@@ -316,10 +332,10 @@ export const ARTICLES = [
 // (Wikipédia + sites officiels). Liens dofollow : ce sont de vraies citations.
 const SOURCES_BY_SLUG = {
   'mondial-2026-lions-atlas-bresil': [
-    { label: 'Olympics.com — Programme et calendrier du Maroc au Mondial 2026', url: 'https://www.olympics.com/fr/infos/coupe-du-monde-2026-programme-calendrier-maroc-horaires-matchs-adversaires-lions-atlas-mondial-2026' },
-    { label: 'Afrik-Foot — Le Maroc à la Coupe du monde 2026', url: 'https://www.afrik-foot.com/maroc-coupe-du-monde-2026-liste-des-joueurs-calendrier-match' },
-    { label: 'AllAfrica — Le Maroc retrouve le Brésil et l\'Écosse, 28 ans après France 98', url: 'https://fr.allafrica.com/stories/202512080610.html' },
-    { label: 'Africa Radio — Préparation : le Maroc cale contre la Norvège', url: 'https://www.africaradio.com/actualite-114829-coupe-du-monde-2026-en-match-de-preparation-le-maroc-cale-contre-la-norvege-et-perd-deux-piliers-sur-blessure' },
+    { label: 'Olympics.com — Programme et calendrier du Maroc au Mondial 2026', label_ar: 'Olympics.com — برنامج وروزنامة المغرب في مونديال 2026', url: 'https://www.olympics.com/fr/infos/coupe-du-monde-2026-programme-calendrier-maroc-horaires-matchs-adversaires-lions-atlas-mondial-2026' },
+    { label: 'Afrik-Foot — Le Maroc à la Coupe du monde 2026', label_ar: 'Afrik-Foot — المغرب في كأس العالم 2026', url: 'https://www.afrik-foot.com/maroc-coupe-du-monde-2026-liste-des-joueurs-calendrier-match' },
+    { label: 'AllAfrica — Le Maroc retrouve le Brésil et l\'Écosse, 28 ans après France 98', label_ar: 'AllAfrica — المغرب يلتقي البرازيل واسكتلندا بعد 28 سنة من فرنسا 98', url: 'https://fr.allafrica.com/stories/202512080610.html' },
+    { label: 'Africa Radio — Préparation : le Maroc cale contre la Norvège', label_ar: 'Africa Radio — في الإعداد: المغرب يتعثر أمام النرويج', url: 'https://www.africaradio.com/actualite-114829-coupe-du-monde-2026-en-match-de-preparation-le-maroc-cale-contre-la-norvege-et-perd-deux-piliers-sur-blessure' },
   ],
   'lions-atlas-prochains-matchs-radio': [
     { label: 'Fédération Royale Marocaine de Football (FRMF)', url: 'https://www.frmf.ma' },

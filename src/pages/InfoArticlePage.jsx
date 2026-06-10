@@ -105,7 +105,7 @@ export default function InfoArticlePage() {
                   rel="noopener noreferrer"
                   className="text-sm text-[#FF6B7A] hover:underline"
                 >
-                  {s.label} ↗
+                  {(isAr && s.label_ar) ? s.label_ar : s.label} ↗
                 </a>
               </li>
             ))}
