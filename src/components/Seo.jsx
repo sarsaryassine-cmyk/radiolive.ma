@@ -211,7 +211,7 @@ export function radioStationJsonLd(radio, lang = 'fr') {
     name: radio.name,
     url: `${SITE_URL}${arPrefix}/station/${radio.id}`,
     description:
-      radio.description ||
+      (lang === 'ar' ? (radio.description_ar || radio.description) : radio.description) ||
       (lang === 'ar' ? `استمع إلى ${radio.name} مباشرة.` : `Écoutez ${radio.name} en direct.`),
     inLanguage: lang === 'ar' ? 'ar-MA' : 'fr-MA',
     broadcastFrequency,

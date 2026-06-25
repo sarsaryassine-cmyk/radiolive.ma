@@ -131,6 +131,9 @@ export default function StationPage() {
   // H1/H2 optimisés pour l'intention de recherche (FR uniquement ; les pages AR
   // conservent le nom + le H2 par défaut). Slug absent → repli sur radio.name.
   const heads = isAr ? {} : (STATION_HEADINGS[radio.id] || {});
+  // Description selon la langue : AR si traduite (radioDescriptions.ar.json),
+  // sinon repli FR. Utilisée pour la meta, le corps et le JSON-LD.
+  const desc = isAr ? (radio.description_ar || radio.description) : radio.description;
 
   const faqJsonLd = stationFaqs.length
     ? {
@@ -164,8 +167,8 @@ export default function StationPage() {
         lang={lang}
         title={isAr ? `استمع إلى ${radio.name} مباشرة` : `Écouter ${radio.name} en direct`}
         description={
-          radio.description
-            ? `${radio.name} — ${radio.description.slice(0, 145)}…`
+          desc
+            ? `${radio.name} — ${desc.slice(0, 145)}…`
             : (isAr
                 ? `استمع إلى ${radio.name} مباشرة وبجودة عالية، مجاناً وبدون تسجيل. جميع الإذاعات المغربية في منصة واحدة.`
                 : `Écoutez ${radio.name} en direct gratuitement, en streaming HD, sans inscription. Toutes les radios marocaines sur Radio Maroc.`)
@@ -291,7 +294,7 @@ export default function StationPage() {
       {/* Description */}
       <section className="mt-10 grid lg:grid-cols-3 gap-6 lg:gap-10">
         <div className="lg:col-span-2 glass rounded-3xl p-6 sm:p-8">
-          <DescriptionBody text={radio.description} stationName={radio.name} leadHeading={heads.h2} />
+          <DescriptionBody text={desc} stationName={radio.name} leadHeading={isAr ? null : heads.h2} isAr={isAr} />
         </div>
 
         <aside className="glass rounded-3xl p-6 sm:p-8 flex flex-col gap-6">
@@ -519,24 +522,31 @@ function Info({ label, value }) {
  * Paragraphe CTA d'écoute (sans titre), placé sous le H2 de tête. Cible les
  * mots-clés "écouter [station]", "streaming HD", multi-appareils, diaspora MRE.
  */
-function howtoParagraphs(stationName) {
+function howtoParagraphs(stationName, isAr) {
+  if (isAr) {
+    return `للاستماع إلى ${stationName} مباشرة، يكفي الضغط على زر «الاستماع المباشر» أعلى هذه الصفحة. ينطلق البثّ فوراً بجودة عالية، دون تسجيل ودون تحميل أي تطبيق، ويعمل من أي بلد في العالم. ${stationName} متاحة على مدار الساعة طيلة أيام الأسبوع — مثالية للاستماع إلى إذاعتك المغربية المفضّلة سواء كنت بالدار البيضاء أو الرباط أو مراكش أو طنجة أو فاس أو أكادير، أو من الجالية المغربية بفرنسا وبلجيكا وهولندا وإسبانيا وإيطاليا وكندا والولايات المتحدة.
+
+الاستماع إلى ${stationName} عبر الإنترنت متوافق مع الحاسوب والهاتف والجهاز اللوحي ومكبّرات الصوت الذكية والسيارة المتّصلة (CarPlay و Android Auto). ويبقى مشغّل الصوت لدينا نشطاً أثناء تصفّحك لباقي صفحات الموقع — يمكنك مواصلة الاستماع إلى ${stationName} وأنت تستكشف باقي الإذاعات المغربية أو تطّلع على الأخبار.`;
+  }
   return `Pour écouter ${stationName} en direct, il suffit de cliquer sur le bouton "Écouter en direct" en haut de cette page. L'écoute démarre instantanément en haute qualité audio, sans inscription, sans téléchargement d'application, et fonctionne depuis n'importe quel pays du monde. ${stationName} est disponible 24h/24, 7 jours sur 7 — idéal pour écouter votre station marocaine préférée que vous soyez à Casablanca, Rabat, Marrakech, Tanger, Fès, Agadir, ou depuis la diaspora marocaine en France, Belgique, Pays-Bas, Espagne, Italie, Canada ou États-Unis.
 
 L'écoute en ligne de ${stationName} est compatible avec ordinateur, smartphone, tablette, smart speaker et voiture connectée (CarPlay, Android Auto). Notre lecteur audio reste actif lorsque vous naviguez sur les autres pages du site — vous pouvez continuer à écouter ${stationName} tout en explorant les autres radios marocaines ou en consultant les actualités.`;
 }
 
-function DescriptionBody({ text, stationName, leadHeading }) {
+function DescriptionBody({ text, stationName, leadHeading, isAr }) {
   let rawText = (text || '').trim();
 
   if (stationName) {
-    // H2 de tête : le H2 optimisé fourni (STATION_HEADINGS) sinon le générique.
-    const lead = leadHeading || `Écouter ${stationName} en direct & en ligne gratuitement`;
+    // H2 de tête : le H2 optimisé fourni (STATION_HEADINGS) sinon le générique (FR/AR).
+    const lead = leadHeading || (isAr
+      ? `استمع إلى ${stationName} مباشرة وعلى الإنترنت مجاناً`
+      : `Écouter ${stationName} en direct & en ligne gratuitement`);
     // On retire le titre générique d'intro "## Écouter … en direct …" si la
     // description en contient un (sinon il doublonnerait le H1 et le H2 de tête).
     // Le texte qui suit est conservé. Les sections "## Écouter … depuis
     // l'étranger" ne matchent pas (pas de "en direct") → préservées.
     rawText = rawText.replace(/^##\s+Écouter[^\n]*en\s+direct[^\n]*\n?/mi, '').replace(/^\s+/, '');
-    const leadBlock = `## ${lead}\n\n${howtoParagraphs(stationName)}`;
+    const leadBlock = `## ${lead}\n\n${howtoParagraphs(stationName, isAr)}`;
     rawText = rawText ? `${leadBlock}\n\n${rawText}` : leadBlock;
   }
 

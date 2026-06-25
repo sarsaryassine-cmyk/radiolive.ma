@@ -24,6 +24,19 @@ async function loadDescriptions() {
   return descriptionsCache || {};
 }
 
+// Descriptions ARABES (fichier additif, rempli par lots). Fallback FR si une
+// station n'y figure pas encore. Cache-busté par SCHEMA_VERSION (à bumper à
+// chaque nouveau lot de traductions pour forcer un fetch frais).
+let arDescriptionsCache = null;
+async function loadArDescriptions() {
+  if (arDescriptionsCache) return arDescriptionsCache;
+  try {
+    const res = await fetch(`/radioDescriptions.ar.json?v=${SCHEMA_VERSION}`);
+    if (res.ok) arDescriptionsCache = await res.json();
+  } catch (_) { /* ignore — fallback FR géré au niveau page */ }
+  return arDescriptionsCache || {};
+}
+
 const PALETTES = [
   ['#7c4dff', '#38bdf8'],
   ['#f43f5e', '#f59e0b'],
@@ -78,7 +91,7 @@ const STATION_SAMEAS = {
  * UI-decorate a service entry: adds id, gradient, streamType.
  * Memoized externally — pure function of name + stream + icon.
  */
-function decorate(entry, descriptions = {}) {
+function decorate(entry, descriptions = {}, arDescriptions = {}) {
   const [from, to] = accentForName(entry.name);
   const id = slugify(entry.name) || `r-${Math.random().toString(36).slice(2, 8)}`;
   return {
@@ -95,6 +108,7 @@ function decorate(entry, descriptions = {}) {
     gradientTo: to,
     category: entry.category || resolveCategory(entry.name),
     description: descriptions[entry.name] || null,
+    description_ar: arDescriptions[entry.name] || null,
     // Liens encyclopédiques (Wikipedia/Wikidata) → JSON-LD RadioStation.sameAs
     sameAs: STATION_SAMEAS[id] || undefined,
     // Tri par popularité au Maroc (Médiamétrie / Radioscope 2024-2025).
@@ -113,14 +127,14 @@ export const sortByPopularity = (a, b) => {
   return a.name.localeCompare(b.name, 'fr');
 };
 
-const decorateAll = (list, descriptions) => {
+const decorateAll = (list, descriptions, arDescriptions) => {
   const seen = new Set();
   const out = [];
   for (const r of list) {
     const id = slugify(r.name);
     if (id && seen.has(id)) continue;
     if (id) seen.add(id);
-    out.push(decorate(r, descriptions));
+    out.push(decorate(r, descriptions, arDescriptions));
   }
   // Tri par popularité plutôt qu'alpha — Hit Radio en tête.
   return out.sort(sortByPopularity);
@@ -160,8 +174,8 @@ export default function useCatalog() {
     if (ctrl.signal.aborted) return;
 
     if (result.ok) {
-      const descriptions = await loadDescriptions();
-      const decorated = decorateAll(result.merged, descriptions);
+      const [descriptions, arDescriptions] = await Promise.all([loadDescriptions(), loadArDescriptions()]);
+      const decorated = decorateAll(result.merged, descriptions, arDescriptions);
       localRef.current = result.merged;
       setRadios(decorated);
       setSyncStatus({
@@ -189,13 +203,14 @@ export default function useCatalog() {
     let coldStart = false;
     (async () => {
       try {
-        const [initial, descriptions] = await Promise.all([
+        const [initial, descriptions, arDescriptions] = await Promise.all([
           loadCatalog(),
           loadDescriptions(),
+          loadArDescriptions(),
         ]);
         if (!alive) return;
         localRef.current = initial;
-        const decorated = decorateAll(initial, descriptions);
+        const decorated = decorateAll(initial, descriptions, arDescriptions);
         setRadios(decorated);
         coldStart = !initial?.meta?.fromCache;
         console.info(
