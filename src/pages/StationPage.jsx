@@ -134,6 +134,7 @@ export default function StationPage() {
   // Description selon la langue : AR si traduite (radioDescriptions.ar.json),
   // sinon repli FR. Utilisée pour la meta, le corps et le JSON-LD.
   const desc = isAr ? (radio.description_ar || radio.description) : radio.description;
+  const dname = isAr ? (radio.name_ar || radio.name) : radio.name;
 
   const faqJsonLd = stationFaqs.length
     ? {
@@ -165,10 +166,10 @@ export default function StationPage() {
     >
       <Seo
         lang={lang}
-        title={isAr ? `استمع إلى ${radio.name} مباشرة` : `Écouter ${radio.name} en direct`}
+        title={isAr ? `استمع إلى ${dname} مباشرة` : `Écouter ${dname} en direct`}
         description={
           desc
-            ? `${radio.name} — ${desc.slice(0, 145)}…`
+            ? `${dname} — ${desc.slice(0, 145)}…`
             : (isAr
                 ? `استمع إلى ${radio.name} مباشرة وبجودة عالية، مجاناً وبدون تسجيل. جميع الإذاعات المغربية في منصة واحدة.`
                 : `Écoutez ${radio.name} en direct gratuitement, en streaming HD, sans inscription. Toutes les radios marocaines sur Radio Maroc.`)
@@ -188,7 +189,7 @@ export default function StationPage() {
           breadcrumbJsonLd([
             { name: t('nav.home'), url: homeHref },
             { name: categoryLabel, url: homeHref },
-            { name: radio.name },
+            { name: dname },
           ]),
           faqJsonLd,
         ].filter(Boolean)}
@@ -234,7 +235,7 @@ export default function StationPage() {
             </div>
 
             <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-balance mb-4">
-              {heads.h1 || radio.name}
+              {heads.h1 || dname}
             </h1>
 
             <div className="flex items-center gap-3 flex-wrap">

@@ -7,6 +7,7 @@ import TiltCard from './TiltCard.jsx';
 import BorderBeam from './ui/BorderBeam.jsx';
 import useReducedMotion from '../hooks/useReducedMotion.js';
 import useI18n from '../i18n/useI18n.js';
+import { stationDisplayName } from '../data/stationNamesAr.js';
 
 function RadioCard({ radio, isActive, isPlaying, isFavorite, onPlay, onToggleFavorite }) {
   const playingHere = isActive && isPlaying;
@@ -14,6 +15,7 @@ function RadioCard({ radio, isActive, isPlaying, isFavorite, onPlay, onToggleFav
   const enableTilt = !reduced && !isMobile;
   const { t, lang } = useI18n();
   const stationHref = lang === 'ar' ? `/ar/station/${radio.id}` : `/station/${radio.id}`;
+  const displayName = stationDisplayName(radio, lang);
 
   const inner = (
     <>
@@ -41,7 +43,7 @@ function RadioCard({ radio, isActive, isPlaying, isFavorite, onPlay, onToggleFav
           <Link
             to={stationHref}
             className="rounded-xl sm:rounded-2xl"
-            aria-label={t('card.view_station', { name: radio.name })}
+            aria-label={t('card.view_station', { name: displayName })}
           >
             <RadioIcon radio={radio} size="md" playing={playingHere} />
           </Link>
@@ -65,7 +67,7 @@ function RadioCard({ radio, isActive, isPlaying, isFavorite, onPlay, onToggleFav
 
         <Link to={stationHref} className="flex-1 min-w-0 group/title">
           <h3 className="font-display font-semibold text-[11px] sm:text-base leading-tight truncate group-hover/title:text-white transition-colors">
-            {radio.name}
+            {displayName}
           </h3>
           <p className="text-[9px] sm:text-xs text-white/50 mt-0.5 sm:mt-1 uppercase tracking-wider inline-flex items-center gap-1">
             {radio.streamType === 'hls' ? t('card.live_hd') : t('card.live_stream')}

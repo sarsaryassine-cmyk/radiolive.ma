@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import RadioIcon from '../RadioIcon.jsx';
 import { CATEGORIES, categoryLabel, slugForLang, localizeArticle } from '../../info/articles.js';
+import { stationDisplayName } from '../../data/stationNamesAr.js';
 
 function Widget({ title, children }) {
   return (
@@ -80,7 +81,7 @@ export default function InfoSidebar({ lang = 'fr', popular = [], recent = [], ta
                 className="flex items-center gap-3 group"
               >
                 <RadioIcon radio={r} size="sm" />
-                <span className="text-sm text-white/75 group-hover:text-[#FF6B7A] transition-colors">{r.name}</span>
+                <span className="text-sm text-white/75 group-hover:text-[#FF6B7A] transition-colors">{stationDisplayName(r, lang)}</span>
               </Link>
             ))}
           </div>

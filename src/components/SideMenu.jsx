@@ -6,6 +6,7 @@ import RadioIcon from './RadioIcon.jsx';
 import RadioMarocLogo from './RadioMarocLogo.jsx';
 import { CATEGORY_ORDER, categoryLabel } from '../utils/categories.js';
 import useI18n from '../i18n/useI18n.js';
+import { stationDisplayName } from '../data/stationNamesAr.js';
 
 const CATEGORY_ICONS = {
   musicale:       Music,
@@ -234,7 +235,7 @@ export default function SideMenu({ radios = [] }) {
                                     <span className="shrink-0">
                                       <RadioIcon radio={r} size="sm" />
                                     </span>
-                                    <span className="text-[12.5px] truncate">{r.name}</span>
+                                    <span className="text-[12.5px] truncate">{stationDisplayName(r, lang)}</span>
                                   </NavLink>
                                 </li>
                               ))}

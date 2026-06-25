@@ -168,8 +168,8 @@ export function radioBroadcastServiceJsonLd(radio, lang = 'fr') {
   return {
     '@context': 'https://schema.org',
     '@type': 'RadioBroadcastService',
-    name: radio.name,
-    broadcastDisplayName: radio.name,
+    name: (lang === 'ar' && radio.name_ar) ? radio.name_ar : radio.name,
+    broadcastDisplayName: (lang === 'ar' && radio.name_ar) ? radio.name_ar : radio.name,
     url: `${SITE_URL}${arPrefix}/station/${radio.id}`,
     inLanguage: lang === 'ar' ? 'ar-MA' : 'fr-MA',
     broadcastFrequency,
@@ -208,7 +208,8 @@ export function radioStationJsonLd(radio, lang = 'fr') {
   return {
     '@context': 'https://schema.org',
     '@type': 'RadioStation',
-    name: radio.name,
+    name: (lang === 'ar' && radio.name_ar) ? radio.name_ar : radio.name,
+    alternateName: (lang === 'ar' && radio.name_ar) ? radio.name : (radio.name_ar || undefined),
     url: `${SITE_URL}${arPrefix}/station/${radio.id}`,
     description:
       (lang === 'ar' ? (radio.description_ar || radio.description) : radio.description) ||

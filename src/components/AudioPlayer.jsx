@@ -23,6 +23,7 @@ import AudioVisualizer from './AudioVisualizer.jsx';
 import BorderBeam from './ui/BorderBeam.jsx';
 import { useNowPlaying } from '../hooks/useSongs.js';
 import useI18n from '../i18n/useI18n.js';
+import { stationDisplayName } from '../data/stationNamesAr.js';
 
 function VolumeIcon({ volume, muted }) {
   if (muted || volume === 0) return <VolumeX className="h-4 w-4" />;
@@ -253,7 +254,7 @@ function FullScreenPlayer({
   current, isPlaying, isLoading, volume, muted, error, isFavorite,
   onTogglePlay, onPrev, onNext, onToggleFavorite, onVolume, onToggleMute, onClose,
 }) {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const np = useNowPlaying(current.id);
   const hasTrack = np && (np.artist || np.title);
 
@@ -305,7 +306,7 @@ function FullScreenPlayer({
 
         <div className="text-center max-w-full">
           <h2 className="font-display font-bold text-2xl mb-2 truncate">
-            {current.name}
+            {stationDisplayName(current, lang)}
           </h2>
           {error ? (
             <p className="inline-flex items-center gap-1.5 text-sm text-rose-300">
@@ -419,7 +420,7 @@ function NowPlayingInfo({ current, isPlaying, isLoading, error }) {
       <RadioIcon radio={current} size="sm" playing={isPlaying} />
       <div className="min-w-0">
         <p className="font-display font-semibold truncate text-sm sm:text-base">
-          {current.name}
+          {stationDisplayName(current, lang)}
         </p>
 
         {/* Status line: error > loading > now-playing track > live/pause */}

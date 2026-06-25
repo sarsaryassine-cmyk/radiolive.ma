@@ -7,6 +7,7 @@ import {
   SCHEMA_VERSION,
 } from '../services/radioService.js';
 import { resolveCategory } from '../utils/categories.js';
+import { STATION_NAMES_AR } from '../data/stationNamesAr.js';
 
 // Cache of name → description, populated once per session.
 // Cache-busting via SCHEMA_VERSION : sans ça, le navigateur servait l'ancienne
@@ -97,6 +98,7 @@ function decorate(entry, descriptions = {}, arDescriptions = {}) {
   return {
     id,
     name: entry.name,
+    name_ar: STATION_NAMES_AR[id] || null,
     stream: entry.stream,
     streamType: detectStreamType(entry.stream),
     icon: entry.icon || null,
