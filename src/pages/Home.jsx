@@ -526,7 +526,8 @@ export function homeFaqJsonLd() {
 }
 
 function CompactHero({ count, syncStatus, onResync }) {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
+  const isAr = lang === 'ar';
   return (
     <motion.section
       initial={{ opacity: 0, y: 12 }}
@@ -541,15 +542,15 @@ function CompactHero({ count, syncStatus, onResync }) {
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-6">
         <div className="min-w-0 sm:flex-1">
           <h1 className="font-display text-xl sm:text-xl md:text-2xl font-bold leading-tight text-balance">
-            Radio Maroc en direct —{' '}
-            <span className="gradient-text">Écouter en ligne toutes les stations marocaines</span>
+            {isAr ? 'راديو المغرب مباشر — ' : 'Radio Maroc en direct — '}
+            <span className="gradient-text">
+              {isAr ? 'استمع أونلاين إلى جميع الإذاعات المغربية' : 'Écouter en ligne toutes les stations marocaines'}
+            </span>
           </h1>
           <p className="mt-2 sm:mt-3 text-[13px] sm:text-[13.5px] text-white/65 leading-relaxed">
-            Écoutez les radios du Maroc en direct, gratuitement et sans
-            inscription. Plus de 30 stations FM et webradios diffusent leur
-            signal 24 heures sur 24 sur notre plateforme. Sélectionnez une
-            station, cliquez sur écouter, et profitez du Maroc en direct
-            depuis n'importe où dans le monde.
+            {isAr
+              ? 'استمع إلى إذاعات المغرب مباشرة، مجاناً وبدون تسجيل. أكثر من 30 محطة FM وإذاعة ويب تبثّ إشارتها على مدار الساعة على منصّتنا. اختر محطة، اضغط على استماع، واستمتع بالمغرب مباشرة من أي مكان في العالم.'
+              : "Écoutez les radios du Maroc en direct, gratuitement et sans inscription. Plus de 30 stations FM et webradios diffusent leur signal 24 heures sur 24 sur notre plateforme. Sélectionnez une station, cliquez sur écouter, et profitez du Maroc en direct depuis n'importe où dans le monde."}
           </p>
         </div>
 
