@@ -24,7 +24,7 @@ const initialsOf = (name) =>
  * initials-on-gradient fallback. Successful resolutions are cached in
  * localStorage so subsequent visits skip the chain.
  */
-function RadioIcon({ radio, size = 'md', playing = false }) {
+function RadioIcon({ radio, size = 'md', playing = false, alt }) {
   const { src, onError, onLoad, exhausted } = useIconChain(radio);
 
   return (
@@ -37,7 +37,7 @@ function RadioIcon({ radio, size = 'md', playing = false }) {
       {!exhausted ? (
         <img
           src={src}
-          alt={radio.name}
+          alt={alt || radio.name}
           loading="lazy"
           decoding="async"
           referrerPolicy="no-referrer"

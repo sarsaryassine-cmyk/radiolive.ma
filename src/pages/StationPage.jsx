@@ -213,7 +213,12 @@ export default function StationPage() {
         />
         <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-start">
           <div className="shrink-0">
-            <RadioIcon radio={radio} size="xl" playing={playingHere} />
+            <RadioIcon
+              radio={radio}
+              size="xl"
+              playing={playingHere}
+              alt={isAr ? `شعار ${dname} — استمع مباشرة على راديو المغرب` : `Logo ${dname} — écouter en direct sur Radio Maroc`}
+            />
           </div>
 
           <div className="flex-1 min-w-0">

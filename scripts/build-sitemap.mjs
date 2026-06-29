@@ -147,14 +147,15 @@ const slugify = (str) =>
     .replace(/^-+|-+$/g, '');
 
 /** Build a <url> entry with fr + ar hreflang siblings. */
-function buildUrl(path, today, changefreq, priority) {
+function buildUrl(path, today, changefreq, priority, imageLoc) {
   const fr = `${SITE_URL}${path}`;
   const ar = `${SITE_URL}/ar${path === '/' ? '' : path}`;
+  const img = imageLoc ? `\n    <image:image><image:loc>${escape(imageLoc)}</image:loc></image:image>` : '';
   return [fr, ar].map((loc) => `  <url>
     <loc>${escape(loc)}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>${changefreq}</changefreq>
-    <priority>${priority}</priority>
+    <priority>${priority}</priority>${img}
     <xhtml:link rel="alternate" hreflang="fr-MA" href="${escape(fr)}"/>
     <xhtml:link rel="alternate" hreflang="ar-MA" href="${escape(ar)}"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="${escape(fr)}"/>
@@ -292,6 +293,7 @@ async function main() {
     <lastmod>${a.dateModified || a.date || today}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
+    <image:image><image:loc>${escape(`${SITE_URL}/info/${a.slug}.png`)}</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="fr-MA" href="${escape(frUrl)}"/>
     <xhtml:link rel="alternate" hreflang="ar-MA" href="${escape(arUrl)}"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="${escape(frUrl)}"/>
@@ -304,7 +306,11 @@ async function main() {
     if (!r.name) continue;
     const id = slugify(r.name);
     if (!id) continue;
-    out.push(buildUrl(`/station/${id}`,                  today, 'weekly', '0.8'));
+    // Logo de la station pour l'image sitemap (Google Images).
+    const icon = !r.icon
+      ? null
+      : (/^https?:\/\//i.test(r.icon) ? r.icon : `${SITE_URL}${r.icon.startsWith('/') ? '' : '/'}${r.icon}`);
+    out.push(buildUrl(`/station/${id}`,                  today, 'weekly', '0.8', icon));
     out.push(buildUrl(`/station/${id}/historique`,       today, 'hourly', '0.75'));
     out.push(buildUrl(`/station/${id}/top-chansons`,     today, 'daily',  '0.75'));
     out.push(buildUrl(`/station/${id}/chanson-actuelle`, today, 'always', '0.7'));
@@ -314,7 +320,8 @@ async function main() {
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${out.join('\n')}
 </urlset>
 `;
