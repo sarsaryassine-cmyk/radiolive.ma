@@ -109,8 +109,9 @@ export function organizationJsonLd(lang = 'fr') {
     '@type': 'Organization',
     name: siteName(lang),
     alternateName: lang === 'ar' ? SITE_NAME_FR : SITE_NAME_AR,
-    url: SITE_URL,
-    logo: `${SITE_URL}/favicon.svg`,
+    url: CANONICAL_BASE,
+    logo: `${CANONICAL_BASE}/favicon-master.png`,
+    image: `${CANONICAL_BASE}/og-default.png`,
     // sameAs : profils officiels qui prouvent à Google que c'est bien la même
     // entité. Important pour le Knowledge Panel et les sitelinks à terme.
     // Ne lister QUE les profils existants — jamais d'URL fake type
