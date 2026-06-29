@@ -390,7 +390,7 @@ const SOURCES_BY_SLUG = {
 // → public/info/<slug>.png) si aucune image explicite, et ses sources externes.
 // Pour une vraie photo : renseigner `image` (+ `imageAlt` / `imageAlt_ar`).
 for (const a of ARTICLES) {
-  if (!a.image) a.image = `/info/${a.slug}.png`;
+  if (!a.image) a.image = `/info/${a.slug}.webp`;
   if (!a.sources) a.sources = SOURCES_BY_SLUG[a.slug] || [];
 }
 

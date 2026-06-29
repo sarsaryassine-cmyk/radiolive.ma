@@ -293,7 +293,7 @@ async function main() {
     <lastmod>${a.dateModified || a.date || today}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
-    <image:image><image:loc>${escape(`${SITE_URL}/info/${a.slug}.png`)}</image:loc></image:image>
+    <image:image><image:loc>${escape(`${SITE_URL}/info/${a.slug}.webp`)}</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="fr-MA" href="${escape(frUrl)}"/>
     <xhtml:link rel="alternate" hreflang="ar-MA" href="${escape(arUrl)}"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="${escape(frUrl)}"/>

@@ -86,18 +86,19 @@ async function main() {
   let generated = 0;
   for (const a of ARTICLES) {
     const src = findPhoto(a.slug);
-    let png;
+    let buf;
     if (src) {
-      // Vraie photo → recadrage propre 1200×630 (centré), optimisée.
-      png = await sharp(src).resize(1200, 630, { fit: 'cover', position: 'centre' }).png({ compressionLevel: 9 }).toBuffer();
+      // Vraie photo → recadrage 1200×630 (centré), WebP (≈10× plus léger qu'un PNG).
+      buf = await sharp(src).resize(1200, 630, { fit: 'cover', position: 'centre' }).webp({ quality: 82 }).toBuffer();
       photos++;
     } else {
-      png = await sharp(Buffer.from(svgFor(a))).png({ compressionLevel: 9 }).toBuffer();
+      // Couverture générée (dégradé + texte) → WebP haute qualité pour garder un texte net.
+      buf = await sharp(Buffer.from(svgFor(a))).webp({ quality: 90 }).toBuffer();
       generated++;
     }
-    await writeFile(resolve(OUT, `${a.slug}.png`), png);
+    await writeFile(resolve(OUT, `${a.slug}.webp`), buf);
   }
-  console.log(`✓ /info — ${photos} vraie(s) photo(s) intégrée(s), ${generated} couverture(s) générée(s)`);
+  console.log(`✓ /info — ${photos} photo(s) + ${generated} couverture(s) générée(s), en WebP`);
 }
 
 main().catch((err) => {
