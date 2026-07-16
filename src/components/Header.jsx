@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Moon, Sun, Heart, Sparkles, Languages } from 'lucide-react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import useI18n from '../i18n/useI18n.js';
 import RadioMarocLogo from './RadioMarocLogo.jsx';
 import { useAppContext } from '../AppContext.jsx';
@@ -14,6 +14,7 @@ export default function Header({
 }) {
   const { t, switchLang, lang } = useI18n();
   const { radios } = useAppContext();
+  const homeHref = lang === 'ar' ? '/ar' : '/';
 
   // Sur les pages station, on remplace le branding "Radio Maroc" par
   // "Écouter [nom de la station]" — devient à la fois un signal de contexte
@@ -47,12 +48,18 @@ export default function Header({
       <div className="mx-auto max-w-7xl glass-strong rounded-2xl pl-14 sm:pl-5 pr-3 sm:pr-5 py-3 flex items-center gap-3 sm:gap-5">
         <div className="flex items-center gap-3 min-w-0">
           {/* Logo : 48 px sur mobile pour éviter overflow, 72 px à partir de sm */}
-          <span className="hidden sm:block shrink-0">
-            <RadioMarocLogo size={72} />
-          </span>
-          <span className="sm:hidden shrink-0">
-            <RadioMarocLogo size={48} />
-          </span>
+          <Link
+            to={homeHref}
+            aria-label={lang === 'ar' ? 'الصفحة الرئيسية — إذاعات المغرب' : 'Accueil — Radio Maroc'}
+            className="shrink-0"
+          >
+            <span className="hidden sm:block">
+              <RadioMarocLogo size={72} />
+            </span>
+            <span className="sm:hidden">
+              <RadioMarocLogo size={48} />
+            </span>
+          </Link>
           <div className="min-w-0">
             {/* Marque affichée dans le header — pas un H1 sémantique pour éviter
                 de dupliquer l'H1 réel de chaque page (station, landing, blog…).
