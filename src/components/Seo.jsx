@@ -43,7 +43,7 @@ export default function Seo({
     description ||
     (lang === 'ar'
       ? 'استمع إلى جميع الإذاعات المغربية مباشرة وبجودة عالية. مجاناً، بدون تسجيل، من المغرب أو من الخارج.'
-      : "Écoutez toutes les radios marocaines en direct gratuitement : Hit Radio, Radio Mars, Chada FM, Medi 1, Radio 2M et plus de 30 stations. Streaming HD, sans inscription, depuis n'importe où.");
+      : "Écoutez toutes les radios marocaines en direct gratuitement : Hit Radio, Radio Mars, Chada FM, Medi 1, Radio 2M et plus de 50 stations. Streaming HD, sans inscription, depuis n'importe où.");
 
   const url = canonical || (typeof window !== 'undefined' ? window.location.href : SITE_URL);
   // PNG 1200×630 (généré via `npm run og:png`) — universel. Le SVG n'est pas

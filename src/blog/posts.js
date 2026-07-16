@@ -1169,7 +1169,7 @@ export const POSTS = [
     readingTime: 6,
     keywords: ['quelle radio ecouter maroc', 'choisir radio marocaine'],
     body: [
-      p("Avec plus de 30 stations marocaines disponibles, choisir LA radio à écouter peut sembler complexe. Ce guide vous oriente selon votre profil et vos goûts."),
+      p("Avec plus de 50 stations marocaines disponibles, choisir LA radio à écouter peut sembler complexe. Ce guide vous oriente selon votre profil et vos goûts."),
       h2('Vous êtes jeune et fan de pop / R&B'),
       p("Hit Radio et Skyrock Casablanca sont vos deux meilleures options. La première est plus pop / mainstream international, la seconde plus urbaine / hip-hop."),
       h2("Vous aimez la musique arabe et le tarab"),

@@ -26,18 +26,18 @@ export const DIASPORA_COUNTRIES = {
     fr_description:
       "Écoutez en direct toutes les radios marocaines depuis la France : Hit Radio, Medi 1, Radio Mars, Chada FM. Streaming HD gratuit pour la diaspora marocaine de Paris, Lyon, Marseille, Lille et toute la France.",
     ar_description:
-      'الجالية المغربية في فرنسا، استمع إلى أكثر من 30 إذاعة مغربية مباشرة وبجودة عالية: هيت راديو، ميدي1، شدى إف إم، ميد راديو وأكثر. مجاناً من باريس وليون ومرسيليا وكل المدن الفرنسية.',
+      'الجالية المغربية في فرنسا، استمع إلى أكثر من 50 إذاعة مغربية مباشرة وبجودة عالية: هيت راديو، ميدي1، شدى إف إم، ميد راديو وأكثر. مجاناً من باريس وليون ومرسيليا وكل المدن الفرنسية.',
     fr_h1: 'Radio Maroc en France — Toutes les radios marocaines en direct depuis Paris',
     ar_h1: 'إذاعات المغرب من فرنسا — جميع راديوهات المغرب مباشرة',
     fr_body: [
-      "La France abrite la plus importante diaspora marocaine au monde, avec plus de 1,5 million de Marocains résidant dans l'Hexagone — principalement en Île-de-France, dans la région Auvergne-Rhône-Alpes, en Provence-Alpes-Côte d'Azur et dans les Hauts-de-France. Pour cette communauté, garder un lien quotidien avec le pays passe souvent par la radio : un format qui accompagne la cuisine, le trajet domicile-travail, les soirées en famille. Sur Radio Maroc, vous accédez à plus de 30 stations marocaines en streaming, depuis n'importe quelle ville française, sans VPN, sans inscription et gratuitement.",
+      "La France abrite la plus importante diaspora marocaine au monde, avec plus de 1,5 million de Marocains résidant dans l'Hexagone — principalement en Île-de-France, dans la région Auvergne-Rhône-Alpes, en Provence-Alpes-Côte d'Azur et dans les Hauts-de-France. Pour cette communauté, garder un lien quotidien avec le pays passe souvent par la radio : un format qui accompagne la cuisine, le trajet domicile-travail, les soirées en famille. Sur Radio Maroc, vous accédez à plus de 50 stations marocaines en streaming, depuis n'importe quelle ville française, sans VPN, sans inscription et gratuitement.",
       "Les Marocains de France apprécient particulièrement les flux de Hit Radio, Medi 1 Radio, Chada FM et Radio Mars. Les jeunes nés en France retrouvent les hits qui passent à Casablanca au même moment, tandis que les générations plus âgées privilégient Medi 1 (information bilingue franco-arabe) ou Radio Coran pour la spiritualité. Les fans de musique chaabi et amazighe se tournent vers Yabiladi Chaabi Maroc, Yabiladi Azawan Amazigh ou Radio Atbir, qui diffusent les classiques d'Aïta, de Reggada et d'Aroubi.",
       "Vous pouvez aussi suivre l'actualité sportive marocaine en temps réel grâce à Radio Mars, première radio 100 % sport au Maroc, qui retransmet la Botola Pro, les matchs des Lions de l'Atlas et la CAN. Pendant le mois de Ramadan, l'écoute des radios religieuses (Radio Coran, Al Quran Radio, Radio Manarat) explose dans la diaspora française : c'est l'occasion d'entendre les récitations des plus grands lecteurs marocains depuis Paris, Lyon ou Marseille.",
       "Notre plateforme fonctionne sur tous les appareils : ordinateur, smartphone, tablette, smart TV. Le lecteur audio reste actif lorsque vous changez de page et la qualité du flux s'adapte automatiquement à votre connexion (4G, 5G, fibre, ADSL). Aucune coupure publicitaire intrusive : vous écoutez la radio marocaine exactement comme si vous étiez au pays.",
       "Pour les Marocains du Nord de la France et de la région parisienne, Radio Maroc constitue le complément naturel des grandes mosquées, des associations culturelles et des épiceries du bled. Pour les étudiants marocains à Lyon, Toulouse, Bordeaux ou Lille, c'est un fil quotidien vers la maison. Pour les familles binationales, c'est un moyen simple de transmettre la langue, la musique et la culture marocaine aux enfants nés en France.",
     ],
     ar_body: [
-      'تحتضن فرنسا أكبر جالية مغربية في العالم، حيث يقيم أكثر من مليون ونصف مغربي في باريس وليون ومرسيليا وليل وستراسبورغ وغيرها من المدن. ومن أجل أبناء الجالية، يبقى الراديو وسيلة بسيطة وسريعة للحفاظ على الرابط اليومي مع أرض الوطن. عبر منصتنا، يمكنك الاستماع إلى أكثر من 30 محطة إذاعية مغربية مباشرة وبجودة عالية، من أي مدينة فرنسية، مجاناً ودون تسجيل أو تطبيقات ثقيلة.',
+      'تحتضن فرنسا أكبر جالية مغربية في العالم، حيث يقيم أكثر من مليون ونصف مغربي في باريس وليون ومرسيليا وليل وستراسبورغ وغيرها من المدن. ومن أجل أبناء الجالية، يبقى الراديو وسيلة بسيطة وسريعة للحفاظ على الرابط اليومي مع أرض الوطن. عبر منصتنا، يمكنك الاستماع إلى أكثر من 50 محطة إذاعية مغربية مباشرة وبجودة عالية، من أي مدينة فرنسية، مجاناً ودون تسجيل أو تطبيقات ثقيلة.',
       'يفضل المغاربة المقيمون في فرنسا الاستماع إلى هيت راديو، ميدي1، شدى إف إم، راديو مارس وميد راديو. الأجيال الشابة تستمتع بنفس الأغاني التي تُبث الآن في الدار البيضاء أو الرباط، فيما يتابع كبار السن النشرات الإخبارية لميدي1 بلغتيها العربية والفرنسية. أما محبو الموسيقى الشعبية والأمازيغية فيعودون إلى يابلادي شعبي، يابلادي أزوان أمازيغ وراديو أتبير، حيث يجدون كلاسيكيات العيطة والركادة والأغاني الأطلسية.',
       'كما يمكنك متابعة الرياضة المغربية مباشرة عبر راديو مارس، أول إذاعة مغربية متخصصة في الرياضة، التي تنقل مباريات البطولة الاحترافية ومباريات أسود الأطلس وكأس أمم إفريقيا. خلال شهر رمضان الكريم، تزداد نسبة الاستماع إلى الإذاعات الدينية مثل راديو القرآن الكريم، إذاعة منارات وراديو القرآن، وذلك لمتابعة قراءات أشهر القراء المغاربة من باريس وليون ومرسيليا.',
       'تعمل منصتنا على جميع الأجهزة: الحاسوب، الهاتف، اللوحة الإلكترونية والتلفاز الذكي. مشغل الصوت يستمر في العمل حتى عند التنقل بين الصفحات، وتتكيف جودة البث تلقائياً مع سرعة الإنترنت لديك. لا توجد إعلانات مزعجة طويلة: تستمع إلى الإذاعة المغربية تماماً كما لو كنت في البلد.',
@@ -56,9 +56,9 @@ export const DIASPORA_COUNTRIES = {
     fr_title: 'Radio Maroc en Belgique — Écouter les radios marocaines depuis Bruxelles, Anvers, Liège',
     ar_title: 'إذاعات المغرب من بلجيكا — راديو المغرب مباشر من بروكسيل وأنفيرس ولييج',
     fr_description:
-      "Diaspora marocaine de Belgique : écoutez en direct Hit Radio, Medi 1, Chada FM, Radio Mars depuis Bruxelles, Anvers, Liège, Charleroi. Plus de 30 stations FM marocaines en streaming HD gratuit.",
+      "Diaspora marocaine de Belgique : écoutez en direct Hit Radio, Medi 1, Chada FM, Radio Mars depuis Bruxelles, Anvers, Liège, Charleroi. Plus de 50 stations FM marocaines en streaming HD gratuit.",
     ar_description:
-      'الجالية المغربية في بلجيكا، استمع إلى الإذاعات المغربية المباشرة من بروكسيل وأنفيرس ولييج وشارلروا. أكثر من 30 محطة، مجاناً ودون تسجيل.',
+      'الجالية المغربية في بلجيكا، استمع إلى الإذاعات المغربية المباشرة من بروكسيل وأنفيرس ولييج وشارلروا. أكثر من 50 محطة، مجاناً ودون تسجيل.',
     fr_h1: 'Radio Maroc en Belgique — Streaming en direct depuis Bruxelles',
     ar_h1: 'إذاعات المغرب من بلجيكا — البث المباشر من بروكسيل',
     fr_body: [
@@ -87,9 +87,9 @@ export const DIASPORA_COUNTRIES = {
     fr_title: 'Radio Maroc aux Pays-Bas — Écouter les radios marocaines depuis Amsterdam, Rotterdam, La Haye',
     ar_title: 'إذاعات المغرب من هولندا — راديو المغرب مباشر من أمستردام وروتردام ولاهاي',
     fr_description:
-      'Marocains des Pays-Bas, écoutez Hit Radio, Medi 1, Chada FM, Radio Mars depuis Amsterdam, Rotterdam, La Haye, Utrecht. Plus de 30 radios marocaines en streaming HD gratuit.',
+      'Marocains des Pays-Bas, écoutez Hit Radio, Medi 1, Chada FM, Radio Mars depuis Amsterdam, Rotterdam, La Haye, Utrecht. Plus de 50 radios marocaines en streaming HD gratuit.',
     ar_description:
-      'الجالية المغربية في هولندا، استمع إلى الإذاعات المغربية المباشرة من أمستردام وروتردام ولاهاي وأوتريخت. أكثر من 30 محطة، مجاناً.',
+      'الجالية المغربية في هولندا، استمع إلى الإذاعات المغربية المباشرة من أمستردام وروتردام ولاهاي وأوتريخت. أكثر من 50 محطة، مجاناً.',
     fr_h1: 'Radio Maroc aux Pays-Bas — Toutes les radios marocaines en direct',
     ar_h1: 'إذاعات المغرب من هولندا — جميع راديوهات المغرب مباشرة',
     fr_body: [
@@ -120,19 +120,19 @@ export const DIASPORA_COUNTRIES = {
     fr_description:
       'Diaspora marocaine en Espagne : écoutez en direct Hit Radio, Medi 1, Chada FM, Radio Mars depuis Madrid, Barcelone, Málaga, Murcie, Algésiras. Streaming HD gratuit.',
     ar_description:
-      'الجالية المغربية في إسبانيا، استمع إلى الإذاعات المغربية المباشرة من مدريد وبرشلونة ومالقة ومرسية. أكثر من 30 محطة، مجاناً وبجودة عالية.',
+      'الجالية المغربية في إسبانيا، استمع إلى الإذاعات المغربية المباشرة من مدريد وبرشلونة ومالقة ومرسية. أكثر من 50 محطة، مجاناً وبجودة عالية.',
     fr_h1: 'Radio Maroc en Espagne — Streaming en direct depuis la péninsule ibérique',
     ar_h1: 'إذاعات المغرب من إسبانيا — البث المباشر من شبه الجزيرة الإيبيرية',
     fr_body: [
       "L'Espagne abrite près d'un million de personnes d'origine marocaine, ce qui en fait l'une des plus importantes diasporas du royaume. La proximité géographique avec le détroit de Gibraltar a favorisé une migration soutenue depuis les années 1990, principalement vers l'Andalousie (Málaga, Algésiras), la Catalogne (Barcelone, Tarragone), Madrid, la région de Murcie et les enclaves de Ceuta et Melilla.",
-      "Pour cette diaspora très active, l'écoute des radios marocaines fait partie du quotidien. Sur notre plateforme, vous accédez à plus de 30 stations FM et webradios marocaines en streaming HD, gratuitement, depuis n'importe quelle ville espagnole. Les flux fonctionnent aussi bien à Madrid qu'à Algésiras ou aux Canaries, sans VPN.",
+      "Pour cette diaspora très active, l'écoute des radios marocaines fait partie du quotidien. Sur notre plateforme, vous accédez à plus de 50 stations FM et webradios marocaines en streaming HD, gratuitement, depuis n'importe quelle ville espagnole. Les flux fonctionnent aussi bien à Madrid qu'à Algésiras ou aux Canaries, sans VPN.",
       "Les Marocains d'Espagne sont nombreux à écouter Hit Radio pour les hits internationaux, Medi 1 Radio pour l'information bilingue franco-arabe, Chada FM pour la musique pop et chaabi, Radio Mars pour le sport. Les travailleurs saisonniers de l'agriculture (Almería, Huelva) qui passent l'année entre l'Espagne et le Maroc utilisent quotidiennement la radio pour rester informés de l'actualité du royaume.",
       "Andalousie et Maroc partagent une histoire culturelle profonde, notamment à travers la musique andalouse arabo-andalouse. Sur Radio Maroc, nous diffusons Medi 1 Andalouse et Medi 1 Tarab — deux stations dédiées à ce patrimoine. Les amateurs de musique andalouse à Grenade, Cordoue ou Séville y trouvent une bande-son idéale, qui prolonge la mémoire de l'héritage al-Andalus.",
       "Pendant le Ramadan, l'écoute des radios religieuses (Radio Coran, Al Quran Radio, Radio Manarat) augmente fortement parmi les Marocains d'Espagne. Beaucoup de familles allument la radio au moment de l'adhan, créant un lien sonore avec le Maroc à des centaines de kilomètres. Notre lecteur audio fonctionne 24 heures sur 24, sans coupure.",
     ],
     ar_body: [
       'تستضيف إسبانيا حوالي مليون شخص من أصل مغربي، مما يجعلها واحدة من أكبر الجاليات المغربية في العالم. القرب الجغرافي عبر مضيق جبل طارق ساهم في تنامي الهجرة منذ التسعينات، خاصة نحو الأندلس (مالقة، الجزيرة الخضراء)، كاطالونيا (برشلونة، طاراغونا)، مدريد، منطقة مرسية إضافة إلى سبتة ومليلية.',
-      'بالنسبة لهذه الجالية النشيطة، يشكل الاستماع إلى الإذاعات المغربية جزءاً من الحياة اليومية. عبر منصتنا، يمكنك الوصول إلى أكثر من 30 محطة FM وإذاعة على الأنترنت، بجودة عالية ومجاناً، من أي مدينة إسبانية. تعمل البثوث في مدريد كما في الجزيرة الخضراء أو جزر الكناري، دون الحاجة إلى VPN.',
+      'بالنسبة لهذه الجالية النشيطة، يشكل الاستماع إلى الإذاعات المغربية جزءاً من الحياة اليومية. عبر منصتنا، يمكنك الوصول إلى أكثر من 50 محطة FM وإذاعة على الأنترنت، بجودة عالية ومجاناً، من أي مدينة إسبانية. تعمل البثوث في مدريد كما في الجزيرة الخضراء أو جزر الكناري، دون الحاجة إلى VPN.',
       'يستمع المغاربة في إسبانيا بكثرة إلى هيت راديو للموسيقى العالمية، ميدي1 للأخبار باللغتين العربية والفرنسية، شدى إف إم للموسيقى الشعبية، وراديو مارس للرياضة. كما يستعمل العمال الموسميون في القطاع الفلاحي (ألميرية وهويلفا) الذين يقضون السنة بين إسبانيا والمغرب، الراديو كوسيلة يومية للبقاء على اطلاع بأخبار الوطن.',
       'الأندلس والمغرب يتشاركان تاريخاً ثقافياً عميقاً، خاصة من خلال الموسيقى العربية الأندلسية. على منصتنا، نبث ميدي1 الأندلسية وميدي1 طرب، وهما محطتان مخصصتان لهذا الإرث. عشاق الموسيقى الأندلسية في غرناطة وقرطبة وإشبيلية يجدون فيهما أجمل ما يمتد إرث الأندلس.',
       'خلال شهر رمضان، يزداد الاستماع إلى الإذاعات الدينية (راديو القرآن، إذاعة منارات) بشكل كبير بين أبناء الجالية في إسبانيا. كثير من العائلات تُشغل الراديو وقت الأذان، مما يخلق رابطاً صوتياً مع المغرب على بعد مئات الكيلومترات. مشغلنا يعمل على مدار الساعة دون انقطاع.',
@@ -149,9 +149,9 @@ export const DIASPORA_COUNTRIES = {
     fr_title: "Radio Maroc en Italie — Écouter les radios marocaines depuis Milan, Turin, Rome",
     ar_title: 'إذاعات المغرب من إيطاليا — راديو المغرب مباشر من ميلانو وتورينو وروما',
     fr_description:
-      "Diaspora marocaine d'Italie : écoutez Hit Radio, Medi 1, Chada FM depuis Milan, Turin, Bologne, Rome, Naples. Plus de 30 radios FM marocaines en streaming HD gratuit.",
+      "Diaspora marocaine d'Italie : écoutez Hit Radio, Medi 1, Chada FM depuis Milan, Turin, Bologne, Rome, Naples. Plus de 50 radios FM marocaines en streaming HD gratuit.",
     ar_description:
-      'الجالية المغربية في إيطاليا، استمع إلى الإذاعات المغربية مباشرة من ميلانو وتورينو وبولونيا وروما ونابولي. أكثر من 30 محطة، مجاناً.',
+      'الجالية المغربية في إيطاليا، استمع إلى الإذاعات المغربية مباشرة من ميلانو وتورينو وبولونيا وروما ونابولي. أكثر من 50 محطة، مجاناً.',
     fr_h1: 'Radio Maroc en Italie — Toutes les radios marocaines en direct',
     ar_h1: 'إذاعات المغرب من إيطاليا — جميع راديوهات المغرب مباشرة',
     fr_body: [
@@ -180,21 +180,21 @@ export const DIASPORA_COUNTRIES = {
     fr_title: 'Radio Maroc en Allemagne — Écouter les radios marocaines depuis Berlin, Francfort, Munich',
     ar_title: 'إذاعات المغرب من ألمانيا — راديو المغرب مباشر من برلين وفرانكفورت وميونخ',
     fr_description:
-      "Diaspora marocaine d'Allemagne, écoutez Hit Radio, Medi 1, Chada FM, Radio Mars depuis Berlin, Francfort, Munich, Hambourg, Cologne. Plus de 30 stations en streaming HD gratuit.",
+      "Diaspora marocaine d'Allemagne, écoutez Hit Radio, Medi 1, Chada FM, Radio Mars depuis Berlin, Francfort, Munich, Hambourg, Cologne. Plus de 50 stations en streaming HD gratuit.",
     ar_description:
-      'الجالية المغربية في ألمانيا، استمع إلى الإذاعات المغربية المباشرة من برلين وفرانكفورت وميونخ وهامبورغ وكولونيا. أكثر من 30 محطة، مجاناً.',
+      'الجالية المغربية في ألمانيا، استمع إلى الإذاعات المغربية المباشرة من برلين وفرانكفورت وميونخ وهامبورغ وكولونيا. أكثر من 50 محطة، مجاناً.',
     fr_h1: "Radio Maroc en Allemagne — Streaming en direct depuis l'Allemagne",
     ar_h1: 'إذاعات المغرب من ألمانيا — البث المباشر من ألمانيا',
     fr_body: [
       "L'Allemagne accueille une diaspora marocaine d'environ 200 000 personnes, en croissance constante depuis les années 2000. La communauté est principalement présente à Francfort, Berlin, Munich, Hambourg, Cologne et Düsseldorf — souvent dans des secteurs hautement qualifiés (ingénierie, médecine, tech).",
-      "Sur Radio Maroc, vous écoutez en direct plus de 30 stations FM et webradios marocaines depuis n'importe quelle ville allemande. Le service est gratuit, sans inscription, et fonctionne avec toute connexion (Vodafone, O2, Telekom, Deutsche Glasfaser).",
+      "Sur Radio Maroc, vous écoutez en direct plus de 50 stations FM et webradios marocaines depuis n'importe quelle ville allemande. Le service est gratuit, sans inscription, et fonctionne avec toute connexion (Vodafone, O2, Telekom, Deutsche Glasfaser).",
       "Les Marocains d'Allemagne plébiscitent particulièrement Hit Radio (musique pop urbaine), Medi 1 Radio (information bilingue), Chada FM (chaabi et raï), Radio Mars (sport) et Radio Coran (spiritualité). Pour la communauté berbère du Souss, du Rif et de l'Atlas installée en Bavière ou en Hesse, nous proposons Yabiladi Azawan Amazigh, Radio Atbir et Radio Achkid FM.",
       "Pour les médecins, ingénieurs et étudiants marocains des grandes universités allemandes (TU Munich, RWTH Aix-la-Chapelle, Heidelberg, Humboldt), la radio en streaming offre un moyen simple de se reconnecter au pays après une longue journée de travail ou de cours. C'est un outil d'apaisement, de divertissement et de transmission culturelle.",
       "Pendant le mois de Ramadan, l'écoute des radios religieuses connaît un pic considérable. Les imams et lecteurs de Coran marocains diffusent depuis Casablanca, Rabat, Marrakech, et leurs voix sont audibles à Berlin, Munich ou Hambourg en HD, sans décalage perceptible. Notre lecteur fonctionne 24 heures sur 24 et s'adapte automatiquement à la qualité de votre connexion.",
     ],
     ar_body: [
       'تستضيف ألمانيا جالية مغربية يبلغ عددها حوالي 200 ألف شخص، في نمو مستمر منذ بداية الألفية. تتمركز هذه الجالية أساساً في فرانكفورت، برلين، ميونخ، هامبورغ، كولونيا ودوسلدورف، وغالباً ما تعمل في قطاعات عالية المهارات (الهندسة، الطب، التكنولوجيا).',
-      'عبر منصتنا، يمكنك الاستماع مباشرة إلى أكثر من 30 محطة FM وإذاعة على الأنترنت من أي مدينة ألمانية. الخدمة مجانية، بدون تسجيل، وتعمل مع جميع شبكات الأنترنت (فودافون، O2، تيليكوم، Deutsche Glasfaser).',
+      'عبر منصتنا، يمكنك الاستماع مباشرة إلى أكثر من 50 محطة FM وإذاعة على الأنترنت من أي مدينة ألمانية. الخدمة مجانية، بدون تسجيل، وتعمل مع جميع شبكات الأنترنت (فودافون، O2، تيليكوم، Deutsche Glasfaser).',
       'يفضل المغاربة المقيمون في ألمانيا الاستماع بشكل خاص إلى هيت راديو (الموسيقى الحضرية)، ميدي1 (الأخبار باللغتين)، شدى إف إم (الشعبي والراي)، راديو مارس (الرياضة) وراديو القرآن (الروحانيات). أما المغاربة الأمازيغيون من السوس والريف والأطلس المقيمون في بافاريا أو هيسن، فنوفر لهم يابلادي أزوان أمازيغ، راديو أتبير وراديو أشكيد إف إم.',
       'بالنسبة للأطباء والمهندسين والطلبة المغاربة في الجامعات الألمانية الكبرى (تو ميونخ، RWTH آخن، هايدلبرغ، هومبولت)، فإن الإذاعة عبر الأنترنت تتيح وسيلة سهلة لإعادة الاتصال بالوطن بعد يوم طويل من العمل أو الدراسة. إنها وسيلة للراحة والترفيه ونقل الثقافة.',
       'خلال شهر رمضان، يبلغ الاستماع إلى الإذاعات الدينية ذروته. الأئمة وقراء القرآن المغاربة يبثون من الدار البيضاء والرباط ومراكش، وأصواتهم مسموعة في برلين وميونخ وهامبورغ بجودة عالية ودون تأخير. مشغلنا يعمل على مدار الساعة ويتكيف تلقائياً مع جودة الاتصال لديك.',
@@ -213,7 +213,7 @@ export const DIASPORA_COUNTRIES = {
     fr_description:
       "Diaspora marocaine du Canada, écoutez Hit Radio, Medi 1, Chada FM, Radio Mars depuis Montréal, Québec, Toronto, Ottawa, Vancouver. Streaming HD gratuit pour les MRE.",
     ar_description:
-      'الجالية المغربية في كندا، استمع إلى الإذاعات المغربية المباشرة من مونتريال وكيبيك وتورنتو وأوتاوا وفانكوفر. أكثر من 30 محطة، مجاناً.',
+      'الجالية المغربية في كندا، استمع إلى الإذاعات المغربية المباشرة من مونتريال وكيبيك وتورنتو وأوتاوا وفانكوفر. أكثر من 50 محطة، مجاناً.',
     fr_h1: 'Radio Maroc au Canada — Streaming en direct depuis Montréal',
     ar_h1: 'إذاعات المغرب من كندا — البث المباشر من مونتريال',
     fr_body: [
@@ -249,14 +249,14 @@ export const DIASPORA_COUNTRIES = {
     ar_h1: 'إذاعات المغرب من أمريكا — البث المباشر من الولايات المتحدة',
     fr_body: [
       "La diaspora marocaine aux États-Unis compte environ 80 000 personnes, principalement installées dans le Nord-Est (New York, Boston, Washington DC), au Texas (Houston) et en Californie (Los Angeles, San Francisco). C'est une communauté très qualifiée, présente dans les secteurs de la finance, de la tech, du conseil et de la recherche universitaire.",
-      "Sur Radio Maroc, les Marocains des USA accèdent gratuitement à plus de 30 radios FM et webradios marocaines en direct. La plateforme est accessible depuis tout l'État, sans VPN, et fonctionne avec n'importe quelle connexion (Verizon, T-Mobile, AT&T, Spectrum). Le décalage horaire ne pose aucun problème : la radio marocaine continue de diffuser 24 heures sur 24 quel que soit votre fuseau (-4 h à -7 h GMT).",
+      "Sur Radio Maroc, les Marocains des USA accèdent gratuitement à plus de 50 radios FM et webradios marocaines en direct. La plateforme est accessible depuis tout l'État, sans VPN, et fonctionne avec n'importe quelle connexion (Verizon, T-Mobile, AT&T, Spectrum). Le décalage horaire ne pose aucun problème : la radio marocaine continue de diffuser 24 heures sur 24 quel que soit votre fuseau (-4 h à -7 h GMT).",
       "Hit Radio, Medi 1 Radio, Chada FM et Radio Mars sont les stations préférées de la diaspora américano-marocaine. Pour les Marocains travaillant à Wall Street, dans la Silicon Valley ou à Houston, la radio en streaming offre un moment de respiration culturelle entre deux meetings. C'est un retour express au bled, en un clic.",
       "Les communautés religieuses marocaines de New York, Boston et Washington (notamment autour des centres islamiques et des mosquées) écoutent quotidiennement Radio Coran, Al Quran Radio et Radio Manarat. Pendant le Ramadan, ces stations sont diffusées dans les centres communautaires, les restaurants halal et les foyers, recréant l'atmosphère du mois sacré.",
       "Pour les enfants américains d'origine marocaine, écouter quotidiennement la radio marocaine est l'un des moyens les plus efficaces de maintenir le contact avec la darija et la culture du pays. Beaucoup de parents installent un haut-parleur dans la cuisine et laissent Hit Radio ou Chada FM tourner pendant les repas — un rituel simple qui transmet la mémoire sonore du Maroc.",
     ],
     ar_body: [
       'تتكون الجالية المغربية في الولايات المتحدة الأمريكية من حوالي 80 ألف شخص، يقيمون بشكل رئيسي في الشمال الشرقي (نيويورك، بوسطن، واشنطن العاصمة)، في تكساس (هيوستن) وفي كاليفورنيا (لوس أنجلوس، سان فرانسيسكو). إنها جالية ذات مستوى تعليمي عال، تعمل في قطاعات المالية والتكنولوجيا والاستشارات والبحث الجامعي.',
-      'عبر منصتنا، يصل المغاربة المقيمون في أمريكا مجاناً إلى أكثر من 30 محطة FM وإذاعة على الأنترنت مباشرة. المنصة متاحة من جميع الولايات، دون VPN، وتعمل مع أي اتصال (Verizon، T-Mobile، AT&T، Spectrum). فارق التوقيت لا يطرح أي مشكلة: البث المغربي يستمر على مدار الساعة بغض النظر عن منطقتك الزمنية (-4 إلى -7 ساعات).',
+      'عبر منصتنا، يصل المغاربة المقيمون في أمريكا مجاناً إلى أكثر من 50 محطة FM وإذاعة على الأنترنت مباشرة. المنصة متاحة من جميع الولايات، دون VPN، وتعمل مع أي اتصال (Verizon، T-Mobile، AT&T، Spectrum). فارق التوقيت لا يطرح أي مشكلة: البث المغربي يستمر على مدار الساعة بغض النظر عن منطقتك الزمنية (-4 إلى -7 ساعات).',
       'هيت راديو، ميدي1، شدى إف إم وراديو مارس هي أكثر الإذاعات استماعاً من طرف الجالية المغربية الأمريكية. بالنسبة للمغاربة العاملين في وول ستريت، في وادي السيليكون أو في هيوستن، تتيح الإذاعة عبر الأنترنت لحظة من الراحة الثقافية بين اجتماعين. إنها عودة سريعة إلى البلد بنقرة واحدة.',
       'الجاليات الدينية المغربية في نيويورك وبوسطن وواشنطن (خاصة حول المراكز الإسلامية والمساجد) تستمع يومياً إلى راديو القرآن، إذاعة منارات وراديو القرآن الكريم. خلال شهر رمضان، تُبث هذه الإذاعات في المراكز الجماعية والمطاعم الحلال والبيوت، لإعادة خلق أجواء الشهر الفضيل.',
       'بالنسبة للأطفال الأمريكيين من أصل مغربي، يعد الاستماع اليومي للإذاعة المغربية من أكثر الوسائل فعالية للحفاظ على التواصل مع الدارجة والثقافة المغربية. كثير من الآباء يضعون مكبر صوت في المطبخ ويتركون هيت راديو أو شدى إف إم تعمل خلال الوجبات: عادة بسيطة تنقل الذاكرة الصوتية للمغرب.',
@@ -273,21 +273,21 @@ export const DIASPORA_COUNTRIES = {
     fr_title: 'Radio Maroc pour la diaspora marocaine — MRE du monde entier',
     ar_title: 'إذاعات المغرب للجالية المغربية في الخارج — راديو المغرب لأبناء الجالية',
     fr_description:
-      "Marocains résidant à l'étranger (MRE), restez connectés au pays. Plus de 30 radios marocaines en direct, accessibles 24h/24 depuis tous les continents. Gratuit, sans inscription.",
+      "Marocains résidant à l'étranger (MRE), restez connectés au pays. Plus de 50 radios marocaines en direct, accessibles 24h/24 depuis tous les continents. Gratuit, sans inscription.",
     ar_description:
-      'لأبناء الجالية المغربية في الخارج، ابقوا على تواصل دائم مع الوطن. أكثر من 30 إذاعة مغربية مباشرة على مدار الساعة من جميع القارات. مجاناً وبدون تسجيل.',
+      'لأبناء الجالية المغربية في الخارج، ابقوا على تواصل دائم مع الوطن. أكثر من 50 إذاعة مغربية مباشرة على مدار الساعة من جميع القارات. مجاناً وبدون تسجيل.',
     fr_h1: 'Radio Maroc pour les MRE — Le pays vous accompagne où que vous soyez',
     ar_h1: 'إذاعات المغرب للجالية المغربية في الخارج — الوطن معك أينما كنت',
     fr_body: [
       "Plus de 5 millions de Marocains vivent à l'étranger : c'est l'une des plus grandes diasporas au monde rapportée à la population du pays d'origine. Du Canada à l'Australie, de la France au Golfe, du Brésil à l'Allemagne, les Marocains résidant à l'étranger (MRE) jouent un rôle central dans l'économie marocaine — à travers leurs transferts d'argent, leurs investissements et leur engagement associatif.",
-      "Pour ces 5 millions de personnes, la radio reste un médium fondamental. Contrairement à la télévision qui demande l'attention visuelle, la radio s'écoute pendant la cuisine, le travail, la conduite, le sport. Elle accompagne la journée sans la monopoliser. Sur Radio Maroc, vous accédez gratuitement à plus de 30 stations FM et webradios marocaines en direct, depuis n'importe quel pays du monde.",
+      "Pour ces 5 millions de personnes, la radio reste un médium fondamental. Contrairement à la télévision qui demande l'attention visuelle, la radio s'écoute pendant la cuisine, le travail, la conduite, le sport. Elle accompagne la journée sans la monopoliser. Sur Radio Maroc, vous accédez gratuitement à plus de 50 stations FM et webradios marocaines en direct, depuis n'importe quel pays du monde.",
       "Hit Radio, Medi 1 Radio, Chada FM, Radio Mars, MFM, Medi Radio : toutes les grandes stations marocaines diffusent leur signal sur notre plateforme. La diaspora francophone privilégie Medi 1 (bilingue franco-arabe) et Hit Radio. La diaspora arabophone se tourne vers Chada FM, Medina FM et MFM. Les communautés berbères du Souss et du Rif écoutent Yabiladi Azawan Amazigh, Radio Atbir et Radio Achkid FM.",
       "Pendant les grands moments du calendrier marocain — Ramadan, Aïd el-Fitr, Aïd al-Adha, Achoura, Mouloud — l'écoute des radios depuis l'étranger explose. Les MRE allument la radio au moment de l'adhan, écoutent les chansons traditionnelles de fête, suivent les transmissions officielles depuis le Palais royal. Notre plateforme reproduit cette ambiance partout dans le monde, sans VPN, sans coupure publicitaire intrusive.",
       "Que vous habitiez à Paris, Bruxelles, Rotterdam, Madrid, Milan, Berlin, Montréal, New York, Sydney ou Dubaï, Radio Maroc met le pays à votre portée. Notre lecteur audio fonctionne sur ordinateur, smartphone, tablette, smart TV, voiture connectée (CarPlay, Android Auto). La qualité du flux s'adapte automatiquement à votre débit. Le service est intégralement gratuit, financé par une publicité discrète qui ne perturbe jamais l'écoute.",
     ],
     ar_body: [
       'يعيش أكثر من 5 ملايين مغربي في الخارج: تعد هذه واحدة من أكبر الجاليات في العالم نسبة إلى عدد سكان البلد الأصلي. من كندا إلى أستراليا، من فرنسا إلى الخليج، من البرازيل إلى ألمانيا، يلعب أبناء الجالية المغربية دوراً محورياً في الاقتصاد المغربي من خلال التحويلات المالية والاستثمارات والعمل الجمعوي.',
-      'بالنسبة لهؤلاء الخمسة ملايين شخص، يبقى الراديو وسيلة أساسية. على عكس التلفزيون الذي يتطلب الانتباه البصري، يمكن الاستماع للراديو أثناء الطبخ، العمل، القيادة والرياضة. إنه يرافق اليوم دون أن يحتكره. عبر منصتنا، يمكنك الوصول مجاناً إلى أكثر من 30 محطة إذاعية مغربية مباشرة، من أي بلد في العالم.',
+      'بالنسبة لهؤلاء الخمسة ملايين شخص، يبقى الراديو وسيلة أساسية. على عكس التلفزيون الذي يتطلب الانتباه البصري، يمكن الاستماع للراديو أثناء الطبخ، العمل، القيادة والرياضة. إنه يرافق اليوم دون أن يحتكره. عبر منصتنا، يمكنك الوصول مجاناً إلى أكثر من 50 محطة إذاعية مغربية مباشرة، من أي بلد في العالم.',
       'هيت راديو، ميدي1، شدى إف إم، راديو مارس، MFM، ميد راديو: جميع الإذاعات المغربية الكبرى تبث برامجها على منصتنا. الجالية الناطقة بالفرنسية تفضل ميدي1 وهيت راديو. الناطقون بالعربية يتجهون إلى شدى إف إم ومدينة إف إم وMFM. أما الجاليات الأمازيغية من السوس والريف فتستمع إلى يابلادي أزوان أمازيغ، راديو أتبير وراديو أشكيد إف إم.',
       'خلال المناسبات الكبرى في الروزنامة المغربية - رمضان، عيد الفطر، عيد الأضحى، عاشوراء، المولد النبوي - يزداد الاستماع إلى الإذاعات من الخارج بشكل كبير. أبناء الجالية يشغلون الراديو وقت الأذان، يستمعون إلى الأغاني التقليدية للأعياد، يتابعون البث الرسمي من القصر الملكي. منصتنا تعيد إنتاج هذا الجو في جميع أنحاء العالم، دون VPN ودون إعلانات مزعجة.',
       'سواء كنت تقيم في باريس أو بروكسيل أو روتردام أو مدريد أو ميلانو أو برلين أو مونتريال أو نيويورك أو سيدني أو دبي، تجعل منصتنا الوطن في متناول يدك. مشغل الصوت يعمل على الحاسوب والهاتف واللوحة والتلفاز الذكي والسيارات المتصلة (CarPlay، Android Auto). جودة البث تتكيف تلقائياً مع سرعة الأنترنت. الخدمة مجانية بالكامل، تمول بإعلانات بسيطة لا تؤثر أبداً على الاستماع.',
@@ -310,14 +310,14 @@ export const DIASPORA_COUNTRIES = {
     fr_h1: "Radio Maroc depuis l'étranger — Le Maroc, à portée d'écoute partout",
     ar_h1: 'إذاعات المغرب من الخارج — المغرب على مسمعك في أي مكان',
     fr_body: [
-      "Vous êtes à l'étranger en voyage d'affaires, en vacances, en mission diplomatique, en études ou en expatriation longue durée ? Vous voulez garder le contact avec l'actualité, la musique et la culture marocaines ? Notre plateforme est faite pour vous. Plus de 30 radios marocaines en direct, accessibles depuis n'importe quel pays, sans VPN, sans inscription, gratuitement.",
+      "Vous êtes à l'étranger en voyage d'affaires, en vacances, en mission diplomatique, en études ou en expatriation longue durée ? Vous voulez garder le contact avec l'actualité, la musique et la culture marocaines ? Notre plateforme est faite pour vous. Plus de 50 radios marocaines en direct, accessibles depuis n'importe quel pays, sans VPN, sans inscription, gratuitement.",
       "Que vous soyez à Doha, Dubaï, Riyad, Istanbul, Le Caire, Dakar, Abidjan, Casablanca-en-déplacement, Genève, Londres, Tokyo ou Sydney, Radio Maroc fonctionne. Notre infrastructure repose sur des CDN globaux qui assurent une diffusion sans coupure dans toutes les régions du monde. La qualité audio s'adapte automatiquement à votre débit, du Wi-Fi à la 5G, en passant par les réseaux satellitaires.",
       "Pour les voyageurs d'affaires, la radio en arrière-plan dans la chambre d'hôtel ou dans la voiture de location recrée instantanément l'ambiance du pays. Pour les diplomates marocains en poste, c'est un moyen quotidien de suivre l'actualité du royaume entre deux audiences. Pour les étudiants en année à l'étranger, c'est un fil quotidien vers la maison qui aide à combattre le mal du pays.",
       "Hit Radio, Medi 1 Radio, Chada FM et Radio Mars sont les stations les plus écoutées par les Marocains en déplacement. Pour les longs vols et les longs trajets, plusieurs stations offrent des flux ininterrompus de musique chaabi, raï, gnaoua, jazz oriental ou andalou — l'occasion idéale de redécouvrir le patrimoine musical du royaume sans distractions.",
       "Notre service est intégralement gratuit. Aucune inscription, aucun compte, aucun téléchargement d'application. Il suffit d'ouvrir notre site, de choisir une station, et d'écouter. Le lecteur fonctionne en arrière-plan : vous pouvez naviguer, lire vos emails, travailler — la radio marocaine continue à diffuser sans interruption.",
     ],
     ar_body: [
-      'هل أنت خارج المغرب في رحلة عمل، عطلة، مهمة دبلوماسية، دراسة أو إقامة طويلة؟ هل تريد البقاء على اتصال بالأخبار والموسيقى والثقافة المغربية؟ منصتنا مصممة من أجلك. أكثر من 30 إذاعة مغربية مباشرة، متاحة من أي بلد، دون VPN، دون تسجيل، مجاناً.',
+      'هل أنت خارج المغرب في رحلة عمل، عطلة، مهمة دبلوماسية، دراسة أو إقامة طويلة؟ هل تريد البقاء على اتصال بالأخبار والموسيقى والثقافة المغربية؟ منصتنا مصممة من أجلك. أكثر من 50 إذاعة مغربية مباشرة، متاحة من أي بلد، دون VPN، دون تسجيل، مجاناً.',
       'سواء كنت في الدوحة أو دبي أو الرياض أو إسطنبول أو القاهرة أو داكار أو أبيدجان أو جنيف أو لندن أو طوكيو أو سيدني، فإن منصتنا تعمل بشكل كامل. تعتمد بنيتنا التحتية على شبكات CDN العالمية التي تضمن بثاً متواصلاً في جميع مناطق العالم. تتكيف جودة الصوت تلقائياً مع سرعة الإنترنت لديك، من الواي فاي إلى 5G مروراً بالشبكات الفضائية.',
       'بالنسبة للمسافرين لأغراض العمل، يخلق تشغيل الراديو في غرفة الفندق أو سيارة الإيجار أجواء البلد على الفور. بالنسبة للدبلوماسيين المغاربة في مهامهم، إنها وسيلة يومية لمتابعة أخبار الوطن بين موعدين. وبالنسبة للطلبة في سنة دراسية بالخارج، إنها خيط يومي يقودهم إلى البيت ويساعد على مقاومة الحنين إلى الوطن.',
       'هيت راديو، ميدي1، شدى إف إم وراديو مارس هي أكثر الإذاعات استماعاً من طرف المغاربة المسافرين. بالنسبة للرحلات الطويلة، تقدم عدة محطات بثاً متواصلاً للموسيقى الشعبية والراي والكناوة والجاز الشرقي والأندلسي - فرصة مثالية لإعادة اكتشاف التراث الموسيقي للمملكة بعيداً عن التشويش.',

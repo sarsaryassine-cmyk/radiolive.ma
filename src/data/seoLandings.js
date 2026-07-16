@@ -81,7 +81,7 @@ export const SEO_LANDINGS = {
       },
       {
         q: 'Combien y a-t-il de radios au Maroc ?',
-        a: "Le HACA recense aujourd'hui environ 30 stations FM autorisées, auxquelles s'ajoutent une vingtaine de webradios pure-player. Notre plateforme regroupe plus de 30 radios marocaines en streaming direct.",
+        a: "Le HACA recense aujourd'hui environ 30 stations FM autorisées, auxquelles s'ajoutent une vingtaine de webradios pure-player. Notre plateforme regroupe plus de 50 radios marocaines en streaming direct.",
       },
       {
         q: 'Comment écouter la radio marocaine en ligne ?',
@@ -109,7 +109,7 @@ export const SEO_LANDINGS = {
     path: '/radio-maroc-en-direct',
     altPath: '/ar/radio-maroc-mubashir',
     title: 'Radio Maroc en direct — Sport, Ramadan, festivals et info en live',
-    description: "Vivez le direct des radios marocaines : matchs des Lions de l'Atlas, Ramadan, festivals et flashs info en temps réel. Le live de plus de 30 stations, gratuit, partout dans le monde.",
+    description: "Vivez le direct des radios marocaines : matchs des Lions de l'Atlas, Ramadan, festivals et flashs info en temps réel. Le live de plus de 50 stations, gratuit, partout dans le monde.",
     h1: 'Radio Maroc en direct : vivez le live, moment par moment',
     intro: "Le direct, c'est l'âme de la radio : un match des Lions de l'Atlas commenté en temps réel, l'appel à la prière pendant le Ramadan, une soirée Mawazine retransmise en live, un flash info qui tombe. Cette page vous aide à suivre le live des radios marocaines — les grands rendez-vous, les stations qui les couvrent, et comment ne rien manquer, où que vous soyez.",
     body: [
@@ -300,9 +300,9 @@ export const SEO_LANDINGS = {
     path: '/ar/radio-maroc-mubashir',
     altPath: '/radio-maroc-en-direct',
     title: 'إذاعات المغرب مباشر — استمع لجميع الإذاعات المغربية أون لاين مجاناً',
-    description: 'استمع إلى جميع الإذاعات المغربية مباشرة وبجودة عالية: هيت راديو، ميدي1، شدى إف إم، راديو مارس وأكثر من 30 محطة. مجاناً، بدون تسجيل، على مدار الساعة.',
+    description: 'استمع إلى جميع الإذاعات المغربية مباشرة وبجودة عالية: هيت راديو، ميدي1، شدى إف إم، راديو مارس وأكثر من 50 محطة. مجاناً، بدون تسجيل، على مدار الساعة.',
     h1: 'إذاعات المغرب مباشر — جميع راديوهات المغرب أون لاين',
-    intro: 'استمع إلى أكثر من 30 إذاعة مغربية مباشرة وبجودة عالية، مجاناً ودون تسجيل. منصتنا تجمع أهم المحطات الإذاعية في المغرب: هيت راديو، ميدي1، شدى إف إم، راديو مارس، راديو 2M، ميد راديو وأكثر، متاحة على مدار الساعة من أي بلد في العالم.',
+    intro: 'استمع إلى أكثر من 50 إذاعة مغربية مباشرة وبجودة عالية، مجاناً ودون تسجيل. منصتنا تجمع أهم المحطات الإذاعية في المغرب: هيت راديو، ميدي1، شدى إف إم، راديو مارس، راديو 2M، ميد راديو وأكثر، متاحة على مدار الساعة من أي بلد في العالم.',
     body: [
       { h2: 'جميع الإذاعات المغربية في مكان واحد' },
       { p: 'تجمع منصتنا أكثر من ثلاثين إذاعة مغربية في بث مباشر متواصل. تحظى هيت راديو، ميدي1 راديو، شدى إف إم، راديو مارس، راديو 2M وMFM بأعلى نسب الاستماع، إلى جانب إذاعات متخصصة كراديو القرآن الكريم، إذاعة منارات، ميدي1 طرب، وراديو يابلادي. كل ذلك بدون فترات صمت، ودون إعلانات مزعجة تقطع الاستماع.' },
@@ -325,7 +325,7 @@ export const SEO_LANDINGS = {
     faq: [
       {
         q: 'كيف يمكن الاستماع إلى الإذاعة المغربية مباشرة؟',
-        a: 'افتح صفحتنا الرئيسية، اختر إذاعة من الكتالوج (أكثر من 30 محطة متاحة) ثم اضغط على زر الاستماع. سيبدأ البث خلال ثوان معدودة، دون تسجيل أو تحميل لأي تطبيق.',
+        a: 'افتح صفحتنا الرئيسية، اختر إذاعة من الكتالوج (أكثر من 50 محطة متاحة) ثم اضغط على زر الاستماع. سيبدأ البث خلال ثوان معدودة، دون تسجيل أو تحميل لأي تطبيق.',
       },
       {
         q: 'هل الاستماع مجاني فعلاً؟',
