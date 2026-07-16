@@ -333,36 +333,112 @@ function SyncToast({ status, hasPlayer }) {
 function Footer() {
   const { t, lang } = useI18n();
   const isAr = lang === 'ar';
-  const links = isAr
+  const home = isAr ? '/ar' : '/';
+
+  // Colonnes de maillage interne : draine le jus vers la home + les pages
+  // piliers + villes + genres + hubs, sur CHAQUE page (footer site-wide).
+  const cols = isAr
     ? [
-        { to: '/ar/3an',               label: 'حول الموقع' },
-        { to: '/ar/ittisal',           label: 'اتصل بنا' },
-        { to: '/ar/siyasa-khusousia',  label: 'سياسة الخصوصية' },
-        { to: '/ar/shoroot-isti3mal',  label: 'شروط الاستخدام' },
-        { to: '/ar/blog',              label: 'المدونة' },
+        { title: 'استكشف', links: [
+          { to: '/ar', label: 'الرئيسية' },
+          { to: '/ar/radio-maroc-mubashir', label: 'راديو المغرب مباشر' },
+          { to: '/ar/radio-riyada-maghreb', label: 'راديو الرياضة' },
+          { to: '/ar/radio-al-idha3a-al-wataniya', label: 'الإذاعة الوطنية' },
+          { to: '/ar/top-radio-maroc', label: 'أفضل الإذاعات' },
+        ] },
+        { title: 'مدن', links: [
+          { to: '/ar/radio-casablanca', label: 'الدار البيضاء' },
+          { to: '/ar/radio-rabat', label: 'الرباط' },
+          { to: '/ar/radio-marrakech', label: 'مراكش' },
+          { to: '/ar/radio-tanger', label: 'طنجة' },
+          { to: '/ar/radio-fes', label: 'فاس' },
+          { to: '/ar/radio-agadir', label: 'أكادير' },
+        ] },
+        { title: 'أنواع والمزيد', links: [
+          { to: '/ar/radio-maroc-chaabi', label: 'شعبي' },
+          { to: '/ar/radio-maroc-hit', label: 'هيت' },
+          { to: '/ar/radio-maroc-amazigh', label: 'أمازيغي' },
+          { to: '/ar/frequences-radio-maroc', label: 'الترددات FM' },
+          { to: '/ar/info', label: 'الأخبار' },
+          { to: '/ar/blog', label: 'المدونة' },
+          { to: '/ar/baramij', label: 'البرامج' },
+        ] },
+        { title: 'معلومات', links: [
+          { to: '/ar/3an', label: 'حول الموقع' },
+          { to: '/ar/ittisal', label: 'اتصل بنا' },
+          { to: '/ar/siyasa-khusousia', label: 'سياسة الخصوصية' },
+          { to: '/ar/shoroot-isti3mal', label: 'شروط الاستخدام' },
+        ] },
       ]
     : [
-        { to: '/a-propos',                  label: 'À propos' },
-        { to: '/contact',                   label: 'Contact' },
-        { to: '/politique-confidentialite', label: 'Politique de confidentialité' },
-        { to: '/conditions-utilisation',    label: "Conditions d'utilisation" },
-        { to: '/blog',                      label: 'Blog' },
+        { title: 'Explorer', links: [
+          { to: '/', label: 'Accueil' },
+          { to: '/radio-maroc', label: 'Radio au Maroc' },
+          { to: '/radio-maroc-en-direct', label: 'Radio Maroc en direct' },
+          { to: '/radio-sport-maroc', label: 'Radio sport' },
+          { to: '/radio-nationale-marocaine', label: 'Radio Nationale' },
+          { to: '/top-radio-maroc', label: 'Top radios' },
+        ] },
+        { title: 'Villes', links: [
+          { to: '/radio-casablanca', label: 'Casablanca' },
+          { to: '/radio-rabat', label: 'Rabat' },
+          { to: '/radio-marrakech', label: 'Marrakech' },
+          { to: '/radio-tanger', label: 'Tanger' },
+          { to: '/radio-fes', label: 'Fès' },
+          { to: '/radio-agadir', label: 'Agadir' },
+        ] },
+        { title: 'Genres & plus', links: [
+          { to: '/radio-maroc-chaabi', label: 'Chaabi' },
+          { to: '/radio-maroc-hit', label: 'Hits' },
+          { to: '/radio-maroc-amazigh', label: 'Amazigh' },
+          { to: '/frequences-radio-maroc', label: 'Fréquences FM' },
+          { to: '/info', label: 'Actualités' },
+          { to: '/blog', label: 'Blog' },
+          { to: '/emissions', label: 'Émissions' },
+        ] },
+        { title: 'Infos', links: [
+          { to: '/a-propos', label: 'À propos' },
+          { to: '/contact', label: 'Contact' },
+          { to: '/politique-confidentialite', label: 'Confidentialité' },
+          { to: '/conditions-utilisation', label: "Conditions d'utilisation" },
+        ] },
       ];
+
   return (
     <footer className="mt-20 px-4 sm:px-6 pb-28 border-t border-white/8">
-      <div className="mx-auto max-w-7xl pt-8 flex flex-col items-center gap-4">
-        <nav className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-[12px] text-white/55">
-          {links.map((l) => (
-            <Link
-              key={l.to}
-              to={l.to}
-              className="hover:text-white transition-colors"
-            >
-              {l.label}
+      <div className="mx-auto max-w-7xl pt-10">
+        <div className="flex items-center gap-3 mb-8">
+          <Link to={home} aria-label={isAr ? 'الرئيسية — إذاعات المغرب' : 'Accueil — Radio Maroc'} className="shrink-0">
+            <RadioMarocLogo size={44} />
+          </Link>
+          <div className="leading-tight">
+            <Link to={home} className="font-display font-bold text-white hover:text-[#FF6B7A] transition-colors">
+              {isAr ? 'إذاعات المغرب' : 'Radio Maroc'}
             </Link>
+            <p className="text-[11px] text-white/45">
+              {isAr ? 'كل الإذاعات المغربية مباشرة' : 'Toutes les radios marocaines en direct'}
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-8 mb-8">
+          {cols.map((col) => (
+            <div key={col.title}>
+              <h3 className="text-[11px] font-semibold uppercase tracking-wider text-white/70 mb-3">{col.title}</h3>
+              <ul className="space-y-2">
+                {col.links.map((l) => (
+                  <li key={l.to}>
+                    <Link to={l.to} className="text-[12.5px] text-white/55 hover:text-white transition-colors">
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
-        </nav>
-        <p className="text-xs text-white/40 text-center">
+        </div>
+
+        <p className="text-xs text-white/40 text-center border-t border-white/5 pt-6">
           {t('footer.copyright', { year: new Date().getFullYear() })}
         </p>
       </div>
