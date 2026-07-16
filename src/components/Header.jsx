@@ -64,10 +64,20 @@ export default function Header({
             {/* Marque affichée dans le header — pas un H1 sémantique pour éviter
                 de dupliquer l'H1 réel de chaque page (station, landing, blog…).
                 Le H1 de chaque page reste celui spécifique au contenu. */}
-            <p className="font-display font-bold text-base sm:text-lg leading-tight truncate">
-              {brandPrefix}{' '}
-              <span className="gradient-text">{brandAccent}</span>
-            </p>
+            {isStationPage ? (
+              <p className="font-display font-bold text-base sm:text-lg leading-tight truncate">
+                {brandPrefix}{' '}
+                <span className="gradient-text">{brandAccent}</span>
+              </p>
+            ) : (
+              <Link
+                to={homeHref}
+                className="block font-display font-bold text-base sm:text-lg leading-tight truncate hover:opacity-90 transition-opacity"
+              >
+                {brandPrefix}{' '}
+                <span className="gradient-text">{brandAccent}</span>
+              </Link>
+            )}
             {!isStationPage && (
               <p className="text-[11px] text-white/50 -mt-0.5 hidden sm:block">
                 {t('header.brand_streaming')}
