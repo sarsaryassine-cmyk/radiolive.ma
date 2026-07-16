@@ -291,7 +291,7 @@ function SeoCopy() {
         Toutes les radios marocaines en direct, à un clic
       </h2>
       <p className="mb-5">
-        Notre plateforme centralise plus de trente stations marocaines en direct.{' '}
+        Notre plateforme centralise plus de cinquante stations marocaines en direct.{' '}
         <Link to="/station/hit-radio" className="text-white hover:text-brand-300 underline-offset-2 hover:underline">Hit Radio</Link>,{' '}
         <Link to="/station/medi-1-radio" className="text-white hover:text-brand-300 underline-offset-2 hover:underline">Medi 1 Radio</Link>,{' '}
         <Link to="/station/chada-fm" className="text-white hover:text-brand-300 underline-offset-2 hover:underline">Chada FM</Link>,{' '}
@@ -493,7 +493,7 @@ function SeoCopy() {
 const HOME_FAQS = [
   {
     q: 'Comment écouter la radio marocaine en direct ?',
-    a: "Ouvrez notre page d'accueil, choisissez une radio dans le catalogue (plus de 30 stations disponibles) et cliquez sur Écouter. L'écoute démarre en quelques secondes, sans inscription ni téléchargement.",
+    a: "Ouvrez notre page d'accueil, choisissez une radio dans le catalogue (plus de 50 stations disponibles) et cliquez sur Écouter. L'écoute démarre en quelques secondes, sans inscription ni téléchargement.",
   },
   {
     q: "L'écoute est-elle vraiment gratuite ?",
@@ -549,8 +549,8 @@ function CompactHero({ count, syncStatus, onResync }) {
           </h1>
           <p className="mt-2 sm:mt-3 text-[13px] sm:text-[13.5px] text-white/65 leading-relaxed">
             {isAr
-              ? 'استمع إلى إذاعات المغرب مباشرة، مجاناً وبدون تسجيل. أكثر من 30 محطة FM وإذاعة ويب تبثّ إشارتها على مدار الساعة على منصّتنا. اختر محطة، اضغط على استماع، واستمتع بالمغرب مباشرة من أي مكان في العالم.'
-              : "Écoutez les radios du Maroc en direct, gratuitement et sans inscription. Plus de 30 stations FM et webradios diffusent leur signal 24 heures sur 24 sur notre plateforme. Sélectionnez une station, cliquez sur écouter, et profitez du Maroc en direct depuis n'importe où dans le monde."}
+              ? 'استمع إلى إذاعات المغرب مباشرة، مجاناً وبدون تسجيل. أكثر من 50 محطة FM وإذاعة ويب تبثّ إشارتها على مدار الساعة على منصّتنا. اختر محطة، اضغط على استماع، واستمتع بالمغرب مباشرة من أي مكان في العالم.'
+              : "Écoutez les radios du Maroc en direct, gratuitement et sans inscription. Plus de 50 stations FM et webradios diffusent leur signal 24 heures sur 24 sur notre plateforme. Sélectionnez une station, cliquez sur écouter, et profitez du Maroc en direct depuis n'importe où dans le monde."}
           </p>
         </div>
 
