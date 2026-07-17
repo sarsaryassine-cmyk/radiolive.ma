@@ -4,16 +4,18 @@ import { DIASPORA_COUNTRIES, DIASPORA_KEYS } from '../data/diaspora.js';
 import useI18n from '../i18n/useI18n.js';
 
 /**
- * Country shortcuts shown only on the Arabic home page.
+ * Country shortcuts shown on the home page (FR + AR).
  *
- * Each card links to the AR diaspora landing (e.g. /ar/min-faransa) which
- * contains ~500 words of unique, country-targeted SEO copy plus a featured
- * grid of stations. Surfaces the diaspora hub right after the live
- * stations grid where MRE visitors are most likely to look.
+ * Each card links to the matching diaspora landing — FR (/radio-maroc-france)
+ * on the French home, AR (/ar/min-faransa) on the Arabic home — each carrying
+ * ~500 words of unique, country-targeted SEO copy plus a featured grid of
+ * stations. Surfaces the diaspora hub right after the live stations grid where
+ * MRE visitors are most likely to look, and — côté maillage — donne à chaque
+ * page diaspora un lien entrant depuis l'accueil (sinon orphelines).
  */
 export default function DiasporaBlock() {
   const { lang } = useI18n();
-  if (lang !== 'ar') return null;
+  const isAr = lang === 'ar';
 
   return (
     <section className="mt-12 sm:mt-16">
@@ -23,10 +25,12 @@ export default function DiasporaBlock() {
         </div>
         <div>
           <h2 className="font-display text-xl sm:text-2xl font-bold">
-            للجالية المغربية في الخارج
+            {isAr ? 'للجالية المغربية في الخارج' : 'Pour la diaspora marocaine (MRE)'}
           </h2>
           <p className="text-xs text-white/55 mt-0.5">
-            استمع إلى الإذاعات المغربية من بلدك
+            {isAr
+              ? 'استمع إلى الإذاعات المغربية من بلدك'
+              : 'Écoutez les radios du Maroc en direct depuis votre pays'}
           </p>
         </div>
       </div>
@@ -34,17 +38,19 @@ export default function DiasporaBlock() {
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
         {DIASPORA_KEYS.map((key) => {
           const c = DIASPORA_COUNTRIES[key];
+          const to = isAr ? c.ar_path : c.fr_path;
+          const label = isAr ? c.ar_country : c.fr_country;
           return (
             <Link
               key={key}
-              to={c.ar_path}
+              to={to}
               className="glass rounded-2xl p-4 text-center hover:bg-white/8 hover:scale-[1.02] transition-all"
             >
               <p className="text-sm font-semibold text-white">
-                {c.ar_country}
+                {label}
               </p>
               <p className="text-[11px] sm:text-[10px] text-white/45 mt-1 truncate">
-                {c.ar_path}
+                {to}
               </p>
             </Link>
           );

@@ -165,7 +165,7 @@ export default function Home() {
 
       <EmissionsSection lang={lang} />
 
-      {lang === 'ar' && <DiasporaBlock />}
+      <DiasporaBlock />
       {lang === 'ar' ? <HomeContentAr /> : <SeoCopy />}
     </>
   );
