@@ -155,9 +155,9 @@ export default function Home() {
       {!error && filtered.length > 0 && (
         <div className="mt-12 sm:mt-16 flex flex-col items-center gap-8">
           <AdBanner inline width={970} height={250}
-            slot={import.meta.env.VITE_ADSENSE_SLOT_BOTTOM || ''} />
+            slot={import.meta.env.VITE_ADSENSE_SLOT_BOTTOM || '8798189510'} />
           <AdBanner inline width={970} height={250}
-            slot={import.meta.env.VITE_ADSENSE_SLOT_BOTTOM_2 || ''} />
+            slot={import.meta.env.VITE_ADSENSE_SLOT_BOTTOM_2 || '9623266151'} />
         </div>
       )}
 

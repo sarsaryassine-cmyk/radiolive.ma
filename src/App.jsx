@@ -100,9 +100,9 @@ function AppShell() {
       </div>
 
       <AdBanner position="right-top"
-        slot={import.meta.env.VITE_ADSENSE_SLOT_RIGHT_TOP || ''} />
+        slot={import.meta.env.VITE_ADSENSE_SLOT_RIGHT_TOP || '6941262499'} />
       <AdBanner position="right-bottom"
-        slot={import.meta.env.VITE_ADSENSE_SLOT_RIGHT_BOTTOM || ''} />
+        slot={import.meta.env.VITE_ADSENSE_SLOT_RIGHT_BOTTOM || '8055953485'} />
 
       <div className="relative z-10 min-h-screen flex flex-col">
         <Header
